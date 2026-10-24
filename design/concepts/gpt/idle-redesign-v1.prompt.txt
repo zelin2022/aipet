@@ -1,0 +1,21 @@
+Use case: stylized-concept.
+Asset type: exactly ONE full-body transparent idle concept sprite for Aipet, a restrained color/shape redesign of the existing CrossPet GPT/ChatGPT dragon girl.
+
+Inputs: Image1 original idle is the primary character identity, proportions, costume construction and ornament reference. Image2 thinking and Image3 happy are supporting face, wing, tail and costume references. They are source references for ONE redesigned idle illustration, not three outputs. This is the SAME character with a more readable palette and silhouette.
+
+Primary objective: improve small desktop-pet readability. The original white hair and white dress merge visually. Keep her hair pearly white; give her dress a clearly DIFFERENT, appreciably DEEPER color. Make a polished, cohesive silver-and-dusty-violet dragon scholar, with a confident gentle expression and elegant restrained detailing.
+
+Identity to preserve: oversized round chibi head, tiny body and original age appearance; long pearly white hair with cool lilac shadows, recognizable bangs, small curled ahoge; violet eyes; two curved segmented ivory dragon horns; pointed ears; the silver-white interwoven knot/rosette ornament with a pearl and tassel on viewer-right; two small dragon wings and her curled scaled tail. Preserve her modest ornate high-collar fantasy dress, bell sleeves, layered asymmetrical skirt, Chinese-knot-inspired fastenings and small shoes. Keep the recognizable original face and proportions. No new species, hair color, hairstyle overhaul, weapon, book or unrelated prop.
+
+Specific design:
+- MAIN DRESS fabric: medium-deep muted dusty iris/violet (around #67527E), including the bodice and the main skirt. This must occupy a substantial connected area and read clearly darker than the hair, rather than a mostly-white outfit with purple accents.
+- SECONDARY fabric: soft muted mauve-lilac (around #A48CBA) in sleeve linings and one secondary skirt panel. Restrained pearl-ivory trim, narrow ruffles and silver knot ornaments supply highlights. Simplify the tiniest repetitive embroidery into fewer larger silver motifs; retain a fine, finished costume, not a plain dress.
+- Hair stays luminous pearl-white with lavender-grey shadows and a slightly stronger cool-violet contour. Sweep the bulk of the long hair behind her shoulders, keep two narrower curled front locks, and leave the dark bodice readable. Avoid covering both arms/hands with hair.
+- Small wings sit clearly behind the arms, with ivory/silver edges and slightly deeper dusty-lilac membranes distinguishable from white hair. Her pale lavender-grey scaled tail curves off to viewer-right, with a small air gap between tail and skirt; its shape is readable and not an enormous overlapping white mass. Keep both wings and the tail recognizably draconic.
+- Two bare hands visible and relaxed at either side, slightly away from the sleeves and body. Standing relaxed, mostly front-facing with a very slight three-quarter angle, both small dark-violet shoes with silver detail visible. Gentle intelligent smile, open saturated violet eyes and subtle blush; expression remains calm and approachable.
+- Make white hair, purple clothing, skin/hands, wings and tail separate at about 240–300 px tall. Hierarchy: face first, dark dress second, dragon silhouette third.
+
+Style: polished 2D anime/chibi illustration matching the original collection, crisp warm/cool dark-violet line work, smooth cel shading, soft hair highlights, carefully drawn hands, expressive eyes, controlled fine detail. Same modest costume coverage and original character age appearance.
+
+Composition/background: one centered WHOLE-BODY character, no sheet/grid, no captions or color swatches. All horns, hair tips, wings, tail, hands and shoes fully inside the image with modest clear transparent padding (about5%) on every side. True transparent alpha, clean closed silhouette, smooth antialiased edges, opaque costume highlights. No background, floor, cast shadow, halo, haze, gradients, floating symbols, lettering, watermark, extra character or duplicate limbs.
+

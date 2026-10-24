@@ -1,0 +1,12 @@
+Use case: stylized-concept.
+Asset type: one full-body 2D transparent desktop companion sprite, a new work pose of the existing CrossPet Claude girl.
+
+Input images: Image1 original idle is the primary identity/costume/proportion reference. Image2 original action pose is the book/gesture/prop reference. Image3 approved custom wave is the polished finish and character-consistency reference. Create ONE new pose with the same character, not a collage or repeated wave.
+
+Identity/style invariants: oversized round chibi head and tiny modestly dressed body, long flowing copper-orange hair with the exact bangs/highlights, warm amber eyes, gentle blush. Keep the orange chrysanthemum ornament, black bow, pearls and cream tassel on viewer-right, not mirrored. Keep the original ivory/cream, rust-orange and black ornate dress, capelet, ruffled collar/cuffs/hem, flower brooches, waist chain, bows, gold floral embroidery and tiny black shoes. Keep her dark brown book with the same gold flower design. Match warm dark outlines, smooth cel shading, fine decorative detail and the polished anime/chibi finish of the references. Preserve original age appearance and modest costume; no redesign.
+
+Framing/cutout: a single centered whole-body character, both shoes and all hair tips, hands, book and action props fully visible with a small clear transparent margin (about5%) on every side. Match reference head/body scale and feet baseline. No cropping, duplicate people/views/limbs, scene, furniture, external hand, lettering, logos, legible writing or watermark.
+
+Background: genuinely transparent alpha. Clean isolated silhouette, fully opaque cream costume and highlights, smooth antialiased edges. No floor, cast shadow, glow, halo, haze, gradients, particles or drawn checkerboard. This PNG will be composited directly on a Windows desktop.
+
+Primary request: actively writing/coding represented with the original white feather quill and ornate book. Turn three-quarter toward viewer-left; support the open original book at waist height on one palm while the other hand uses the same white feather quill, nib clearly touching an inner page in a purposeful writing gesture. Look down along the nib with intent amber eyes, a tiny determined smile, and a slight forward lean. The writing arm has a clear elbow and wrist, feather upright enough to read at small size. Keep the book cover flower visible and page free of legible text. No computer, desk or extra props. Make this a dynamic, precise writing pose rather than reading or holding a quill beside her face.

@@ -1,0 +1,19 @@
+Use case: precise-object-edit.
+Asset type: ONE transparent full-body GPT/ChatGPT desktop-pet concept revision, V3.
+
+Input roles: Image1 is the EDIT TARGET (the V2 dragon girl). Image2 is the original CrossPet GPT character, supplied ONLY as the reference for the white/silver OpenAI-knot hair ornament's color and recognizable interwoven shape.
+
+Primary request: revise ONLY the hair ornament on viewer-right, preserving its original white/silver coloring and making it a clearer, flatter silhouette of the OpenAI-style interwoven six-loop knot. The user wants this emblem to stay white/silver, not purple.
+
+Ornament changes:
+- Restore luminous pearl-WHITE woven bands with subtle pale SILVER/grey shading, matching the original reference's color. The broad surfaces of the knot must remain white, not dark violet or metallic purple.
+- Make the emblem read as a clean graphic six-loop interlocking knot/rosette: six coherent rounded lobes, clearly connected overlapping bands, and visible open negative spaces including the center. Preserve the OpenAI-logo reference. It should not look like a generic flower, a cluster of pearls, a swirl, or an irregular lump.
+- Flatten the visual treatment toward a crisp readable emblem. Use even, slightly bolder white band widths and simplify excessive bevels/tiny highlights.
+- Give the exterior silhouette and the gaps between bands a neat thin dark cool-violet outline/shadow, coordinated with the existing illustration linework. Slightly open the interior gaps so the white knot remains recognizable at desktop-pet size. Contrast should come from this narrow contour and negative space.
+- Keep the ornament's current position beside the horn/temple, approximately the same overall size; preserve the small pearl and long pale hanging tassel BELOW the knot. Do not place a pearl, jewel, bead or other solid object in the knot's central opening. Do not add a solid background disk, backing plate, halo or surrounding decoration.
+- A very small natural contact shadow on the hair immediately under the ornament is acceptable, without changing the hair color.
+
+Strict invariants: change only this hair ornament and its tiny contact shadow. Preserve the V2 girl's face, violet eyes, smile, skin tone, silver-white hair and its stronger lavender shadows, smoky-amethyst horns, deeper lilac wing membranes, dark-violet dress, silver embroidery and waist knots, sleeves, hands, tail, shoes, pose and proportions as closely as possible. Do NOT recolor her horns back to white, alter other costume knots, change the dress, move limbs, add a prop, redesign the face or make another pose. Preserve original age appearance and modest costume.
+
+Output/framing: exactly one centered complete full-body character on genuine transparent alpha. All horns, ahoge, hair, wings, tail, hands and shoes inside the image with small clear padding. Keep opaque whites, polished anime/chibi finish, smooth cel shading and clean antialiased edges. No additional views, labels, text, watermark, background, ground shadow, glow, haze, checkerboard, border or palette swatches.
+

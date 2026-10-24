@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "kind": "AI-assisted same-character redesign pose adaptation",
+  "character": "CrossPet GPT / ChatGPT white dragon",
+  "output": {
+    "path": "assets/custom/gpt/coding-review-v1.png",
+    "sha256": "7547b63038b5d964c1450426434d482ae30a17f8d9584591ddae057bf1cf806b",
+    "bytes": 1865638,
+    "width": 1165,
+    "height": 1350,
+    "format": "PNG",
+    "alphaPreserved": true,
+    "framing": {
+      "x": 39,
+      "y": 51,
+      "width": 1090,
+      "height": 1215,
+      "canvasWidth": 1165,
+      "canvasHeight": 1350
+    }
+  },
+  "generatedAt": "2026-10-24T12:03:28.586Z",
+  "stagedAt": "2026-10-24T12:03:28.588Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "coding-review-v1.prompt.txt",
+  "modification": "NEW reviewing-while-coding pose: one arm cradles the open silver/lilac book upright at lower chest, other holds the white feather quill poised beside her cheek with nib safely downward. Eyes look thoughtfully toward page, tiny confident smile and slight head tilt. Active engagement, no celebration/completion.",
+  "references": [
+    {
+      "path": "design/concepts/gpt/idle-redesign-v4.png",
+      "sha256": "1a056bb221252821d255f75a3b7cca65ba1920c747aa2d33ce5b1716037f50a3",
+      "bytes": 1678302,
+      "role": "Approved redesign identity, palette and finish reference"
+    },
+    {
+      "path": "assets/crosspet/characters/gpt/writing.webp",
+      "sha256": "38a56572d8b3ecc7a518981e57f3bc315815274c358e1704079fa50a4007b799",
+      "bytes": 95170,
+      "role": "Original same-character pose/identity reference"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "sourceCredits": [
+    "CrossPet by lokicorvus and contributors",
+    "ZipZipPipe, GPT white-dragon design known as 御姐白龙"
+  ],
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet desktop companion pose",
+  "generationPlan": {
+    "path": "out/gpt-generation-plan.json",
+    "sha256": "89b700126e3dcb87130868126ba641d23ef14674bc0de403a94a4d16aac2d59c",
+    "batch": 6,
+    "state": "coding"
+  },
+  "alphaAnalysis": {
+    "width": 1165,
+    "height": 1350,
+    "framing": {
+      "x": 39,
+      "y": 51,
+      "width": 1090,
+      "height": 1215,
+      "canvasWidth": 1165,
+      "canvasHeight": 1350
+    },
+    "alpha": {
+      "clear": 689915,
+      "partial": 44192,
+      "nearOpaque": 837169,
+      "opaque": 1474
+    },
+    "alphaMinimum": 0,
+    "alphaMaximum": 255,
+    "visiblePixels": 858322,
+    "boundaryVisible": 0,
+    "boundaryNontransparent": 6,
+    "analysisOnly": true
+  },
+  "reviewNotes": [
+    "Generator PNG bytes and native alpha preserved without image postprocessing.",
+    "Alpha framing measured by nativeImage decode only; visual review remains required before runtime promotion.",
+    "Passed full-size and desktop-size light/dark visual review; registered as part of the complete 38-image GPT replacement profile."
+  ],
+  "runtimeIntegrated": true
+}

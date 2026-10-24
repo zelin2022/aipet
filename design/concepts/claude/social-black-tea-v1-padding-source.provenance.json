@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "kind": "Initial generated pose retained as padding-edit source",
+  "character": "CrossPet Claude",
+  "output": {
+    "path": "design/concepts/claude/social-black-tea-v1-padding-source.png",
+    "sha256": "0a295da227000a9155eb725a1d88036110f23f1f74cc0d27ef538348bdf2921c",
+    "bytes": 1763953,
+    "width": 1183,
+    "height": 1329,
+    "format": "PNG",
+    "alphaPreserved": true,
+    "framing": {
+      "x": 21,
+      "y": 1,
+      "width": 1142,
+      "height": 1291,
+      "canvasWidth": 1183,
+      "canvasHeight": 1329
+    }
+  },
+  "generatedAt": "2026-10-24T12:33:20.849Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "social-black-tea-v1-padding-source.prompt.txt",
+  "modification": "Drinks BLACK TEA from a TINY delicate cream porcelain teacup with orange-flower trim matching Image3. One hand holds the little cup by its handle and raises the rim into gentle contact with her lips, actually taking a small sip; the other holds a matching small saucer just below chest height. Cup tilts subtly so dark amber-brown clear tea remains visible at its surface; no milk, foam or latte art. Relaxed half-lidded amber eyes and a contented expression. Omit book and cake. Whole-body standing, both shoes visible, no furniture or steam scene.",
+  "references": [
+    {
+      "path": "assets/crosspet/characters/claude/idle.webp",
+      "sha256": "cb4540df9325fd246de61c673e29027de0821ea70eeeafb3220a97546f440653",
+      "bytes": 96880,
+      "role": "Original same-character identity and costume reference"
+    },
+    {
+      "path": "assets/custom/claude/wave-v1.png",
+      "sha256": "a3f5040aca3dae540e8d0c95056b5d12e9c2a712580840cb1f92ca644e4087d3",
+      "bytes": 1900276,
+      "role": "Approved same-character identity, palette and finish reference"
+    },
+    {
+      "path": "assets/crosspet/characters/claude/greet_afternoon.webp",
+      "sha256": "b4ceebd4d9944e23ab600b31e8fb22c8b152acf1c9cd8e6b8adf597e56ca36a5",
+      "bytes": 101376,
+      "role": "Original same-character identity and costume reference"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "sourceCredits": [
+    "CrossPet by lokicorvus and contributors",
+    "Claude community personification; ai-school-op and openpet-ai-girls references credited by CrossPet"
+  ],
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet desktop companion pose",
+  "generationPlan": {
+    "path": "out/social-generation-plan.json",
+    "sha256": "afdf1d17f2beb1e56aad7302ca1497682c0f4679f7ba2a0e2226bd8b73ee389c",
+    "batch": 1,
+    "state": "sip"
+  },
+  "alphaAnalysis": {
+    "width": 1183,
+    "height": 1329,
+    "framing": {
+      "x": 21,
+      "y": 1,
+      "width": 1142,
+      "height": 1291,
+      "canvasWidth": 1183,
+      "canvasHeight": 1329
+    },
+    "alpha": {
+      "clear": 622154,
+      "partial": 33116,
+      "nearOpaque": 915420,
+      "opaque": 1517
+    },
+    "alphaMinimum": 0,
+    "alphaMaximum": 255,
+    "visiblePixels": 933858,
+    "boundaryVisible": 0,
+    "boundaryNontransparent": 156,
+    "analysisOnly": true
+  },
+  "reviewNotes": [
+    "Generated PNG bytes and native alpha preserved without image postprocessing.",
+    "Alpha framing measured by nativeImage decode only; visual review remains required before runtime promotion.",
+    "Tight initial composition rejected before runtime integration; exact source retained for imagegen padding edit."
+  ],
+  "runtimeIntegrated": false
+}

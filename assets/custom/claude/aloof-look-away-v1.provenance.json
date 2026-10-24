@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "kind": "AI-assisted same-character social pose adaptation",
+  "character": "CrossPet Claude",
+  "output": {
+    "path": "assets/custom/claude/aloof-look-away-v1.png",
+    "sha256": "46b079e4aa1d3be160a14ce362e80a1799f6a0ef54147f79625ea2cbba7eeffa",
+    "bytes": 1428186,
+    "width": 1152,
+    "height": 1366,
+    "format": "PNG",
+    "alphaPreserved": true,
+    "framing": {
+      "x": 109,
+      "y": 124,
+      "width": 978,
+      "height": 1133,
+      "canvasWidth": 1152,
+      "canvasHeight": 1366
+    }
+  },
+  "generatedAt": "2026-10-24T12:38:29.362Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "aloof-look-away-v1.prompt.txt",
+  "modification": "Preserve the original generated aloof gesture and costume; uniformly reduce composition to add 6–8% clear alpha padding without cropping.",
+  "references": [
+    {
+      "path": "design/concepts/claude/social-aloof-look-away-v1-padding-source.png",
+      "sha256": "a6a35d1d94b372e71a8e69e9e96ef1a3f8782a453b9127665dbc00066b460e36",
+      "bytes": 1883518,
+      "role": "Approved same-character identity, palette and finish reference"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "sourceCredits": [
+    "CrossPet by lokicorvus and contributors",
+    "Claude community personification; ai-school-op and openpet-ai-girls references credited by CrossPet"
+  ],
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet desktop companion pose",
+  "generationPlan": {
+    "path": "out/social-generation-plan.json",
+    "sha256": "960a26770e2868dad0b0f1fe9f3848dff6dc06117f43d3e37a0330926fb77e5d",
+    "batch": 1,
+    "state": "aloof"
+  },
+  "alphaAnalysis": {
+    "width": 1152,
+    "height": 1366,
+    "framing": {
+      "x": 109,
+      "y": 124,
+      "width": 978,
+      "height": 1133,
+      "canvasWidth": 1152,
+      "canvasHeight": 1366
+    },
+    "alpha": {
+      "clear": 856344,
+      "partial": 29019,
+      "nearOpaque": 687570,
+      "opaque": 699
+    },
+    "alphaMinimum": 0,
+    "alphaMaximum": 255,
+    "visiblePixels": 702615,
+    "boundaryVisible": 0,
+    "boundaryNontransparent": 14,
+    "analysisOnly": true
+  },
+  "reviewNotes": [
+    "Generated PNG bytes and native alpha preserved without image postprocessing.",
+    "Alpha framing measured by nativeImage decode only; visual review remains required before runtime promotion.",
+    "Passed final full-size and desktop-size light/dark review with complete silhouette and clear margins."
+  ],
+  "runtimeIntegrated": true
+}

@@ -1,0 +1,752 @@
+{
+  "schemaVersion": 1,
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "license": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "manifestSha256": "46612babf4c5d7cc9179797ef42633aaf2c84811225cdff4565e15a438c2fdd6",
+  "fileCount": 123,
+  "totalBytes": 11672443,
+  "files": [
+    {
+      "source": "LICENSE",
+      "destination": "UPSTREAM_LICENSE.txt",
+      "bytes": 1309,
+      "sha256": "e479554800315d20bc9505e51ed1169289601d9867aea4df21147ee15f232cfc"
+    },
+    {
+      "source": "characters/LICENSE.md",
+      "destination": "characters/LICENSE.md",
+      "bytes": 2162,
+      "sha256": "45a526f6ea84394937392df30601bb0c2565150485b3a766288fc08a4a151578"
+    },
+    {
+      "source": "characters/claude/annoyed.webp",
+      "destination": "characters/claude/annoyed.webp",
+      "bytes": 102394,
+      "sha256": "d5dadd42f9e4293223c08484a5a7ce0504f962a0bbe5051525b125c2c1aaf60f"
+    },
+    {
+      "source": "characters/claude/asking.webp",
+      "destination": "characters/claude/asking.webp",
+      "bytes": 89446,
+      "sha256": "6c74302e9286ca323b9614baf46cf19824d2ea6e07259161b1f71575b9929815"
+    },
+    {
+      "source": "characters/claude/busy_left.webp",
+      "destination": "characters/claude/busy_left.webp",
+      "bytes": 120624,
+      "sha256": "1b4183e49bef253467c023c6d6bcfac78637c25b8f7c27f96fb7f7d84ba39ee0"
+    },
+    {
+      "source": "characters/claude/busy_right.webp",
+      "destination": "characters/claude/busy_right.webp",
+      "bytes": 115738,
+      "sha256": "948d6c230b4f693e656a7e26c4e2c2f0961dadecde6512bafa10812db45d155c"
+    },
+    {
+      "source": "characters/claude/bye.webp",
+      "destination": "characters/claude/bye.webp",
+      "bytes": 97560,
+      "sha256": "b484735b9444e413743c2dc6e7d09bfd271742340e665b8991076eb529a3bb95"
+    },
+    {
+      "source": "characters/claude/character.json",
+      "destination": "characters/claude/character.json",
+      "bytes": 5913,
+      "sha256": "92838b50a456b1e4780c8e78c2f863fe2d89b1b56867d46345895123ad1877a4"
+    },
+    {
+      "source": "characters/claude/clawd.webp",
+      "destination": "characters/claude/clawd.webp",
+      "bytes": 100354,
+      "sha256": "490baa9d8005605dd0fe6f39595a6ff784f3bf861003118891859cf6df074f41"
+    },
+    {
+      "source": "characters/claude/coaxed.webp",
+      "destination": "characters/claude/coaxed.webp",
+      "bytes": 104392,
+      "sha256": "546a80b41d2cf638bab71c698b4163c8ddc0788c03d7576aa4086c16e733020a"
+    },
+    {
+      "source": "characters/claude/compact.webp",
+      "destination": "characters/claude/compact.webp",
+      "bytes": 108322,
+      "sha256": "5688dd3afa0970231eeedf60397268561fe99dee761f743ea6a4c7a2fcdd68bc"
+    },
+    {
+      "source": "characters/claude/delegating.webp",
+      "destination": "characters/claude/delegating.webp",
+      "bytes": 110202,
+      "sha256": "b24dab84cca545eedf73e8ade363f369357dd928feaaebb4b658880290804d3a"
+    },
+    {
+      "source": "characters/claude/dizzy.webp",
+      "destination": "characters/claude/dizzy.webp",
+      "bytes": 108586,
+      "sha256": "6167a2599cc22f45c2b8994d2d407dde46520fefbe2e230badf69ef154ce2ae3"
+    },
+    {
+      "source": "characters/claude/edge_left_peek.webp",
+      "destination": "characters/claude/edge_left_peek.webp",
+      "bytes": 89866,
+      "sha256": "07bbe0721c3ba92b6290dfd78b9a47a650503e7fae3d5d7a9b6265b5dd86afa7"
+    },
+    {
+      "source": "characters/claude/edge_left.webp",
+      "destination": "characters/claude/edge_left.webp",
+      "bytes": 64560,
+      "sha256": "01c4e4361ed51f960cbf3ea7329a2f7729b2f02b895e21db7023c82a4e41b7e0"
+    },
+    {
+      "source": "characters/claude/edge_right_peek.webp",
+      "destination": "characters/claude/edge_right_peek.webp",
+      "bytes": 76356,
+      "sha256": "fe7248ec6dc8a39453dfe2b85321a2efcbfe025a955102650e6dfd93b6403295"
+    },
+    {
+      "source": "characters/claude/edge_right.webp",
+      "destination": "characters/claude/edge_right.webp",
+      "bytes": 64528,
+      "sha256": "b3aee8f24a2153c6acd89233885f9dc1f95df33cfd7028bef559a760f5891547"
+    },
+    {
+      "source": "characters/claude/fest_christmas.webp",
+      "destination": "characters/claude/fest_christmas.webp",
+      "bytes": 100768,
+      "sha256": "9c488d898b77dba0ee7cdd86fffac1b1c738d99906d667e26f0a83145abedf1c"
+    },
+    {
+      "source": "characters/claude/fest_dragonboat.webp",
+      "destination": "characters/claude/fest_dragonboat.webp",
+      "bytes": 103836,
+      "sha256": "b81a857303a26752e0fdecdf9d56f5f3393cd0680c5193b2101066b4fc43d9b4"
+    },
+    {
+      "source": "characters/claude/fest_halloween.webp",
+      "destination": "characters/claude/fest_halloween.webp",
+      "bytes": 105328,
+      "sha256": "f5be2454ad58c9466d62e40a9b669c0250b5f1bcd2dd90ed0c4e4ed7f715dae1"
+    },
+    {
+      "source": "characters/claude/fest_lantern.webp",
+      "destination": "characters/claude/fest_lantern.webp",
+      "bytes": 104006,
+      "sha256": "3b1542ea459619615a5714af1ea4ab58180ab29ef89599a5c8c6105b34adcc7b"
+    },
+    {
+      "source": "characters/claude/fest_midautumn.webp",
+      "destination": "characters/claude/fest_midautumn.webp",
+      "bytes": 106414,
+      "sha256": "02b92b3a3721b85185a5d8e875d8ef7c65cadbf58e411227abd92b604a16fce5"
+    },
+    {
+      "source": "characters/claude/fest_national.webp",
+      "destination": "characters/claude/fest_national.webp",
+      "bytes": 112770,
+      "sha256": "181a40de4ea5ea06aae09633acfcd9542e9f6c78ba8da110db75af30bafb3462"
+    },
+    {
+      "source": "characters/claude/fest_newyear.webp",
+      "destination": "characters/claude/fest_newyear.webp",
+      "bytes": 102832,
+      "sha256": "6c0f33dcce4e37d3ae1f6aacf79f32c3da9551646d1539930d885bc8e21d1ded"
+    },
+    {
+      "source": "characters/claude/fest_spring.webp",
+      "destination": "characters/claude/fest_spring.webp",
+      "bytes": 104802,
+      "sha256": "4b21fe2f51f7ac736e0c554b4a8a9c083e227f85b1102005d1106f3b549f69d9"
+    },
+    {
+      "source": "characters/claude/forgiven.webp",
+      "destination": "characters/claude/forgiven.webp",
+      "bytes": 102186,
+      "sha256": "de80639d0fc9b4d9342c04c865c42363c6a40805ba794d0d98a9ecf6358c7da1"
+    },
+    {
+      "source": "characters/claude/greet_afternoon.webp",
+      "destination": "characters/claude/greet_afternoon.webp",
+      "bytes": 101376,
+      "sha256": "b4ceebd4d9944e23ab600b31e8fb22c8b152acf1c9cd8e6b8adf597e56ca36a5"
+    },
+    {
+      "source": "characters/claude/greet_dawn.webp",
+      "destination": "characters/claude/greet_dawn.webp",
+      "bytes": 95636,
+      "sha256": "69f9cc9e544bd33c0aa5ccfd65a7e13ad0428ca15ef81cc355aa1401db336c68"
+    },
+    {
+      "source": "characters/claude/greet_evening.webp",
+      "destination": "characters/claude/greet_evening.webp",
+      "bytes": 106542,
+      "sha256": "798b0e2322a3e2ce8ea1c129a0e528fb25b77722354c9579bb77cb12275aac76"
+    },
+    {
+      "source": "characters/claude/greet_morning.webp",
+      "destination": "characters/claude/greet_morning.webp",
+      "bytes": 104658,
+      "sha256": "a265ead4447fbec7093a0ec8870c60a5418c3ab835f612d262a73dd2184193aa"
+    },
+    {
+      "source": "characters/claude/greet_night.webp",
+      "destination": "characters/claude/greet_night.webp",
+      "bytes": 105976,
+      "sha256": "749c3cb1c672e7eab39756c40fb3063f6198b85e5886d38572b5b05b57528877"
+    },
+    {
+      "source": "characters/claude/greet_noon.webp",
+      "destination": "characters/claude/greet_noon.webp",
+      "bytes": 101772,
+      "sha256": "f80fe73672bdd5a52932c5d9f4500a14698ff5ee1d57a6d9f77a50f60c876da9"
+    },
+    {
+      "source": "characters/claude/happy-2.webp",
+      "destination": "characters/claude/happy-2.webp",
+      "bytes": 103290,
+      "sha256": "5864d856f4e4ad4d3880be646413300d246dd129c1a07854c59286c5d230d4c4"
+    },
+    {
+      "source": "characters/claude/hum.webp",
+      "destination": "characters/claude/hum.webp",
+      "bytes": 99154,
+      "sha256": "6eeb999d6359fa7437aa703f1b18300f953f71cd637a753fba114ad8b03f0801"
+    },
+    {
+      "source": "characters/claude/idle-2.webp",
+      "destination": "characters/claude/idle-2.webp",
+      "bytes": 101338,
+      "sha256": "28796b7a8abe6cd71f0a050b769656a4fb655f06d1bce1726f124610ab1d9557"
+    },
+    {
+      "source": "characters/claude/idle-3.webp",
+      "destination": "characters/claude/idle-3.webp",
+      "bytes": 101062,
+      "sha256": "49376b3f902f23a4228d88fbe15ad7ba75dcbb52324a026f2018840b5c3822bb"
+    },
+    {
+      "source": "characters/claude/idle-blink.webp",
+      "destination": "characters/claude/idle-blink.webp",
+      "bytes": 95676,
+      "sha256": "726fc8f09433fb9331b5c7e19a7af93e07131d0bbb81ce58945e733171a482e8"
+    },
+    {
+      "source": "characters/claude/idle.webp",
+      "destination": "characters/claude/idle.webp",
+      "bytes": 96880,
+      "sha256": "cb4540df9325fd246de61c673e29027de0821ea70eeeafb3220a97546f440653"
+    },
+    {
+      "source": "characters/claude/listening.webp",
+      "destination": "characters/claude/listening.webp",
+      "bytes": 107058,
+      "sha256": "48e388fb2f8047f2a6bfec253d44d5f57651422af3a4969cb4b5a917c9b79b2d"
+    },
+    {
+      "source": "characters/claude/oops.webp",
+      "destination": "characters/claude/oops.webp",
+      "bytes": 103494,
+      "sha256": "da097e09d863a72c69dcd982df13984794121bed80ce5530d56676b9c728b5f0"
+    },
+    {
+      "source": "characters/claude/pat-2.webp",
+      "destination": "characters/claude/pat-2.webp",
+      "bytes": 99104,
+      "sha256": "50c8701328963fdec18b93ce27ce1d3623d2389a2ea7e8087b7969d3a0a3ec4f"
+    },
+    {
+      "source": "characters/claude/proud.webp",
+      "destination": "characters/claude/proud.webp",
+      "bytes": 94962,
+      "sha256": "adc8d1e823e4c6c92d0cc5513c34d4b90c9142b3a0ca6194d1e906a8eb54cc12"
+    },
+    {
+      "source": "characters/claude/puffed.webp",
+      "destination": "characters/claude/puffed.webp",
+      "bytes": 104798,
+      "sha256": "f5784cb25728309a7cb9d19fbaea1da2ccf1dca7f67afabd179ae9dbec271e10"
+    },
+    {
+      "source": "characters/claude/reading-2.webp",
+      "destination": "characters/claude/reading-2.webp",
+      "bytes": 102842,
+      "sha256": "47e587cd43032d4af10ff611b766b1c8ae7d7ac3fd333d55a6dcdaecd3c3a834"
+    },
+    {
+      "source": "characters/claude/redhot.webp",
+      "destination": "characters/claude/redhot.webp",
+      "bytes": 109904,
+      "sha256": "984d1e344e3e7386ad53725971d2d39ff26e5e49d0e47a721e2f6a97fc4bbb32"
+    },
+    {
+      "source": "characters/claude/running.webp",
+      "destination": "characters/claude/running.webp",
+      "bytes": 103714,
+      "sha256": "8cc07cfec11b89c12499feecbbb2225699533192e2f1c8fb8d884bb19cd15950"
+    },
+    {
+      "source": "characters/claude/searching.webp",
+      "destination": "characters/claude/searching.webp",
+      "bytes": 104610,
+      "sha256": "fc970e2b08ba00282b7a6f641c19dedf31ecbfbfd0c899a439ca010f6cd656e6"
+    },
+    {
+      "source": "characters/claude/sleeping-2.webp",
+      "destination": "characters/claude/sleeping-2.webp",
+      "bytes": 99768,
+      "sha256": "a85e7147fce85737588775e27c751223c53f02a5a5a85d36c49ef4fc8ab45564"
+    },
+    {
+      "source": "characters/claude/sorry.webp",
+      "destination": "characters/claude/sorry.webp",
+      "bytes": 89086,
+      "sha256": "4a059d79a2b861e3a4e746472015a54f1c3b39947810236e0b0dd0120f305dc3"
+    },
+    {
+      "source": "characters/claude/stretch.webp",
+      "destination": "characters/claude/stretch.webp",
+      "bytes": 98920,
+      "sha256": "3e40608b7a2b6e880d282fedde6070b3bd25d8d5d8330c8aa4483faa7c9750de"
+    },
+    {
+      "source": "characters/claude/sulk.webp",
+      "destination": "characters/claude/sulk.webp",
+      "bytes": 100828,
+      "sha256": "6eabecbbfd2b05efd6fcfc4d855bbfe0e8c838202114d5f40c8b9864b652e2a6"
+    },
+    {
+      "source": "characters/claude/surprised.webp",
+      "destination": "characters/claude/surprised.webp",
+      "bytes": 98456,
+      "sha256": "aad0d612d9a839a97d578922b78cfe2e7c75d30b260b56e3b3c95aa1159f7145"
+    },
+    {
+      "source": "characters/claude/swamped_left.webp",
+      "destination": "characters/claude/swamped_left.webp",
+      "bytes": 100870,
+      "sha256": "cb9cb8e744e426a2a23b0b192e916689b5add09449b04628e93f546fb9abe7d3"
+    },
+    {
+      "source": "characters/claude/swamped_right.webp",
+      "destination": "characters/claude/swamped_right.webp",
+      "bytes": 104326,
+      "sha256": "37584952e2f3d9cfffb9c6e59186bd31ccf0bf156adea03707986b73e9fbc3ef"
+    },
+    {
+      "source": "characters/claude/thinking-2.webp",
+      "destination": "characters/claude/thinking-2.webp",
+      "bytes": 101662,
+      "sha256": "1693db33e8767e39a331f300461360547bb6ba83fa0dd6cea9b0c6b4513b75ea"
+    },
+    {
+      "source": "characters/claude/thinking.webp",
+      "destination": "characters/claude/thinking.webp",
+      "bytes": 97840,
+      "sha256": "48cc8fb2a0b151beef025ea0a6ba530784a5b894149659578843efc1c68ba736"
+    },
+    {
+      "source": "characters/claude/tired.webp",
+      "destination": "characters/claude/tired.webp",
+      "bytes": 99054,
+      "sha256": "2cdbcdd200ccc347a69bcf39a60441c967911bbb37f12b9c5d61c8f7796626ab"
+    },
+    {
+      "source": "characters/claude/update.webp",
+      "destination": "characters/claude/update.webp",
+      "bytes": 92050,
+      "sha256": "de46b431b125fe4a447f81ada12ca6815749ad5c1fe9eea00a6f65d5226e227e"
+    },
+    {
+      "source": "characters/claude/writing.webp",
+      "destination": "characters/claude/writing.webp",
+      "bytes": 102400,
+      "sha256": "23f2e3ab2df890f02178b24e5dd184006c662b0b6c261061b742fade24b33093"
+    },
+    {
+      "source": "characters/claude/yawn.webp",
+      "destination": "characters/claude/yawn.webp",
+      "bytes": 100518,
+      "sha256": "87674418647662f780dcdc1a4cfdadf370926da7bc3eaa36ae60bd27de76f126"
+    },
+    {
+      "source": "characters/gpt/annoyed.webp",
+      "destination": "characters/gpt/annoyed.webp",
+      "bytes": 101630,
+      "sha256": "ce9716e1a3abfdf3f0b507d903c8d64b1e3d7615b8925f56a8c912fb27763bd7"
+    },
+    {
+      "source": "characters/gpt/asking.webp",
+      "destination": "characters/gpt/asking.webp",
+      "bytes": 96664,
+      "sha256": "8bf57a6978723971a8dbcdf3409664658d0c1f2631821ce87791f21878f20f8d"
+    },
+    {
+      "source": "characters/gpt/busy_left.webp",
+      "destination": "characters/gpt/busy_left.webp",
+      "bytes": 105588,
+      "sha256": "d3d2e0b36efb228bd5d16693a3b39ebaa685a8a5f01e2e74f8c66c8f9dc968cf"
+    },
+    {
+      "source": "characters/gpt/busy_right.webp",
+      "destination": "characters/gpt/busy_right.webp",
+      "bytes": 105134,
+      "sha256": "099025866691d41e5fab7879787b015161ff3c8190b693a2a05da3774d852f8b"
+    },
+    {
+      "source": "characters/gpt/bye.webp",
+      "destination": "characters/gpt/bye.webp",
+      "bytes": 82776,
+      "sha256": "192527c5ab4ea583a14cd0c9913a913a9fc406e8ee9a1c87446e70d9b2fde23e"
+    },
+    {
+      "source": "characters/gpt/character.json",
+      "destination": "characters/gpt/character.json",
+      "bytes": 5777,
+      "sha256": "3af568cd019130eeb577f4bb28442f14988d087a84d6256fc4b2783f78ec49a7"
+    },
+    {
+      "source": "characters/gpt/coaxed-2.webp",
+      "destination": "characters/gpt/coaxed-2.webp",
+      "bytes": 97580,
+      "sha256": "e249cd897272a8f13dd99aaa10e6761e909c7c2e52c4040242df54fa90ab7cb1"
+    },
+    {
+      "source": "characters/gpt/coaxed.webp",
+      "destination": "characters/gpt/coaxed.webp",
+      "bytes": 95804,
+      "sha256": "488a99a07bbc413f34c64105f3e85823cb6aa742040720f0f57d7ef5f1acde6f"
+    },
+    {
+      "source": "characters/gpt/compact.webp",
+      "destination": "characters/gpt/compact.webp",
+      "bytes": 99400,
+      "sha256": "ca082df65af14255a33f8fc8bbe5d169675c9caf704a0795d9add654699ac21b"
+    },
+    {
+      "source": "characters/gpt/delegating.webp",
+      "destination": "characters/gpt/delegating.webp",
+      "bytes": 120842,
+      "sha256": "440cfbee0e16c51e7c8689810871c8207ae2bd24fa7073d57dd6e092c817af86"
+    },
+    {
+      "source": "characters/gpt/dizzy.webp",
+      "destination": "characters/gpt/dizzy.webp",
+      "bytes": 95740,
+      "sha256": "2fdda2ddcede95e299d182bf245d6d0c3c4b21d20ffa580ee9229c3f4a87e8fb"
+    },
+    {
+      "source": "characters/gpt/drawing.webp",
+      "destination": "characters/gpt/drawing.webp",
+      "bytes": 92236,
+      "sha256": "64ef47c78c5039e08b8d7cd0bdfdb96118a18a65a600f209a1bba0bce822c74e"
+    },
+    {
+      "source": "characters/gpt/edge_left_peek.webp",
+      "destination": "characters/gpt/edge_left_peek.webp",
+      "bytes": 82112,
+      "sha256": "b5f74a98aad1b7c91dc6467720177c1a6349b11abbc8fdb19ac587ba89c9fbf4"
+    },
+    {
+      "source": "characters/gpt/edge_left.webp",
+      "destination": "characters/gpt/edge_left.webp",
+      "bytes": 58398,
+      "sha256": "3fde554f9d7ccc9b137751c07bd63d1e08e62964c7db53d690ffac77f2326906"
+    },
+    {
+      "source": "characters/gpt/edge_right_peek.webp",
+      "destination": "characters/gpt/edge_right_peek.webp",
+      "bytes": 75620,
+      "sha256": "35ade6f8e3855d5ea144d02c5da54c88a0218f55984334825179f388d5127577"
+    },
+    {
+      "source": "characters/gpt/edge_right.webp",
+      "destination": "characters/gpt/edge_right.webp",
+      "bytes": 54806,
+      "sha256": "69783289915b80490f9970702009c08bf7ce756d1eb18f7b4a71efad2d7a68c4"
+    },
+    {
+      "source": "characters/gpt/fest_christmas.webp",
+      "destination": "characters/gpt/fest_christmas.webp",
+      "bytes": 100844,
+      "sha256": "4bde3dfea85eeb8f933554c667e54a86831cce539098fd2c926cc56997b354c8"
+    },
+    {
+      "source": "characters/gpt/fest_dragonboat.webp",
+      "destination": "characters/gpt/fest_dragonboat.webp",
+      "bytes": 100268,
+      "sha256": "fb1dab48a8f826e7ed3349beea9957a70780630b52b6ccbc48b57ed3b7c508a9"
+    },
+    {
+      "source": "characters/gpt/fest_halloween.webp",
+      "destination": "characters/gpt/fest_halloween.webp",
+      "bytes": 96482,
+      "sha256": "5c2ac267353b8d4bb964d5783099e905345616cbc5766525d5eed04bb38b7f37"
+    },
+    {
+      "source": "characters/gpt/fest_lantern.webp",
+      "destination": "characters/gpt/fest_lantern.webp",
+      "bytes": 92370,
+      "sha256": "e8177e940bb1b2c75047d833f7607a1246c01e3d1b24780f294f79bb911a5252"
+    },
+    {
+      "source": "characters/gpt/fest_midautumn.webp",
+      "destination": "characters/gpt/fest_midautumn.webp",
+      "bytes": 95034,
+      "sha256": "e69962e51995f3dcbf8fae993860ed89af29ad345ce85bf4be1c6ecafe7ad027"
+    },
+    {
+      "source": "characters/gpt/fest_national.webp",
+      "destination": "characters/gpt/fest_national.webp",
+      "bytes": 101720,
+      "sha256": "0a462a8d6c5bce482c78e4dfa6817395defaa38c9d5382754905f7e446bec72a"
+    },
+    {
+      "source": "characters/gpt/fest_newyear.webp",
+      "destination": "characters/gpt/fest_newyear.webp",
+      "bytes": 95548,
+      "sha256": "5f5459ec7c6bfee762ee957cdfec5c07c092d3e385405043b39c4ea21c3108da"
+    },
+    {
+      "source": "characters/gpt/fest_spring.webp",
+      "destination": "characters/gpt/fest_spring.webp",
+      "bytes": 110178,
+      "sha256": "965e983ba473b79468266e12b6abd4445f6f9d7d02a3a4a01e305d6e8455bbde"
+    },
+    {
+      "source": "characters/gpt/forgiven.webp",
+      "destination": "characters/gpt/forgiven.webp",
+      "bytes": 97674,
+      "sha256": "6386ea2f8984a613139fc1c25ade0aa11042e1eced464ce057f0edcc608fe875"
+    },
+    {
+      "source": "characters/gpt/greet_afternoon.webp",
+      "destination": "characters/gpt/greet_afternoon.webp",
+      "bytes": 92716,
+      "sha256": "5f5f30e4de8eaa98b7313806f429e813b8b458062e6e30887f73976f46b92a4b"
+    },
+    {
+      "source": "characters/gpt/greet_dawn.webp",
+      "destination": "characters/gpt/greet_dawn.webp",
+      "bytes": 92648,
+      "sha256": "7dbb09b3f3e9b95cb78c1e4c43735fc7cfb6c2b4a3aeff4c10a0b85ba44cef59"
+    },
+    {
+      "source": "characters/gpt/greet_evening.webp",
+      "destination": "characters/gpt/greet_evening.webp",
+      "bytes": 92992,
+      "sha256": "b774c668b277ae5ffca46ee72be1c0d3ff8b96ba668c916c262b874429ff5861"
+    },
+    {
+      "source": "characters/gpt/greet_morning.webp",
+      "destination": "characters/gpt/greet_morning.webp",
+      "bytes": 95994,
+      "sha256": "b8ee329c5bc66b93f86fc0c3727acf53490411e75e3fdfc7d9815b269ee8651d"
+    },
+    {
+      "source": "characters/gpt/greet_night.webp",
+      "destination": "characters/gpt/greet_night.webp",
+      "bytes": 88394,
+      "sha256": "b784f889bc2e888f1b036c1ae2613e33cd5d8f23b1b75ade17766c36d5dba1b3"
+    },
+    {
+      "source": "characters/gpt/greet_noon.webp",
+      "destination": "characters/gpt/greet_noon.webp",
+      "bytes": 100336,
+      "sha256": "fe1b35c4d8ae4e0dc36b312c2d690e871415f55dbb0db14c02b5182f6eb73132"
+    },
+    {
+      "source": "characters/gpt/happy.webp",
+      "destination": "characters/gpt/happy.webp",
+      "bytes": 99724,
+      "sha256": "6f7b41d53faea9c9de7ae28370e35aff30118754c3787779fd5404d7ec2ca3f5"
+    },
+    {
+      "source": "characters/gpt/hum.webp",
+      "destination": "characters/gpt/hum.webp",
+      "bytes": 92724,
+      "sha256": "24deb6cb25c2bc122071fca53051a24b9e122738fdff16094af2e3c953b24302"
+    },
+    {
+      "source": "characters/gpt/idle-2.webp",
+      "destination": "characters/gpt/idle-2.webp",
+      "bytes": 94542,
+      "sha256": "170296ef0e3b037e86d26fe3a7b6ba28fc2cbd41e2ee48a18b7115245f1bf5d3"
+    },
+    {
+      "source": "characters/gpt/idle-3.webp",
+      "destination": "characters/gpt/idle-3.webp",
+      "bytes": 95864,
+      "sha256": "12be06f88f189913fa4bfc594c7948be608c4277ac71c6fe7be7bf9c87c41426"
+    },
+    {
+      "source": "characters/gpt/idle-blink.webp",
+      "destination": "characters/gpt/idle-blink.webp",
+      "bytes": 87144,
+      "sha256": "06b8352675194f13bf45a056c00c5076a56dfda9308c746635f6e8a7f91d472d"
+    },
+    {
+      "source": "characters/gpt/idle.webp",
+      "destination": "characters/gpt/idle.webp",
+      "bytes": 87800,
+      "sha256": "329ac22977c06b481abfea8d9a857b4d758a606e88b5d98651ad867aec692587"
+    },
+    {
+      "source": "characters/gpt/listening.webp",
+      "destination": "characters/gpt/listening.webp",
+      "bytes": 97300,
+      "sha256": "cd87b116c4d6ce1b6904f8311ba6c00c9b4567bf0cd642b7c2929ee467b9707e"
+    },
+    {
+      "source": "characters/gpt/oops.webp",
+      "destination": "characters/gpt/oops.webp",
+      "bytes": 96200,
+      "sha256": "be8cfe39ce94732ae77e0ae4ff9da9a1277ed21138d7209f8cb01454af1a0301"
+    },
+    {
+      "source": "characters/gpt/pat.webp",
+      "destination": "characters/gpt/pat.webp",
+      "bytes": 93814,
+      "sha256": "2a4a27a143d82b5cc23dd420be2c2b928e7dfc2f7e8bf32854a53a770381bcf1"
+    },
+    {
+      "source": "characters/gpt/proud.webp",
+      "destination": "characters/gpt/proud.webp",
+      "bytes": 110210,
+      "sha256": "a3b9e52b42ecbb6d36342a2ddfc5be58c50424396b9341cc3d2fc7eb09abd746"
+    },
+    {
+      "source": "characters/gpt/puffed.webp",
+      "destination": "characters/gpt/puffed.webp",
+      "bytes": 98286,
+      "sha256": "8f70ddc1a0302f8a06ec9605ca964ec883e3e0b09d9359f99c9dc81ef4cd921a"
+    },
+    {
+      "source": "characters/gpt/reading.webp",
+      "destination": "characters/gpt/reading.webp",
+      "bytes": 91320,
+      "sha256": "ea5546de7fec13232ce995646a9b73ad59b016384a9233e5a42b80cae05138ea"
+    },
+    {
+      "source": "characters/gpt/redhot.webp",
+      "destination": "characters/gpt/redhot.webp",
+      "bytes": 106872,
+      "sha256": "78f53b629fa2bbcbe160018992e7bb20a1bad2b4ee488d169f980b1342a2d9c5"
+    },
+    {
+      "source": "characters/gpt/reset_bell.webp",
+      "destination": "characters/gpt/reset_bell.webp",
+      "bytes": 104028,
+      "sha256": "55da64d13c2a57b3421b33ce6374f0643ece8f665b0961fffd43a8b9dfeba478"
+    },
+    {
+      "source": "characters/gpt/reset_check.webp",
+      "destination": "characters/gpt/reset_check.webp",
+      "bytes": 97486,
+      "sha256": "a7c02faa0d3a1e18a26ef62cf4a301aa600ae4eb6a43ce394b697b7c499c854f"
+    },
+    {
+      "source": "characters/gpt/reset_hope.webp",
+      "destination": "characters/gpt/reset_hope.webp",
+      "bytes": 113260,
+      "sha256": "6332c1ca7eb256695d1d648139bd7e52783d02e633c6ccc28a81ef87237f23a8"
+    },
+    {
+      "source": "characters/gpt/reset_maybe.webp",
+      "destination": "characters/gpt/reset_maybe.webp",
+      "bytes": 100256,
+      "sha256": "e7b44643fd3a3bf3894e0dbd2543e8f1c0e692cbb2002afe5efcfe54488e731b"
+    },
+    {
+      "source": "characters/gpt/reset_nope.webp",
+      "destination": "characters/gpt/reset_nope.webp",
+      "bytes": 93622,
+      "sha256": "ae6cdea1bfc63755b46ffd0ae94965156d26e813abfdf1f4deef24ee2f1690d6"
+    },
+    {
+      "source": "characters/gpt/reset.webp",
+      "destination": "characters/gpt/reset.webp",
+      "bytes": 103012,
+      "sha256": "241b768385757fb355766b38ec6427f0cb0db7e5beb5d63c9e8c468772e51af6"
+    },
+    {
+      "source": "characters/gpt/running.webp",
+      "destination": "characters/gpt/running.webp",
+      "bytes": 100322,
+      "sha256": "d4593768aae4b178acf39eaddc92b7a65409c94abc8998ce2578c78e1fc6535c"
+    },
+    {
+      "source": "characters/gpt/searching.webp",
+      "destination": "characters/gpt/searching.webp",
+      "bytes": 93106,
+      "sha256": "a376ee9596cb8a283fe1277ed86eea36e9a3c6bd968a925fc4fe4e7dfc09d495"
+    },
+    {
+      "source": "characters/gpt/sleeping.webp",
+      "destination": "characters/gpt/sleeping.webp",
+      "bytes": 87986,
+      "sha256": "05fc3b383695433882770d0b5f45695b03899627e14345a5ec0dbf0061f93bec"
+    },
+    {
+      "source": "characters/gpt/stretch.webp",
+      "destination": "characters/gpt/stretch.webp",
+      "bytes": 97034,
+      "sha256": "da3229abb8a11684e4b1238f9aea56acbd3024204d919587d7cc81a3e68bd724"
+    },
+    {
+      "source": "characters/gpt/sulk.webp",
+      "destination": "characters/gpt/sulk.webp",
+      "bytes": 87522,
+      "sha256": "35478c161bffc1706a4abd81b67b60750819fc6ab9d20d49f833ff9de12fedee"
+    },
+    {
+      "source": "characters/gpt/surprised.webp",
+      "destination": "characters/gpt/surprised.webp",
+      "bytes": 95104,
+      "sha256": "cb9f17096739dbeb8ae7dffbcd32bd80753ab248d86ce82dda3185f98a4402af"
+    },
+    {
+      "source": "characters/gpt/swamped_left.webp",
+      "destination": "characters/gpt/swamped_left.webp",
+      "bytes": 110378,
+      "sha256": "5e1b06b7893d5d01f9bc84880a965f82acc114d19c893776ba2ba20712b4a3ed"
+    },
+    {
+      "source": "characters/gpt/swamped_right.webp",
+      "destination": "characters/gpt/swamped_right.webp",
+      "bytes": 106232,
+      "sha256": "08c47fdad57300d98e9946b5cb2b16b46cc1e8bf7ee4926bfb56c77124e08eb1"
+    },
+    {
+      "source": "characters/gpt/thinking.webp",
+      "destination": "characters/gpt/thinking.webp",
+      "bytes": 94268,
+      "sha256": "01f866e66e360f01b31bddd2d5ee762796348534417a9a08c5a20ddb0978d795"
+    },
+    {
+      "source": "characters/gpt/tired.webp",
+      "destination": "characters/gpt/tired.webp",
+      "bytes": 93216,
+      "sha256": "e63d269de0050ce626b9f30de7cfd9cd1cc0f9caa9da640484364f06567eea2f"
+    },
+    {
+      "source": "characters/gpt/update.webp",
+      "destination": "characters/gpt/update.webp",
+      "bytes": 96334,
+      "sha256": "c64452b225ccad18d7868e66422ef4054ec64dad43002c67a7763a5b74da77c2"
+    },
+    {
+      "source": "characters/gpt/writing.webp",
+      "destination": "characters/gpt/writing.webp",
+      "bytes": 95170,
+      "sha256": "38a56572d8b3ecc7a518981e57f3bc315815274c358e1704079fa50a4007b799"
+    },
+    {
+      "source": "characters/gpt/yawn.webp",
+      "destination": "characters/gpt/yawn.webp",
+      "bytes": 94124,
+      "sha256": "e77e813fa8b6b7326debc72a26107517d9cd9f7a05a01d8f8c2946dfb6c8f5ca"
+    }
+  ]
+}

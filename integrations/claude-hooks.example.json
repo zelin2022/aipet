@@ -1,0 +1,244 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Program Files/nodejs/node.exe",
+            "timeout": 3,
+            "args": [
+              "G:/workspace/aipet/integrations/activity.mjs",
+              "--provider",
+              "claude",
+              "--state",
+              "idle",
+              "--hook"
+            ],
+            "onFailure": "continue"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Program Files/nodejs/node.exe",
+            "timeout": 3,
+            "args": [
+              "G:/workspace/aipet/integrations/activity.mjs",
+              "--provider",
+              "claude",
+              "--state",
+              "thinking",
+              "--hook"
+            ],
+            "onFailure": "continue"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "^(Read|Glob|Grep|LS|WebFetch|WebSearch)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Program Files/nodejs/node.exe",
+            "timeout": 3,
+            "args": [
+              "G:/workspace/aipet/integrations/activity.mjs",
+              "--provider",
+              "claude",
+              "--state",
+              "reading",
+              "--hook"
+            ],
+            "onFailure": "continue"
+          }
+        ]
+      },
+      {
+        "matcher": "^(Write|Edit|MultiEdit|NotebookEdit)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Program Files/nodejs/node.exe",
+            "timeout": 3,
+            "args": [
+              "G:/workspace/aipet/integrations/activity.mjs",
+              "--provider",
+              "claude",
+              "--state",
+              "coding",
+              "--hook"
+            ],
+            "onFailure": "continue"
+          }
+        ]
+      },
+      {
+        "matcher": "^(Bash|PowerShell|powershell|Task|Agent|Skill|ToolSearch|mcp__.*)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Program Files/nodejs/node.exe",
+            "timeout": 3,
+            "args": [
+              "G:/workspace/aipet/integrations/activity.mjs",
+              "--provider",
+              "claude",
+              "--state",
+              "tool",
+              "--hook"
+            ],
+            "onFailure": "continue"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Program Files/nodejs/node.exe",
+            "timeout": 3,
+            "args": [
+              "G:/workspace/aipet/integrations/activity.mjs",
+              "--provider",
+              "claude",
+              "--state",
+              "thinking",
+              "--hook"
+            ],
+            "onFailure": "continue"
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Program Files/nodejs/node.exe",
+            "timeout": 3,
+            "args": [
+              "G:/workspace/aipet/integrations/activity.mjs",
+              "--provider",
+              "claude",
+              "--state",
+              "error",
+              "--hook"
+            ],
+            "onFailure": "continue"
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Program Files/nodejs/node.exe",
+            "timeout": 3,
+            "args": [
+              "G:/workspace/aipet/integrations/activity.mjs",
+              "--provider",
+              "claude",
+              "--state",
+              "error",
+              "--hook"
+            ],
+            "onFailure": "continue"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Program Files/nodejs/node.exe",
+            "timeout": 3,
+            "args": [
+              "G:/workspace/aipet/integrations/activity.mjs",
+              "--provider",
+              "claude",
+              "--state",
+              "waiting",
+              "--hook"
+            ],
+            "onFailure": "continue"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "permission_prompt|idle_prompt|elicitation_dialog|elicitation_url_dialog|agent_needs_input|quota_auto_resume_stale",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Program Files/nodejs/node.exe",
+            "timeout": 3,
+            "args": [
+              "G:/workspace/aipet/integrations/activity.mjs",
+              "--provider",
+              "claude",
+              "--state",
+              "waiting",
+              "--hook"
+            ],
+            "onFailure": "continue"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Program Files/nodejs/node.exe",
+            "timeout": 3,
+            "args": [
+              "G:/workspace/aipet/integrations/activity.mjs",
+              "--provider",
+              "claude",
+              "--state",
+              "success",
+              "--hook"
+            ],
+            "onFailure": "continue"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Program Files/nodejs/node.exe",
+            "timeout": 3,
+            "args": [
+              "G:/workspace/aipet/integrations/activity.mjs",
+              "--provider",
+              "claude",
+              "--state",
+              "offline",
+              "--hook"
+            ],
+            "onFailure": "continue"
+          }
+        ]
+      }
+    ]
+  }
+}

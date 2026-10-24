@@ -1,0 +1,28 @@
+.art-stage { position: relative; isolation: isolate; }
+.character-art { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center bottom; transform-origin: 50% 95%; animation: breathe 4.8s ease-in-out infinite; filter: drop-shadow(0 14px 15px #00000020); user-select: none; -webkit-user-drag: none; }
+.art-stage[data-state="thinking"] .character-art { animation: ponder 3s ease-in-out infinite; }
+.art-stage[data-state="coding"] .character-art, .art-stage[data-state="tool"] .character-art { animation: working 2.5s ease-in-out infinite; }
+.art-stage[data-state="success"] .character-art, .art-stage[data-state="pat"] .character-art { animation: delight 700ms ease-in-out 2; }
+.art-stage[data-state="error"] .character-art { animation: shake 500ms ease-in-out 1; }
+.art-stage[data-state="sleeping"] .character-art { animation: breathe 6s ease-in-out infinite; }
+.effects { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+.mini-terminal { position:absolute; right: -5%; bottom:14%; width:112px; padding:10px; color:#b3ddcd; border:1px solid #657773; border-radius:10px; background:#1c2c31ef; box-shadow:0 8px 20px #0003; transform:rotate(5deg); font:10px Consolas,monospace; animation:float 4s ease-in-out infinite; }
+.terminal-dots { display:flex; gap:3px; margin-bottom:9px; }.terminal-dots i { width:4px;height:4px;border-radius:50%;background:#f3bda2; }.terminal-dots i:nth-child(2){background:#e6d19c}.terminal-dots i:nth-child(3){background:#9bceb4}
+.mini-terminal b { animation:blink 1s steps(1) infinite; }.code-line { height:3px;width:70%;background:#95b0ca66;margin-top:7px;border-radius:4px; animation:codefill 2s ease infinite; }.code-line.short{width:45%;animation-delay:.5s}
+.thinking-dots { display:flex; gap:7px; position:absolute; right:0;top:11%;padding:13px 16px;background:#f5f0ffe8;border:1px solid #d5c2ed;border-radius:20px 20px 20px 4px;box-shadow:0 6px 16px #0001; }.thinking-dots i{width:6px;height:6px;background:#9a83c4;border-radius:50%;animation:dot 1.4s ease-in-out infinite}.thinking-dots i:nth-child(2){animation-delay:.2s}.thinking-dots i:nth-child(3){animation-delay:.4s}
+.mini-book { position:absolute; left:0; bottom:24%;width:76px;height:87px;transform:rotate(-10deg);border-radius:5px 12px 12px 5px;background:#fffbef;border:1px solid #d0b59b;box-shadow:4px 6px 0 #d0b59b44;padding:15px 12px;animation:float 4s ease infinite; }.mini-book:before{content:'';position:absolute;top:0;bottom:0;left:7px;border-left:1px solid #d0b59b66}.mini-book span{display:block;height:3px;background:#c6b6a4;margin:7px 0;border-radius:2px}.mini-book span:last-child{width:60%}
+.sparkle { position:absolute;color:#dcc18a;text-shadow:0 0 15px #ffe1a766;font-size:30px;animation:sparkle 1.8s ease-in-out infinite; }.s1{left:3%;top:23%}.s2{right:2%;top:35%;font-size:25px;animation-delay:.6s}.s3{right:18%;top:3%;font-size:18px;animation-delay:1s}
+.sleep-z { position:absolute;top:10%;right:14%;color:#9c9bc1;font:600 24px Georgia,serif;opacity:0;animation:sleep 3.3s ease-in-out infinite; }.z2{animation-delay:1.1s}.z3{animation-delay:2.2s}
+.waiting-bubble,.error-bubble{position:absolute;right:0;top:8%;width:48px;height:44px;display:grid;place-items:center;border:1px solid #c4b8d9;border-radius:15px 15px 15px 3px;background:#f4effc;color:#9171b6;font-size:24px;letter-spacing:2px;animation:float 3s ease-in-out infinite}.error-bubble{background:#ffefea;color:#c07568;border-color:#d7aaa0;font-weight:700}
+@keyframes breathe{0%,100%{transform:translateY(0) scaleY(1)}50%{transform:translateY(-3px) scaleY(1.008)}}
+@keyframes ponder{0%,100%{transform:rotate(-1deg) translateY(0)}50%{transform:rotate(1deg) translateY(-3px)}}
+@keyframes working{0%,100%{transform:rotate(-.6deg)}50%{transform:rotate(.6deg) translateY(-2px)}}
+@keyframes delight{0%,100%{transform:translateY(0) rotate(0)}30%{transform:translateY(-10px) rotate(-2deg)}70%{transform:translateY(-3px) rotate(2deg)}}
+@keyframes shake{20%,60%{transform:translateX(-4px)}40%,80%{transform:translateX(4px)}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(5deg)}50%{transform:translateY(-6px) rotate(2deg)}}
+@keyframes blink{50%{opacity:0}}@keyframes codefill{50%{opacity:.5;transform:scaleX(.8);transform-origin:left}}
+@keyframes dot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+@keyframes sparkle{0%,100%{opacity:.4;transform:scale(.8) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(12deg)}}
+@keyframes sleep{0%{opacity:0;transform:translate(0,0) scale(.5)}30%{opacity:1}100%{opacity:0;transform:translate(22px,-40px) scale(1.2)}}
+.reduced-motion *, .reduced-motion *::before, .reduced-motion *::after { animation:none !important; transition:none !important; }
+@media(prefers-reduced-motion:reduce){.character-art,.effects *{animation:none!important}.sleep-z{opacity:1}}

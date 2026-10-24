@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "kind": "AI-assisted pose adaptation",
+  "character": "CrossPet Claude",
+  "output": {
+    "path": "assets/custom/claude/pat-content-v1.png",
+    "sha256": "f4781ca996f80a8357c6bc1f225e3a232664b93a8f853e48f853a6b1fd1cf352",
+    "bytes": 2069053,
+    "width": 1184,
+    "height": 1328,
+    "format": "PNG",
+    "alphaPreserved": true
+  },
+  "generatedAt": "2026-10-24T10:03:43.611Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "pat-content-v1.prompt.txt",
+  "modification": "Primary request: a distinct contented after-petting reaction. Stand upright with eyes closed into happy relaxed arcs, a small peaceful smile and soft blush; nuzzle one cheek gently toward the closed book hugged snugly high against her chest with both arms. Her shoulders relax, head tilts gently toward viewer-right, feet close together. This is cozy satisfied affection after a head pat, not laughter, yawning, sleeping, or covering her whole face with the book. No other person or human hand.",
+  "references": [
+    {
+      "path": "assets/crosspet/characters/claude/idle.webp",
+      "sha256": "cb4540df9325fd246de61c673e29027de0821ea70eeeafb3220a97546f440653",
+      "bytes": 96880,
+      "role": "Original identity/costume/style reference"
+    },
+    {
+      "path": "assets/crosspet/characters/claude/thinking.webp",
+      "sha256": "48cc8fb2a0b151beef025ea0a6ba530784a5b894149659578843efc1c68ba736",
+      "bytes": 97840,
+      "role": "Original identity/costume/style reference"
+    },
+    {
+      "path": "assets/crosspet/characters/claude/pat-2.webp",
+      "sha256": "50c8701328963fdec18b93ce27ce1d3623d2389a2ea7e8087b7969d3a0a3ec4f",
+      "bytes": 99104,
+      "role": "Original identity/costume/style reference"
+    },
+    {
+      "path": "assets/custom/claude/wave-v1.png",
+      "sha256": "a3f5040aca3dae540e8d0c95056b5d12e9c2a712580840cb1f92ca644e4087d3",
+      "bytes": 1900276,
+      "role": "Approved finish/quality reference"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet desktop companion pose",
+  "reviewNotes": [
+    "Generator PNG bytes and native alpha preserved without image postprocessing.",
+    "Visually reviewed for identity, pose, full-body framing and desktop readability."
+  ],
+  "runtimeIntegrated": true
+}

@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "designMaster": "design/concepts/gpt/idle-redesign-v4.png",
+  "targetCounts": {
+    "idle": 3,
+    "thinking": 4,
+    "reading": 3,
+    "coding": 3,
+    "tool": 3,
+    "success": 1,
+    "error": 1,
+    "waiting": 2,
+    "sleeping": 1,
+    "pat": 4,
+    "poke": 1,
+    "hum": 1,
+    "stretch": 1,
+    "yawn": 1,
+    "greet": 4,
+    "coaxed": 2,
+    "puffed": 1,
+    "hairplay": 1,
+    "idle-blink": 1
+  },
+  "totalImages": 38,
+  "reusedApprovedIdle": 1,
+  "newImages": 37,
+  "batches": [
+    {
+      "batch": 1,
+      "poses": [
+        {
+          "name": "thinking-v1",
+          "state": "thinking"
+        },
+        {
+          "name": "reading-v1",
+          "state": "reading"
+        },
+        {
+          "name": "writing-v1",
+          "state": "coding"
+        },
+        {
+          "name": "running-v1",
+          "state": "tool"
+        },
+        {
+          "name": "happy-v1",
+          "state": "success"
+        },
+        {
+          "name": "oops-v1",
+          "state": "error"
+        }
+      ],
+      "status": "visual-qa-passed",
+      "qa": {
+        "gallery": "out/smoke/gpt-batch-01.png",
+        "report": "out/smoke/gpt-batch-01.qa.json",
+        "reviewedAt": "2026-10-24T11:41:29.169Z",
+        "result": "Consistent pearl hair, amethyst horns, violet dress and white interwoven emblem; all six poses remain readable on light and dark at desktop size; transparent alpha, full silhouette and zero visible boundary contacts confirmed."
+      }
+    },
+    {
+      "batch": 2,
+      "poses": [
+        {
+          "name": "asking-v1",
+          "state": "waiting"
+        },
+        {
+          "name": "listening-v1",
+          "state": "waiting"
+        },
+        {
+          "name": "sleeping-v1",
+          "state": "sleeping"
+        },
+        {
+          "name": "pat-v1",
+          "state": "pat"
+        },
+        {
+          "name": "forgiven-v1",
+          "state": "pat"
+        },
+        {
+          "name": "surprised-v1",
+          "state": "poke"
+        }
+      ],
+      "status": "visual-qa-passed",
+      "qa": {
+        "gallery": "out/smoke/gpt-batch-02.png",
+        "report": "out/smoke/gpt-batch-02.qa.json",
+        "reviewedAt": "2026-10-24T11:45:49.334Z",
+        "result": "Waiting gestures, sleeping eyes, contented petting, shy heart gesture and surprised face are distinct at desktop size. Palette, white loop emblem and full dragon silhouette remain consistent on light/dark. Native clear alpha and zero visible boundary contacts confirmed."
+      }
+    },
+    {
+      "batch": 3,
+      "poses": [
+        {
+          "name": "hum-v1",
+          "state": "hum"
+        },
+        {
+          "name": "stretch-v1",
+          "state": "stretch"
+        },
+        {
+          "name": "yawn-v1",
+          "state": "yawn"
+        },
+        {
+          "name": "puffed-v1",
+          "state": "puffed"
+        },
+        {
+          "name": "coaxed-v1",
+          "state": "coaxed"
+        }
+      ],
+      "status": "visual-qa-passed",
+      "qa": {
+        "gallery": "out/smoke/gpt-batch-03.png",
+        "report": "out/smoke/gpt-batch-03.qa.json",
+        "reviewedAt": "2026-10-24T11:50:52.443Z",
+        "result": "Humming, raised-arm stretch, hand-over-mouth yawn, puffed-cheek crossed arms and affectionate leaning pose are readable at desktop size. Regenerated yawn has no colored background/glow on light or dark. Palette, white loop emblem and full silhouette remain consistent; all five have clear alpha and zero visible boundary contacts."
+      }
+    },
+    {
+      "batch": 4,
+      "poses": [
+        {
+          "name": "idle-2-v1",
+          "state": "idle"
+        },
+        {
+          "name": "idle-3-v1",
+          "state": "idle"
+        },
+        {
+          "name": "coaxed-2-v1",
+          "state": "coaxed"
+        },
+        {
+          "name": "greet-morning-v1",
+          "state": "greet"
+        },
+        {
+          "name": "greet-afternoon-v1",
+          "state": "greet"
+        }
+      ],
+      "status": "visual-qa-passed",
+      "qa": {
+        "gallery": "out/smoke/gpt-batch-04.png",
+        "report": "out/smoke/gpt-batch-04.qa.json",
+        "reviewedAt": "2026-10-24T12:11:20.701Z",
+        "result": "Final edge cleanup accepted: complete tail and transparent padding, zero boundary contacts, no visible blue/magenta fringe at desktop or studio size. Strongly-blue near-opaque pixels reduced from 944 to 9 (over 99% removed). All five poses retain consistent palette, white loop emblem and readable silhouettes on light/dark."
+      }
+    },
+    {
+      "batch": 5,
+      "poses": [
+        {
+          "name": "greet-evening-v1",
+          "state": "greet"
+        },
+        {
+          "name": "idle-blink-v1",
+          "state": "idle-blink"
+        },
+        {
+          "name": "thinking-2-v1",
+          "state": "thinking"
+        },
+        {
+          "name": "thinking-curious-v1",
+          "state": "thinking"
+        },
+        {
+          "name": "thinking-focused-v1",
+          "state": "thinking"
+        }
+      ],
+      "status": "visual-qa-passed",
+      "qa": {
+        "gallery": "out/smoke/gpt-batch-05.png",
+        "report": "out/smoke/gpt-batch-05.qa.json",
+        "reviewedAt": "2026-10-24T11:59:33.332Z",
+        "result": "Evening greeting and three thinking variants are distinct, with consistent violet palette and white loop emblem. Blink retains the canonical idle body/arms/wings/tail/feet; its framing differs by under 0.4%, with no visible desktop-size registration jump. All five preserve transparent backgrounds and zero visible boundary contacts."
+      }
+    },
+    {
+      "batch": 6,
+      "poses": [
+        {
+          "name": "reading-studious-v1",
+          "state": "reading"
+        },
+        {
+          "name": "reading-page-turn-v1",
+          "state": "reading"
+        },
+        {
+          "name": "coding-quill-v1",
+          "state": "coding"
+        },
+        {
+          "name": "coding-review-v1",
+          "state": "coding"
+        },
+        {
+          "name": "tool-inspect-v1",
+          "state": "tool"
+        }
+      ],
+      "status": "visual-qa-passed",
+      "qa": {
+        "gallery": "out/smoke/gpt-batch-06.png",
+        "report": "out/smoke/gpt-batch-06.qa.json",
+        "reviewedAt": "2026-10-24T12:05:27.597Z",
+        "result": "Both reading gestures, quill writing, code review and magnifying-glass tool inspection read clearly at desktop size. Consistent violet costume, white loop emblem and full wings/tail/feet; clear alpha, no colored background and zero visible boundary contacts on all five."
+      }
+    },
+    {
+      "batch": 7,
+      "poses": [
+        {
+          "name": "tool-adjust-v1",
+          "state": "tool"
+        },
+        {
+          "name": "pat-lean-v1",
+          "state": "pat"
+        },
+        {
+          "name": "pat-content-v1",
+          "state": "pat"
+        },
+        {
+          "name": "greet-wave-v1",
+          "state": "greet"
+        },
+        {
+          "name": "hairplay-v1",
+          "state": "hairplay"
+        }
+      ],
+      "status": "visual-qa-passed",
+      "qa": {
+        "gallery": "out/smoke/gpt-batch-07.png",
+        "report": "out/smoke/gpt-batch-07.qa.json",
+        "reviewedAt": "2026-10-24T12:09:34.303Z",
+        "result": "Tool adjustment, leaning petting, contented petting, waving greeting and hair-twirling idle gesture are distinct at desktop size. Tilted poses retain complete horns/feet/tail and the white loop emblem. Consistent violet palette, clear alpha, no background/glow and zero visible boundary contacts on all five."
+      }
+    }
+  ],
+  "runtimeIntegration": {
+    "status": "active",
+    "scope": "registered source artwork profile",
+    "mode": "complete GPT replacement; Claude append behavior retained",
+    "manifest": "assets/custom/manifest.json",
+    "registeredGPTImages": 38,
+    "presentationPoses": 37,
+    "matchingBlinkImages": 1,
+    "customImagesTotal": 51,
+    "bundledImagesTotal": 170,
+    "customInventoryFiles": 156,
+    "verification": "All states match Claude selected-pose counts; strict hash, provenance, framing and inventory checks passed.",
+    "inventoryAudit": "out/gpt-final-inventory-audit.json"
+  },
+  "sourceArtwork": "Original CrossPet files and licenses preserved byte-for-byte."
+}

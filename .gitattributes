@@ -1,0 +1,14 @@
+* text=auto
+*.cjs text eol=lf
+*.mjs text eol=lf
+*.js text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.ps1 text eol=crlf
+# Preserve imported data and notices exactly; provenance is byte-sensitive.
+assets/crosspet/** -text
+assets/custom/** -text
+design/concepts/** -text
+*.webp binary
+*.png binary
+*.ico binary

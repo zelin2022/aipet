@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "kind": "AI-assisted pose adaptation",
+  "character": "CrossPet Claude",
+  "output": {
+    "path": "assets/custom/claude/coding-quill-v1.png",
+    "sha256": "8f1b271d05c48e844c4ca8e7d47996a49e6b62872c8e850cafc2d3ee47a809d8",
+    "bytes": 1905300,
+    "width": 1183,
+    "height": 1329,
+    "format": "PNG",
+    "alphaPreserved": true
+  },
+  "generatedAt": "2026-10-24T10:34:05.235Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "coding-quill-v1.prompt.txt",
+  "modification": "Primary request: actively writing/coding represented with the original white feather quill and ornate book. Turn three-quarter toward viewer-left; support the open original book at waist height on one palm while the other hand uses the same white feather quill, nib clearly touching an inner page in a purposeful writing gesture. Look down along the nib with intent amber eyes, a tiny determined smile, and a slight forward lean. The writing arm has a clear elbow and wrist, feather upright enough to read at small size. Keep the book cover flower visible and page free of legible text. No computer, desk or extra props. Make this a dynamic, precise writing pose rather than reading or holding a quill beside her face.",
+  "references": [
+    {
+      "path": "assets/crosspet/characters/claude/idle.webp",
+      "sha256": "cb4540df9325fd246de61c673e29027de0821ea70eeeafb3220a97546f440653",
+      "bytes": 96880,
+      "role": "Original identity/costume/style reference"
+    },
+    {
+      "path": "assets/crosspet/characters/claude/writing.webp",
+      "sha256": "23f2e3ab2df890f02178b24e5dd184006c662b0b6c261061b742fade24b33093",
+      "bytes": 102400,
+      "role": "Original identity/costume/style reference"
+    },
+    {
+      "path": "assets/custom/claude/wave-v1.png",
+      "sha256": "a3f5040aca3dae540e8d0c95056b5d12e9c2a712580840cb1f92ca644e4087d3",
+      "bytes": 1900276,
+      "role": "Approved finish/quality reference"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet desktop companion pose",
+  "reviewNotes": [
+    "Generator PNG bytes and native alpha preserved without image postprocessing.",
+    "Visually reviewed for identity, pose, full-body framing and desktop readability."
+  ],
+  "runtimeIntegrated": true
+}

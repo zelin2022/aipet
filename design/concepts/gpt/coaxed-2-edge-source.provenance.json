@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "kind": "Rejected generated pose retained as an exact reference for edge cleanup",
+  "character": "CrossPet GPT / ChatGPT white dragon",
+  "output": {
+    "path": "design/concepts/gpt/coaxed-2-edge-source.png",
+    "sha256": "cb71f1b3082cc20953a6f90bcad2460f00f2b92cb920fabe323886a26ab724f1",
+    "bytes": 1760897,
+    "width": 1201,
+    "height": 1309,
+    "format": "PNG",
+    "alphaPreserved": true,
+    "framing": {
+      "x": 70,
+      "y": 53,
+      "width": 1098,
+      "height": 1166,
+      "canvasWidth": 1201,
+      "canvasHeight": 1309
+    }
+  },
+  "generatedAt": "2026-10-24T12:03:28.979Z",
+  "stagedAt": "2026-10-24T12:03:28.980Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "coaxed-2-edge-source.prompt.txt",
+  "modification": "Rework second original coaxed expression/gesture from Image2 as the other affectionate idle alternative. Use its bashful head/hand arrangement and soft expectant face. Distinguish clearly from first coaxed while staying restrained and wholesome.\nComposition repair: keep the complete character visibly smaller, approximately 85% of canvas height, centered with at least 6% genuinely clear alpha padding on every side. The entire tail including its farthest right curve and pointed tip must be enclosed with a clear gap before the canvas edge. Keep both horn tips, ahoge, both wings and both shoes completely inside. No background, glow, border or shadow.",
+  "references": [
+    {
+      "path": "design/concepts/gpt/idle-redesign-v4.png",
+      "sha256": "1a056bb221252821d255f75a3b7cca65ba1920c747aa2d33ce5b1716037f50a3",
+      "bytes": 1678302,
+      "role": "Approved redesign identity, palette and finish reference"
+    },
+    {
+      "path": "assets/crosspet/characters/gpt/coaxed-2.webp",
+      "sha256": "e249cd897272a8f13dd99aaa10e6761e909c7c2e52c4040242df54fa90ab7cb1",
+      "bytes": 97580,
+      "role": "Original same-character pose/identity reference"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "sourceCredits": [
+    "CrossPet by lokicorvus and contributors",
+    "ZipZipPipe, GPT white-dragon design known as 御姐白龙"
+  ],
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet desktop companion pose",
+  "generationPlan": {
+    "path": "out/gpt-generation-plan.json",
+    "sha256": "89b700126e3dcb87130868126ba641d23ef14674bc0de403a94a4d16aac2d59c",
+    "batch": 4,
+    "state": "coaxed"
+  },
+  "alphaAnalysis": {
+    "width": 1201,
+    "height": 1309,
+    "framing": {
+      "x": 70,
+      "y": 53,
+      "width": 1098,
+      "height": 1166,
+      "canvasWidth": 1201,
+      "canvasHeight": 1309
+    },
+    "alpha": {
+      "clear": 726235,
+      "partial": 48756,
+      "nearOpaque": 796775,
+      "opaque": 343
+    },
+    "alphaMinimum": 0,
+    "alphaMaximum": 255,
+    "visiblePixels": 820934,
+    "boundaryVisible": 0,
+    "boundaryNontransparent": 0,
+    "analysisOnly": true
+  },
+  "reviewNotes": [
+    "Generator PNG bytes and native alpha preserved without image postprocessing.",
+    "Alpha framing measured by nativeImage decode only; visual review remains required before runtime promotion.",
+    "Rejected due to saturated edge speckles; retained only as input to the final imagegen cleanup, never registered as runtime artwork."
+  ],
+  "runtimeIntegrated": false
+}

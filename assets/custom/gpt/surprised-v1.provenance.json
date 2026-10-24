@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "kind": "AI-assisted same-character redesign pose adaptation",
+  "character": "CrossPet GPT / ChatGPT white dragon",
+  "output": {
+    "path": "assets/custom/gpt/surprised-v1.png",
+    "sha256": "d5384c521671726cfe2c0de273a72b25b36a4e090d312ad79e6c92b4caec3c36",
+    "bytes": 1843494,
+    "width": 1182,
+    "height": 1330,
+    "format": "PNG",
+    "alphaPreserved": true,
+    "framing": {
+      "x": 63,
+      "y": 46,
+      "width": 1086,
+      "height": 1224,
+      "canvasWidth": 1182,
+      "canvasHeight": 1330
+    }
+  },
+  "generatedAt": "2026-10-24T11:44:54.521Z",
+  "stagedAt": "2026-10-24T11:44:54.522Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "surprised-v1.prompt.txt",
+  "modification": "Rework the original surprised/poke reaction: eyes open wider, brows raised, tiny surprised mouth and hands held in the original startled gesture. Cute mild surprise, not fear. Keep the whole figure and tail inside the transparent canvas.",
+  "references": [
+    {
+      "path": "design/concepts/gpt/idle-redesign-v4.png",
+      "sha256": "1a056bb221252821d255f75a3b7cca65ba1920c747aa2d33ce5b1716037f50a3",
+      "bytes": 1678302,
+      "role": "Approved redesign identity, palette and finish reference"
+    },
+    {
+      "path": "assets/crosspet/characters/gpt/surprised.webp",
+      "sha256": "cb9f17096739dbeb8ae7dffbcd32bd80753ab248d86ce82dda3185f98a4402af",
+      "bytes": 95104,
+      "role": "Original same-character pose/identity reference"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "sourceCredits": [
+    "CrossPet by lokicorvus and contributors",
+    "ZipZipPipe, GPT white-dragon design known as 御姐白龙"
+  ],
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet desktop companion pose",
+  "generationPlan": {
+    "path": "out/gpt-generation-plan.json",
+    "sha256": "27c25ba5c175c82d8f186c418395b4600a3043fb3a7fd1baf06a65c35f0470a8",
+    "batch": 2,
+    "state": "poke"
+  },
+  "alphaAnalysis": {
+    "width": 1182,
+    "height": 1330,
+    "framing": {
+      "x": 63,
+      "y": 46,
+      "width": 1086,
+      "height": 1224,
+      "canvasWidth": 1182,
+      "canvasHeight": 1330
+    },
+    "alpha": {
+      "clear": 686706,
+      "partial": 39586,
+      "nearOpaque": 844733,
+      "opaque": 1035
+    },
+    "alphaMinimum": 0,
+    "alphaMaximum": 255,
+    "visiblePixels": 865601,
+    "boundaryVisible": 0,
+    "boundaryNontransparent": 0,
+    "analysisOnly": true
+  },
+  "reviewNotes": [
+    "Generator PNG bytes and native alpha preserved without image postprocessing.",
+    "Alpha framing measured by nativeImage decode only; visual review remains required before runtime promotion.",
+    "Passed full-size and desktop-size light/dark visual review; registered as part of the complete 38-image GPT replacement profile."
+  ],
+  "runtimeIntegrated": true
+}

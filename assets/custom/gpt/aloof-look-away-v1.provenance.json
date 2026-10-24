@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "kind": "AI-assisted same-character social pose adaptation",
+  "character": "CrossPet GPT / ChatGPT white dragon",
+  "output": {
+    "path": "assets/custom/gpt/aloof-look-away-v1.png",
+    "sha256": "af584b4e6c93e0647de66a473701b0e7048d0fa11533e49371d0c0c3ea8affc0",
+    "bytes": 1810169,
+    "width": 1189,
+    "height": 1323,
+    "format": "PNG",
+    "alphaPreserved": true,
+    "framing": {
+      "x": 50,
+      "y": 24,
+      "width": 1105,
+      "height": 1235,
+      "canvasWidth": 1189,
+      "canvasHeight": 1323
+    }
+  },
+  "generatedAt": "2026-10-24T12:33:20.281Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "aloof-look-away-v1.prompt.txt",
+  "modification": "Cross both arms clearly over her chest, as in supporting Image2, but change head, shoulders and eyes so she is LOOKING AWAY: turn head and upper body about25 degrees toward viewer-left, eyes gazing further toward viewer-left, chin slightly raised and a tiny stubborn mouth. Face still visible in three-quarter view. The sideways gaze must be unmistakable and must not make eye contact with the viewer. Keep the whole curled tail, both wings and feet visible, no props.",
+  "references": [
+    {
+      "path": "assets/custom/gpt/idle-v1.png",
+      "sha256": "1a056bb221252821d255f75a3b7cca65ba1920c747aa2d33ce5b1716037f50a3",
+      "bytes": 1678302,
+      "role": "Approved same-character identity, palette and finish reference"
+    },
+    {
+      "path": "assets/custom/gpt/puffed-v1.png",
+      "sha256": "a68c5a044916a023dc302bd4ab01b807fc2c078766918ab6cf7fdcc13fe8e15d",
+      "bytes": 1875345,
+      "role": "Approved same-character identity, palette and finish reference"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "sourceCredits": [
+    "CrossPet by lokicorvus and contributors",
+    "ZipZipPipe, GPT white-dragon design known as 御姐白龙"
+  ],
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet desktop companion pose",
+  "generationPlan": {
+    "path": "out/social-generation-plan.json",
+    "sha256": "afdf1d17f2beb1e56aad7302ca1497682c0f4679f7ba2a0e2226bd8b73ee389c",
+    "batch": 1,
+    "state": "aloof"
+  },
+  "alphaAnalysis": {
+    "width": 1189,
+    "height": 1323,
+    "framing": {
+      "x": 50,
+      "y": 24,
+      "width": 1105,
+      "height": 1235,
+      "canvasWidth": 1189,
+      "canvasHeight": 1323
+    },
+    "alpha": {
+      "clear": 695983,
+      "partial": 36700,
+      "nearOpaque": 838885,
+      "opaque": 1479
+    },
+    "alphaMinimum": 0,
+    "alphaMaximum": 255,
+    "visiblePixels": 858546,
+    "boundaryVisible": 0,
+    "boundaryNontransparent": 0,
+    "analysisOnly": true
+  },
+  "reviewNotes": [
+    "Generated PNG bytes and native alpha preserved without image postprocessing.",
+    "Alpha framing measured by nativeImage decode only; visual review remains required before runtime promotion.",
+    "Passed final full-size and desktop-size light/dark review with complete silhouette and clear margins."
+  ],
+  "runtimeIntegrated": true
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "kind": "Initial generated pose retained as padding-edit source",
+  "character": "CrossPet Claude",
+  "output": {
+    "path": "design/concepts/claude/social-aloof-look-away-v1-padding-source.png",
+    "sha256": "a6a35d1d94b372e71a8e69e9e96ef1a3f8782a453b9127665dbc00066b460e36",
+    "bytes": 1883518,
+    "width": 1152,
+    "height": 1365,
+    "format": "PNG",
+    "alphaPreserved": true,
+    "framing": {
+      "x": 9,
+      "y": 6,
+      "width": 1137,
+      "height": 1340,
+      "canvasWidth": 1152,
+      "canvasHeight": 1365
+    }
+  },
+  "generatedAt": "2026-10-24T12:33:20.104Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "social-aloof-look-away-v1-padding-source.prompt.txt",
+  "modification": "Cross both arms clearly over her chest, forearms visibly crossed. Turn head and shoulders about25 degrees toward viewer-left, eyes looking further off toward viewer-left AWAY from the screen/viewer, chin a little raised with a tiny stubborn pout. Playfully aloof, not distressed. Keep her face visible in three-quarter view so the sideways eye direction reads clearly. Omit the book to make crossed arms unmistakable. Both feet planted.",
+  "references": [
+    {
+      "path": "assets/crosspet/characters/claude/idle.webp",
+      "sha256": "cb4540df9325fd246de61c673e29027de0821ea70eeeafb3220a97546f440653",
+      "bytes": 96880,
+      "role": "Original same-character identity and costume reference"
+    },
+    {
+      "path": "assets/custom/claude/wave-v1.png",
+      "sha256": "a3f5040aca3dae540e8d0c95056b5d12e9c2a712580840cb1f92ca644e4087d3",
+      "bytes": 1900276,
+      "role": "Approved same-character identity, palette and finish reference"
+    },
+    {
+      "path": "assets/crosspet/characters/claude/sulk.webp",
+      "sha256": "6eabecbbfd2b05efd6fcfc4d855bbfe0e8c838202114d5f40c8b9864b652e2a6",
+      "bytes": 100828,
+      "role": "Original same-character identity and costume reference"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "sourceCredits": [
+    "CrossPet by lokicorvus and contributors",
+    "Claude community personification; ai-school-op and openpet-ai-girls references credited by CrossPet"
+  ],
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet desktop companion pose",
+  "generationPlan": {
+    "path": "out/social-generation-plan.json",
+    "sha256": "afdf1d17f2beb1e56aad7302ca1497682c0f4679f7ba2a0e2226bd8b73ee389c",
+    "batch": 1,
+    "state": "aloof"
+  },
+  "alphaAnalysis": {
+    "width": 1152,
+    "height": 1365,
+    "framing": {
+      "x": 9,
+      "y": 6,
+      "width": 1137,
+      "height": 1340,
+      "canvasWidth": 1152,
+      "canvasHeight": 1365
+    },
+    "alpha": {
+      "clear": 579792,
+      "partial": 38995,
+      "nearOpaque": 953023,
+      "opaque": 670
+    },
+    "alphaMinimum": 0,
+    "alphaMaximum": 255,
+    "visiblePixels": 973237,
+    "boundaryVisible": 0,
+    "boundaryNontransparent": 138,
+    "analysisOnly": true
+  },
+  "reviewNotes": [
+    "Generated PNG bytes and native alpha preserved without image postprocessing.",
+    "Alpha framing measured by nativeImage decode only; visual review remains required before runtime promotion.",
+    "Tight initial composition rejected before runtime integration; exact source retained for imagegen padding edit."
+  ],
+  "runtimeIntegrated": false
+}

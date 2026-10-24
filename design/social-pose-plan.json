@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "integratedAt": "2026-10-24T12:40:50.498Z",
+  "newImages": [
+    {
+      "character": "claude",
+      "image": "assets/custom/claude/aloof-look-away-v1.png",
+      "state": "aloof",
+      "prompt": "assets/custom/claude/aloof-look-away-v1.prompt.txt"
+    },
+    {
+      "character": "gpt",
+      "image": "assets/custom/gpt/aloof-look-away-v1.png",
+      "state": "aloof",
+      "prompt": "assets/custom/gpt/aloof-look-away-v1.prompt.txt"
+    },
+    {
+      "character": "claude",
+      "image": "assets/custom/claude/wink-v1.png",
+      "state": "wink",
+      "prompt": "assets/custom/claude/wink-v1.prompt.txt"
+    },
+    {
+      "character": "gpt",
+      "image": "assets/custom/gpt/smug-v1.png",
+      "state": "smug",
+      "prompt": "assets/custom/gpt/smug-v1.prompt.txt"
+    },
+    {
+      "character": "claude",
+      "image": "assets/custom/claude/black-tea-v1.png",
+      "state": "sip",
+      "prompt": "assets/custom/claude/black-tea-v1.prompt.txt"
+    },
+    {
+      "character": "gpt",
+      "image": "assets/custom/gpt/white-monster-v1.png",
+      "state": "sip",
+      "prompt": "assets/custom/gpt/white-monster-v1.prompt.txt"
+    }
+  ],
+  "reused": [
+    {
+      "character": "claude",
+      "state": "puffed",
+      "path": "assets/crosspet/characters/claude/puffed.webp"
+    },
+    {
+      "character": "gpt",
+      "state": "puffed",
+      "path": "assets/custom/gpt/puffed-v1.png"
+    },
+    {
+      "character": "claude",
+      "state": "smug",
+      "path": "assets/crosspet/characters/claude/proud.webp"
+    },
+    {
+      "character": "gpt",
+      "state": "wink",
+      "path": "assets/custom/gpt/greet-morning-v1.png"
+    }
+  ],
+  "behavior": {
+    "idleActions": [
+      "aloof",
+      "wink",
+      "smug",
+      "sip"
+    ],
+    "ignoredPout": {
+      "state": "puffed",
+      "visibleIdleMilliseconds": 120000,
+      "repeatMilliseconds": 120000
+    },
+    "workTakesPriority": true,
+    "reducedMotionDisablesDecoration": true
+  },
+  "generation": "OpenAI built-in image_gen; exact PNG bytes and native alpha retained",
+  "gallery": "out/smoke/gpt-social-requested-poses.png"
+}

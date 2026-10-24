@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "kind": "AI-assisted same-character redesign pose adaptation",
+  "character": "CrossPet GPT / ChatGPT white dragon",
+  "output": {
+    "path": "assets/custom/gpt/greet-wave-v1.png",
+    "sha256": "e8145e0c3a90f9786324bc0feff2ccf9986b5c9fc38bd6f037c48a9628cb869b",
+    "bytes": 1767672,
+    "width": 1182,
+    "height": 1330,
+    "format": "PNG",
+    "alphaPreserved": true,
+    "framing": {
+      "x": 66,
+      "y": 27,
+      "width": 1056,
+      "height": 1247,
+      "canvasWidth": 1182,
+      "canvasHeight": 1330
+    }
+  },
+  "generatedAt": "2026-10-24T12:08:24.909Z",
+  "stagedAt": "2026-10-24T12:08:24.910Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "greet-wave-v1.prompt.txt",
+  "modification": "NEW warm waving greeting: face viewer with open violet eyes and a small cheerful smile, one hand beside head raised with open palm in a clear readable wave, other hand at waist or gently touching sleeve. Body turned slightly three-quarter, one foot forward. No other person or props.",
+  "references": [
+    {
+      "path": "design/concepts/gpt/idle-redesign-v4.png",
+      "sha256": "1a056bb221252821d255f75a3b7cca65ba1920c747aa2d33ce5b1716037f50a3",
+      "bytes": 1678302,
+      "role": "Approved redesign identity, palette and finish reference"
+    },
+    {
+      "path": "assets/crosspet/characters/gpt/happy.webp",
+      "sha256": "6f7b41d53faea9c9de7ae28370e35aff30118754c3787779fd5404d7ec2ca3f5",
+      "bytes": 99724,
+      "role": "Original same-character pose/identity reference"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "sourceCredits": [
+    "CrossPet by lokicorvus and contributors",
+    "ZipZipPipe, GPT white-dragon design known as 御姐白龙"
+  ],
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet desktop companion pose",
+  "generationPlan": {
+    "path": "out/gpt-generation-plan.json",
+    "sha256": "89b700126e3dcb87130868126ba641d23ef14674bc0de403a94a4d16aac2d59c",
+    "batch": 7,
+    "state": "greet"
+  },
+  "alphaAnalysis": {
+    "width": 1182,
+    "height": 1330,
+    "framing": {
+      "x": 66,
+      "y": 27,
+      "width": 1056,
+      "height": 1247,
+      "canvasWidth": 1182,
+      "canvasHeight": 1330
+    },
+    "alpha": {
+      "clear": 735302,
+      "partial": 39774,
+      "nearOpaque": 795751,
+      "opaque": 1233
+    },
+    "alphaMinimum": 0,
+    "alphaMaximum": 255,
+    "visiblePixels": 816684,
+    "boundaryVisible": 0,
+    "boundaryNontransparent": 0,
+    "analysisOnly": true
+  },
+  "reviewNotes": [
+    "Generator PNG bytes and native alpha preserved without image postprocessing.",
+    "Alpha framing measured by nativeImage decode only; visual review remains required before runtime promotion.",
+    "Passed full-size and desktop-size light/dark visual review; registered as part of the complete 38-image GPT replacement profile."
+  ],
+  "runtimeIntegrated": true
+}

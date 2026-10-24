@@ -1,0 +1,12 @@
+Use case: stylized-concept.
+Asset type: one full-body 2D desktop-pet character sprite, a new pose of the existing CrossPet Claude girl.
+
+Input images: the three provided local Claude images are identity, costume, proportions, palette, and rendering-style references. Preserve this exact illustrated character. They are references for a NEW pose, not a request to repeat or combine their poses.
+
+Primary request: draw Claude in a friendly waving greeting pose. Turn her body slightly three-quarter, keep her face looking warmly toward the viewer with open amber eyes and a small cheerful smile, tilt her head gently, raise one hand beside her head with an open palm and a clean readable wave, and tuck her original dark brown gold-decorated book securely against her other side. Both tiny black shoes remain visible, one foot slightly forward. Make the gesture visibly different from the original standing, raised-fist, and teacup references.
+
+Identity and style invariants: oversized chibi head and tiny body; long flowing copper-orange hair with the same bangs and highlights; large warm amber eyes, gentle blush; the same orange chrysanthemum/sunburst flower ornament, black ribbon, pearl and cream tassel on the same side as the references; the exact cream/ivory, rust-orange and black ornate dress with the capelet, ruffled collar/cuffs/hem, flower brooches, black bows, delicate golden floral embroidery, chain and tassels; same small black shoes. Match the references' polished anime/chibi illustration, warm dark outlines, smooth cel shading, fine decorative detail, and clean finished edges. Maintain the same character age appearance and modest costume. Do not simplify or redesign her.
+
+Framing: a single centered character, whole body and every hair tip, waving hand, accessory and shoe comfortably inside the image, with clear empty padding on all sides. No overlapping copies, multiple views, sprite-sheet grid, extra limbs, lettering, logos, or watermark.
+
+Background and cutout requirement: genuinely transparent alpha background. The sprite must be isolated with a clean, closed outer silhouette and smooth antialiased edges. All costume whites and pale highlights remain fully opaque. No scene, floor, cast shadow, glow, haze, particles, gradients, checkerboard pattern, or background-colored fringe. This image will be composited directly over a Windows desktop; preserve alpha and fine hair detail.

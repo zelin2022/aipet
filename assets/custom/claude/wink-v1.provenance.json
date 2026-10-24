@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "kind": "AI-assisted same-character social pose adaptation",
+  "character": "CrossPet Claude",
+  "output": {
+    "path": "assets/custom/claude/wink-v1.png",
+    "sha256": "8e827fd05effab3edbbc69d7a93f23d62fc5165b5d008fd3baef3907fc8c167d",
+    "bytes": 1451885,
+    "width": 1189,
+    "height": 1323,
+    "format": "PNG",
+    "alphaPreserved": true,
+    "framing": {
+      "x": 103,
+      "y": 111,
+      "width": 993,
+      "height": 1094,
+      "canvasWidth": 1189,
+      "canvasHeight": 1323
+    }
+  },
+  "generatedAt": "2026-10-24T12:38:29.534Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "wink-v1.prompt.txt",
+  "modification": "Preserve the original generated wink gesture and costume; uniformly reduce composition to add 6–8% clear alpha padding without cropping.",
+  "references": [
+    {
+      "path": "design/concepts/claude/social-wink-v1-padding-source.png",
+      "sha256": "54808dc3cbee13ba3ecccbea23c28ca24a3b98e0c96c3fc64f3c95c312090e30",
+      "bytes": 1948717,
+      "role": "Approved same-character identity, palette and finish reference"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "sourceCredits": [
+    "CrossPet by lokicorvus and contributors",
+    "Claude community personification; ai-school-op and openpet-ai-girls references credited by CrossPet"
+  ],
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet desktop companion pose",
+  "generationPlan": {
+    "path": "out/social-generation-plan.json",
+    "sha256": "960a26770e2868dad0b0f1fe9f3848dff6dc06117f43d3e37a0330926fb77e5d",
+    "batch": 1,
+    "state": "wink"
+  },
+  "alphaAnalysis": {
+    "width": 1189,
+    "height": 1323,
+    "framing": {
+      "x": 103,
+      "y": 111,
+      "width": 993,
+      "height": 1094,
+      "canvasWidth": 1189,
+      "canvasHeight": 1323
+    },
+    "alpha": {
+      "clear": 878661,
+      "partial": 29093,
+      "nearOpaque": 664035,
+      "opaque": 1258
+    },
+    "alphaMinimum": 0,
+    "alphaMaximum": 255,
+    "visiblePixels": 679629,
+    "boundaryVisible": 0,
+    "boundaryNontransparent": 5,
+    "analysisOnly": true
+  },
+  "reviewNotes": [
+    "Generated PNG bytes and native alpha preserved without image postprocessing.",
+    "Alpha framing measured by nativeImage decode only; visual review remains required before runtime promotion.",
+    "Passed final full-size and desktop-size light/dark review with complete silhouette and clear margins."
+  ],
+  "runtimeIntegrated": true
+}

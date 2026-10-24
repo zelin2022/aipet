@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "kind": "AI-assisted same-character redesign pose adaptation",
+  "character": "CrossPet GPT / ChatGPT white dragon",
+  "output": {
+    "path": "assets/custom/gpt/tool-adjust-v1.png",
+    "sha256": "a7a42654723d0bd1c9b157a402e53f7c49164c19c7fc4c5c6886de58540f7a11",
+    "bytes": 1947970,
+    "width": 1182,
+    "height": 1330,
+    "format": "PNG",
+    "alphaPreserved": true,
+    "framing": {
+      "x": 17,
+      "y": 22,
+      "width": 1142,
+      "height": 1260,
+      "canvasWidth": 1182,
+      "canvasHeight": 1330
+    }
+  },
+  "generatedAt": "2026-10-24T12:08:24.405Z",
+  "stagedAt": "2026-10-24T12:08:24.406Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "tool-adjust-v1.prompt.txt",
+  "modification": "NEW adjustment tool pose: one hand raised beside shoulder holds a compact SILVER open-ended wrench vertically, other hand rests at hip, feet planted slightly apart, determined gentle expression. Appropriate small work prop, not a weapon. Keep hands, wrench, sleeves and full tail clearly separated.",
+  "references": [
+    {
+      "path": "design/concepts/gpt/idle-redesign-v4.png",
+      "sha256": "1a056bb221252821d255f75a3b7cca65ba1920c747aa2d33ce5b1716037f50a3",
+      "bytes": 1678302,
+      "role": "Approved redesign identity, palette and finish reference"
+    },
+    {
+      "path": "assets/crosspet/characters/gpt/running.webp",
+      "sha256": "d4593768aae4b178acf39eaddc92b7a65409c94abc8998ce2578c78e1fc6535c",
+      "bytes": 100322,
+      "role": "Original same-character pose/identity reference"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "sourceCredits": [
+    "CrossPet by lokicorvus and contributors",
+    "ZipZipPipe, GPT white-dragon design known as 御姐白龙"
+  ],
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet desktop companion pose",
+  "generationPlan": {
+    "path": "out/gpt-generation-plan.json",
+    "sha256": "89b700126e3dcb87130868126ba641d23ef14674bc0de403a94a4d16aac2d59c",
+    "batch": 7,
+    "state": "tool"
+  },
+  "alphaAnalysis": {
+    "width": 1182,
+    "height": 1330,
+    "framing": {
+      "x": 17,
+      "y": 22,
+      "width": 1142,
+      "height": 1260,
+      "canvasWidth": 1182,
+      "canvasHeight": 1330
+    },
+    "alpha": {
+      "clear": 631286,
+      "partial": 42836,
+      "nearOpaque": 896876,
+      "opaque": 1062
+    },
+    "alphaMinimum": 0,
+    "alphaMaximum": 255,
+    "visiblePixels": 918366,
+    "boundaryVisible": 0,
+    "boundaryNontransparent": 17,
+    "analysisOnly": true
+  },
+  "reviewNotes": [
+    "Generator PNG bytes and native alpha preserved without image postprocessing.",
+    "Alpha framing measured by nativeImage decode only; visual review remains required before runtime promotion.",
+    "Passed full-size and desktop-size light/dark visual review; registered as part of the complete 38-image GPT replacement profile."
+  ],
+  "runtimeIntegrated": true
+}

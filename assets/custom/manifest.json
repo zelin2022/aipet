@@ -1,0 +1,1802 @@
+{
+  "schemaVersion": 1,
+  "profiles": {
+    "gpt": {
+      "mode": "replace"
+    }
+  },
+  "poses": [
+    {
+      "character": "claude",
+      "state": "greet",
+      "image": "claude/wave-v1.png",
+      "provenance": "claude/wave-v1.provenance.json",
+      "prompt": "claude/wave-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1189,
+      "height": 1323
+    },
+    {
+      "character": "claude",
+      "state": "thinking",
+      "image": "claude/thinking-curious-v1.png",
+      "provenance": "claude/thinking-curious-v1.provenance.json",
+      "prompt": "claude/thinking-curious-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1184,
+      "height": 1328
+    },
+    {
+      "character": "claude",
+      "state": "thinking",
+      "image": "claude/thinking-focused-v1.png",
+      "provenance": "claude/thinking-focused-v1.provenance.json",
+      "prompt": "claude/thinking-focused-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1184,
+      "height": 1328
+    },
+    {
+      "character": "claude",
+      "state": "pat",
+      "image": "claude/pat-lean-v1.png",
+      "provenance": "claude/pat-lean-v1.provenance.json",
+      "prompt": "claude/pat-lean-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1186,
+      "height": 1327
+    },
+    {
+      "character": "claude",
+      "state": "pat",
+      "image": "claude/pat-content-v1.png",
+      "provenance": "claude/pat-content-v1.provenance.json",
+      "prompt": "claude/pat-content-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1184,
+      "height": 1328
+    },
+    {
+      "character": "claude",
+      "state": "coaxed",
+      "image": "claude/coaxed-affection-v1.png",
+      "provenance": "claude/coaxed-affection-v1.provenance.json",
+      "prompt": "claude/coaxed-affection-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1183,
+      "height": 1329
+    },
+    {
+      "character": "claude",
+      "state": "hairplay",
+      "image": "claude/hairplay-v1.png",
+      "provenance": "claude/hairplay-v1.provenance.json",
+      "prompt": "claude/hairplay-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1184,
+      "height": 1328
+    },
+    {
+      "character": "claude",
+      "state": "reading",
+      "image": "claude/reading-studious-v1.png",
+      "provenance": "claude/reading-studious-v1.provenance.json",
+      "prompt": "claude/reading-studious-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1189,
+      "height": 1323
+    },
+    {
+      "character": "claude",
+      "state": "reading",
+      "image": "claude/reading-page-turn-v1.png",
+      "provenance": "claude/reading-page-turn-v1.provenance.json",
+      "prompt": "claude/reading-page-turn-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1183,
+      "height": 1329
+    },
+    {
+      "character": "claude",
+      "state": "coding",
+      "image": "claude/coding-quill-v1.png",
+      "provenance": "claude/coding-quill-v1.provenance.json",
+      "prompt": "claude/coding-quill-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1183,
+      "height": 1329
+    },
+    {
+      "character": "claude",
+      "state": "coding",
+      "image": "claude/coding-review-v1.png",
+      "provenance": "claude/coding-review-v1.provenance.json",
+      "prompt": "claude/coding-review-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1189,
+      "height": 1323
+    },
+    {
+      "character": "claude",
+      "state": "tool",
+      "image": "claude/tool-inspect-v1.png",
+      "provenance": "claude/tool-inspect-v1.provenance.json",
+      "prompt": "claude/tool-inspect-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1189,
+      "height": 1323
+    },
+    {
+      "character": "claude",
+      "state": "tool",
+      "image": "claude/tool-adjust-v1.png",
+      "provenance": "claude/tool-adjust-v1.provenance.json",
+      "prompt": "claude/tool-adjust-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1194,
+      "height": 1317
+    },
+    {
+      "character": "gpt",
+      "state": "idle",
+      "image": "gpt/idle-v1.png",
+      "provenance": "gpt/idle-v1.provenance.json",
+      "prompt": "gpt/idle-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 74,
+        "y": 60,
+        "width": 1047,
+        "height": 1165,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "idle",
+      "image": "gpt/idle-2-v1.png",
+      "provenance": "gpt/idle-2-v1.provenance.json",
+      "prompt": "gpt/idle-2-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1176,
+      "height": 1338,
+      "framing": {
+        "x": 41,
+        "y": 21,
+        "width": 1117,
+        "height": 1263,
+        "canvasWidth": 1176,
+        "canvasHeight": 1338
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "idle",
+      "image": "gpt/idle-3-v1.png",
+      "provenance": "gpt/idle-3-v1.provenance.json",
+      "prompt": "gpt/idle-3-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1153,
+      "height": 1364,
+      "framing": {
+        "x": 36,
+        "y": 31,
+        "width": 1089,
+        "height": 1237,
+        "canvasWidth": 1153,
+        "canvasHeight": 1364
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "thinking",
+      "image": "gpt/thinking-v1.png",
+      "provenance": "gpt/thinking-v1.provenance.json",
+      "prompt": "gpt/thinking-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1147,
+      "height": 1372,
+      "framing": {
+        "x": 28,
+        "y": 38,
+        "width": 1094,
+        "height": 1289,
+        "canvasWidth": 1147,
+        "canvasHeight": 1372
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "thinking",
+      "image": "gpt/thinking-2-v1.png",
+      "provenance": "gpt/thinking-2-v1.provenance.json",
+      "prompt": "gpt/thinking-2-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1147,
+      "height": 1372,
+      "framing": {
+        "x": 20,
+        "y": 12,
+        "width": 1114,
+        "height": 1325,
+        "canvasWidth": 1147,
+        "canvasHeight": 1372
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "thinking",
+      "image": "gpt/thinking-curious-v1.png",
+      "provenance": "gpt/thinking-curious-v1.provenance.json",
+      "prompt": "gpt/thinking-curious-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1147,
+      "height": 1372,
+      "framing": {
+        "x": 19,
+        "y": 26,
+        "width": 1107,
+        "height": 1266,
+        "canvasWidth": 1147,
+        "canvasHeight": 1372
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "thinking",
+      "image": "gpt/thinking-focused-v1.png",
+      "provenance": "gpt/thinking-focused-v1.provenance.json",
+      "prompt": "gpt/thinking-focused-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 62,
+        "y": 54,
+        "width": 1055,
+        "height": 1194,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "reading",
+      "image": "gpt/reading-v1.png",
+      "provenance": "gpt/reading-v1.provenance.json",
+      "prompt": "gpt/reading-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 62,
+        "y": 55,
+        "width": 1084,
+        "height": 1215,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "reading",
+      "image": "gpt/reading-studious-v1.png",
+      "provenance": "gpt/reading-studious-v1.provenance.json",
+      "prompt": "gpt/reading-studious-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 39,
+        "y": 33,
+        "width": 1123,
+        "height": 1250,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "reading",
+      "image": "gpt/reading-page-turn-v1.png",
+      "provenance": "gpt/reading-page-turn-v1.provenance.json",
+      "prompt": "gpt/reading-page-turn-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1168,
+      "height": 1347,
+      "framing": {
+        "x": 25,
+        "y": 18,
+        "width": 1116,
+        "height": 1262,
+        "canvasWidth": 1168,
+        "canvasHeight": 1347
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "coding",
+      "image": "gpt/writing-v1.png",
+      "provenance": "gpt/writing-v1.provenance.json",
+      "prompt": "gpt/writing-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1165,
+      "height": 1350,
+      "framing": {
+        "x": 58,
+        "y": 68,
+        "width": 1074,
+        "height": 1203,
+        "canvasWidth": 1165,
+        "canvasHeight": 1350
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "coding",
+      "image": "gpt/coding-quill-v1.png",
+      "provenance": "gpt/coding-quill-v1.provenance.json",
+      "prompt": "gpt/coding-quill-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1165,
+      "height": 1350,
+      "framing": {
+        "x": 48,
+        "y": 24,
+        "width": 1100,
+        "height": 1274,
+        "canvasWidth": 1165,
+        "canvasHeight": 1350
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "coding",
+      "image": "gpt/coding-review-v1.png",
+      "provenance": "gpt/coding-review-v1.provenance.json",
+      "prompt": "gpt/coding-review-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1165,
+      "height": 1350,
+      "framing": {
+        "x": 39,
+        "y": 51,
+        "width": 1090,
+        "height": 1215,
+        "canvasWidth": 1165,
+        "canvasHeight": 1350
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "tool",
+      "image": "gpt/running-v1.png",
+      "provenance": "gpt/running-v1.provenance.json",
+      "prompt": "gpt/running-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1174,
+      "height": 1340,
+      "framing": {
+        "x": 36,
+        "y": 38,
+        "width": 1112,
+        "height": 1240,
+        "canvasWidth": 1174,
+        "canvasHeight": 1340
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "tool",
+      "image": "gpt/tool-inspect-v1.png",
+      "provenance": "gpt/tool-inspect-v1.provenance.json",
+      "prompt": "gpt/tool-inspect-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 22,
+        "y": 10,
+        "width": 1141,
+        "height": 1250,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "tool",
+      "image": "gpt/tool-adjust-v1.png",
+      "provenance": "gpt/tool-adjust-v1.provenance.json",
+      "prompt": "gpt/tool-adjust-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 17,
+        "y": 22,
+        "width": 1142,
+        "height": 1260,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "success",
+      "image": "gpt/happy-v1.png",
+      "provenance": "gpt/happy-v1.provenance.json",
+      "prompt": "gpt/happy-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 38,
+        "y": 40,
+        "width": 1111,
+        "height": 1191,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "error",
+      "image": "gpt/oops-v1.png",
+      "provenance": "gpt/oops-v1.provenance.json",
+      "prompt": "gpt/oops-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 54,
+        "y": 44,
+        "width": 1097,
+        "height": 1239,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "waiting",
+      "image": "gpt/asking-v1.png",
+      "provenance": "gpt/asking-v1.provenance.json",
+      "prompt": "gpt/asking-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1210,
+      "height": 1300,
+      "framing": {
+        "x": 44,
+        "y": 31,
+        "width": 1160,
+        "height": 1212,
+        "canvasWidth": 1210,
+        "canvasHeight": 1300
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "waiting",
+      "image": "gpt/listening-v1.png",
+      "provenance": "gpt/listening-v1.provenance.json",
+      "prompt": "gpt/listening-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 69,
+        "y": 27,
+        "width": 1079,
+        "height": 1266,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "sleeping",
+      "image": "gpt/sleeping-v1.png",
+      "provenance": "gpt/sleeping-v1.provenance.json",
+      "prompt": "gpt/sleeping-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1113,
+      "height": 1413,
+      "framing": {
+        "x": 18,
+        "y": 44,
+        "width": 1084,
+        "height": 1302,
+        "canvasWidth": 1113,
+        "canvasHeight": 1413
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "pat",
+      "image": "gpt/pat-v1.png",
+      "provenance": "gpt/pat-v1.provenance.json",
+      "prompt": "gpt/pat-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1206,
+      "height": 1304,
+      "framing": {
+        "x": 56,
+        "y": 21,
+        "width": 1128,
+        "height": 1217,
+        "canvasWidth": 1206,
+        "canvasHeight": 1304
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "pat",
+      "image": "gpt/forgiven-v1.png",
+      "provenance": "gpt/forgiven-v1.provenance.json",
+      "prompt": "gpt/forgiven-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1177,
+      "height": 1337,
+      "framing": {
+        "x": 73,
+        "y": 40,
+        "width": 1066,
+        "height": 1212,
+        "canvasWidth": 1177,
+        "canvasHeight": 1337
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "pat",
+      "image": "gpt/pat-lean-v1.png",
+      "provenance": "gpt/pat-lean-v1.provenance.json",
+      "prompt": "gpt/pat-lean-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 66,
+        "y": 25,
+        "width": 1097,
+        "height": 1242,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "pat",
+      "image": "gpt/pat-content-v1.png",
+      "provenance": "gpt/pat-content-v1.provenance.json",
+      "prompt": "gpt/pat-content-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 65,
+        "y": 19,
+        "width": 1071,
+        "height": 1261,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "poke",
+      "image": "gpt/surprised-v1.png",
+      "provenance": "gpt/surprised-v1.provenance.json",
+      "prompt": "gpt/surprised-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 63,
+        "y": 46,
+        "width": 1086,
+        "height": 1224,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "hum",
+      "image": "gpt/hum-v1.png",
+      "provenance": "gpt/hum-v1.provenance.json",
+      "prompt": "gpt/hum-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 59,
+        "y": 48,
+        "width": 1084,
+        "height": 1222,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "stretch",
+      "image": "gpt/stretch-v1.png",
+      "provenance": "gpt/stretch-v1.provenance.json",
+      "prompt": "gpt/stretch-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1179,
+      "height": 1334,
+      "framing": {
+        "x": 37,
+        "y": 37,
+        "width": 1123,
+        "height": 1226,
+        "canvasWidth": 1179,
+        "canvasHeight": 1334
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "yawn",
+      "image": "gpt/yawn-v1.png",
+      "provenance": "gpt/yawn-v1.provenance.json",
+      "prompt": "gpt/yawn-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 45,
+        "y": 24,
+        "width": 1101,
+        "height": 1245,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "greet",
+      "aliases": [
+        "wink"
+      ],
+      "image": "gpt/greet-morning-v1.png",
+      "provenance": "gpt/greet-morning-v1.provenance.json",
+      "prompt": "gpt/greet-morning-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 40,
+        "y": 32,
+        "width": 1106,
+        "height": 1233,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "greet",
+      "image": "gpt/greet-afternoon-v1.png",
+      "provenance": "gpt/greet-afternoon-v1.provenance.json",
+      "prompt": "gpt/greet-afternoon-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1078,
+      "height": 1460,
+      "framing": {
+        "x": 12,
+        "y": 58,
+        "width": 1048,
+        "height": 1324,
+        "canvasWidth": 1078,
+        "canvasHeight": 1460
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "greet",
+      "image": "gpt/greet-evening-v1.png",
+      "provenance": "gpt/greet-evening-v1.provenance.json",
+      "prompt": "gpt/greet-evening-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1122,
+      "height": 1402,
+      "framing": {
+        "x": 23,
+        "y": 60,
+        "width": 1078,
+        "height": 1256,
+        "canvasWidth": 1122,
+        "canvasHeight": 1402
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "greet",
+      "image": "gpt/greet-wave-v1.png",
+      "provenance": "gpt/greet-wave-v1.provenance.json",
+      "prompt": "gpt/greet-wave-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 66,
+        "y": 27,
+        "width": 1056,
+        "height": 1247,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "coaxed",
+      "image": "gpt/coaxed-v1.png",
+      "provenance": "gpt/coaxed-v1.provenance.json",
+      "prompt": "gpt/coaxed-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 87,
+        "y": 34,
+        "width": 1073,
+        "height": 1222,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "coaxed",
+      "image": "gpt/coaxed-2-v1.png",
+      "provenance": "gpt/coaxed-2-v1.provenance.json",
+      "prompt": "gpt/coaxed-2-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1201,
+      "height": 1309,
+      "framing": {
+        "x": 63,
+        "y": 47,
+        "width": 1120,
+        "height": 1179,
+        "canvasWidth": 1201,
+        "canvasHeight": 1309
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "puffed",
+      "image": "gpt/puffed-v1.png",
+      "provenance": "gpt/puffed-v1.provenance.json",
+      "prompt": "gpt/puffed-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1189,
+      "height": 1323,
+      "framing": {
+        "x": 47,
+        "y": 24,
+        "width": 1115,
+        "height": 1243,
+        "canvasWidth": 1189,
+        "canvasHeight": 1323
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "hairplay",
+      "image": "gpt/hairplay-v1.png",
+      "provenance": "gpt/hairplay-v1.provenance.json",
+      "prompt": "gpt/hairplay-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 44,
+        "y": 29,
+        "width": 1099,
+        "height": 1238,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "idle-blink",
+      "image": "gpt/idle-blink-v1.png",
+      "provenance": "gpt/idle-blink-v1.provenance.json",
+      "prompt": "gpt/idle-blink-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 73,
+        "y": 59,
+        "width": 1049,
+        "height": 1169,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "claude",
+      "state": "aloof",
+      "image": "claude/aloof-look-away-v1.png",
+      "provenance": "claude/aloof-look-away-v1.provenance.json",
+      "prompt": "claude/aloof-look-away-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1152,
+      "height": 1366,
+      "framing": {
+        "x": 109,
+        "y": 124,
+        "width": 978,
+        "height": 1133,
+        "canvasWidth": 1152,
+        "canvasHeight": 1366
+      }
+    },
+    {
+      "character": "claude",
+      "state": "wink",
+      "image": "claude/wink-v1.png",
+      "provenance": "claude/wink-v1.provenance.json",
+      "prompt": "claude/wink-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1189,
+      "height": 1323,
+      "framing": {
+        "x": 103,
+        "y": 111,
+        "width": 993,
+        "height": 1094,
+        "canvasWidth": 1189,
+        "canvasHeight": 1323
+      }
+    },
+    {
+      "character": "claude",
+      "state": "sip",
+      "image": "claude/black-tea-v1.png",
+      "provenance": "claude/black-tea-v1.provenance.json",
+      "prompt": "claude/black-tea-v1.prompt.txt",
+      "attribution": "claude/ATTRIBUTION.md",
+      "width": 1183,
+      "height": 1329,
+      "framing": {
+        "x": 127,
+        "y": 121,
+        "width": 956,
+        "height": 1086,
+        "canvasWidth": 1183,
+        "canvasHeight": 1329
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "aloof",
+      "image": "gpt/aloof-look-away-v1.png",
+      "provenance": "gpt/aloof-look-away-v1.provenance.json",
+      "prompt": "gpt/aloof-look-away-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1189,
+      "height": 1323,
+      "framing": {
+        "x": 50,
+        "y": 24,
+        "width": 1105,
+        "height": 1235,
+        "canvasWidth": 1189,
+        "canvasHeight": 1323
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "smug",
+      "image": "gpt/smug-v1.png",
+      "provenance": "gpt/smug-v1.provenance.json",
+      "prompt": "gpt/smug-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 55,
+        "y": 35,
+        "width": 1097,
+        "height": 1225,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    },
+    {
+      "character": "gpt",
+      "state": "sip",
+      "image": "gpt/white-monster-v1.png",
+      "provenance": "gpt/white-monster-v1.provenance.json",
+      "prompt": "gpt/white-monster-v1.prompt.txt",
+      "attribution": "gpt/ATTRIBUTION.md",
+      "width": 1182,
+      "height": 1330,
+      "framing": {
+        "x": 28,
+        "y": 13,
+        "width": 1128,
+        "height": 1256,
+        "canvasWidth": 1182,
+        "canvasHeight": 1330
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "claude/aloof-look-away-v1.png",
+      "bytes": 1428186,
+      "sha256": "46b079e4aa1d3be160a14ce362e80a1799f6a0ef54147f79625ea2cbba7eeffa"
+    },
+    {
+      "path": "claude/aloof-look-away-v1.prompt.txt",
+      "bytes": 1646,
+      "sha256": "38bc9b5c24ec6f50191d9621ded8222c5d7f1e9b16303520e6003b8290662725"
+    },
+    {
+      "path": "claude/aloof-look-away-v1.provenance.json",
+      "bytes": 3027,
+      "sha256": "bfc7b2c87817c1a83c185cc8bab30a2777066f49726443d3a4ba40e15e6a9ead"
+    },
+    {
+      "path": "claude/ATTRIBUTION.md",
+      "bytes": 3353,
+      "sha256": "3a107a8240f2340f7c007f97af466a41faddfaae19c86611fd2bf211f1413c97"
+    },
+    {
+      "path": "claude/black-tea-v1.png",
+      "bytes": 1311728,
+      "sha256": "9f44c23a3bd28c340e2a8720422bda006ad18a7e4c7c61d6fc42d5f20268344f"
+    },
+    {
+      "path": "claude/black-tea-v1.prompt.txt",
+      "bytes": 1759,
+      "sha256": "d1bf1ccdf876aef275439efde67e32c8873670119a1797d0f4f110e1af4b5fec"
+    },
+    {
+      "path": "claude/black-tea-v1.provenance.json",
+      "bytes": 3005,
+      "sha256": "15498429a08466f2228fc244c66282d6aefc3d26af0253e546978e4fb7bad391"
+    },
+    {
+      "path": "claude/coaxed-affection-v1.png",
+      "bytes": 1845820,
+      "sha256": "99d26008accaf526582a0d9f3ca168f89d0f0f96d77fc65558a64507a8d30b19"
+    },
+    {
+      "path": "claude/coaxed-affection-v1.prompt.txt",
+      "bytes": 2655,
+      "sha256": "4c9a41b6adcb85d6e05844a234fd5aca75f5390ba7f876c4956c574d1e58beaf"
+    },
+    {
+      "path": "claude/coaxed-affection-v1.provenance.json",
+      "bytes": 2988,
+      "sha256": "5151e287e449bd3de2e0c06ee070685c95fb8fca3f9679679baca0c1aa251f71"
+    },
+    {
+      "path": "claude/coding-quill-v1.png",
+      "bytes": 1905300,
+      "sha256": "8f1b271d05c48e844c4ca8e7d47996a49e6b62872c8e850cafc2d3ee47a809d8"
+    },
+    {
+      "path": "claude/coding-quill-v1.prompt.txt",
+      "bytes": 2559,
+      "sha256": "849c8a3d71c3812b2a3d4d22ec558011835ca52c3dc6ce71a54d53b97da012e7"
+    },
+    {
+      "path": "claude/coding-quill-v1.provenance.json",
+      "bytes": 2838,
+      "sha256": "b8ce0d0ad502e3fdc77ca47100fda1639be9dab93447c7406eeb938939c297e1"
+    },
+    {
+      "path": "claude/coding-review-v1.png",
+      "bytes": 1874419,
+      "sha256": "314beefae605376e861ce380b85ef498ee8f636419a61876126299641fb85999"
+    },
+    {
+      "path": "claude/coding-review-v1.prompt.txt",
+      "bytes": 2546,
+      "sha256": "c5a5ec123efea9d5edb1e003e335b5da1ea9fc81b237d3ce38a31dfad7f385de"
+    },
+    {
+      "path": "claude/coding-review-v1.provenance.json",
+      "bytes": 2827,
+      "sha256": "7acb615f9252df7bbf1c9dd34975cb2e5f0cd1bd8433a96cb08d2f6a738aad29"
+    },
+    {
+      "path": "claude/hairplay-v1.png",
+      "bytes": 2189561,
+      "sha256": "1b0e4e9e86fea627b51724bf7bf72a181be5d0d65f81b5e0d61e60b7197cb7a2"
+    },
+    {
+      "path": "claude/hairplay-v1.prompt.txt",
+      "bytes": 2656,
+      "sha256": "9786a9e73dc7a02247dc6a4850ec7e18efbbe9b3cb0bf26da0e53f9b785a6aff"
+    },
+    {
+      "path": "claude/hairplay-v1.provenance.json",
+      "bytes": 2973,
+      "sha256": "19e3c194929d18c0a410e3105e94c351ffefd71905ac24cc10bdaaf2c3957647"
+    },
+    {
+      "path": "claude/pat-content-v1.png",
+      "bytes": 2069053,
+      "sha256": "f4781ca996f80a8357c6bc1f225e3a232664b93a8f853e48f853a6b1fd1cf352"
+    },
+    {
+      "path": "claude/pat-content-v1.prompt.txt",
+      "bytes": 2528,
+      "sha256": "7272481f1a87253da057cd0c709b5ef2ad0cca7e0bddfe1e24432e391623f44a"
+    },
+    {
+      "path": "claude/pat-content-v1.provenance.json",
+      "bytes": 2851,
+      "sha256": "7f89a3b1428e5075f8946c95632ad1f00627dde871e0ff01ceb1111a4639690a"
+    },
+    {
+      "path": "claude/pat-lean-v1.png",
+      "bytes": 1883990,
+      "sha256": "53ceefd8be741b1226d6601a8092a9a06a049b34e5ada6f150047f7de45601bf"
+    },
+    {
+      "path": "claude/pat-lean-v1.prompt.txt",
+      "bytes": 2570,
+      "sha256": "bf8a6b9e1626492479eb03ea7f6044b801c52b4cd38e56a0372e5a3ac533086a"
+    },
+    {
+      "path": "claude/pat-lean-v1.provenance.json",
+      "bytes": 2887,
+      "sha256": "c0d8aa4005a31798f3649ace04817b5a04a2744208aa9b21f4c3cf57879b68cd"
+    },
+    {
+      "path": "claude/reading-page-turn-v1.png",
+      "bytes": 1890581,
+      "sha256": "c5960535629d15a11c4c15b5aae208ff67c44bc716f9fad65cdd24a5691e2fba"
+    },
+    {
+      "path": "claude/reading-page-turn-v1.prompt.txt",
+      "bytes": 2463,
+      "sha256": "ab81455b5d42cc4e86b6fc09e85c2ef999f08f56a2e3554e0098a2315a7c1e04"
+    },
+    {
+      "path": "claude/reading-page-turn-v1.provenance.json",
+      "bytes": 2754,
+      "sha256": "2b734934da99c08cfde62ae05eb4bc565c39944eba98e2be89cbb2b1c7d05619"
+    },
+    {
+      "path": "claude/reading-studious-v1.png",
+      "bytes": 1806747,
+      "sha256": "04fbcebadcbd7cb22d3640a9dd440d26db6832291f7df0f1db3057c91693b465"
+    },
+    {
+      "path": "claude/reading-studious-v1.prompt.txt",
+      "bytes": 2444,
+      "sha256": "4058e022b17ca682e7dc530f88dae1b079c2704e8031b8b2c036df88e21bf85a"
+    },
+    {
+      "path": "claude/reading-studious-v1.provenance.json",
+      "bytes": 2733,
+      "sha256": "faf7d206e0f0623914ff87c5e7a10a95e45a4ba767494dea39b64e91da21f40e"
+    },
+    {
+      "path": "claude/thinking-curious-v1.png",
+      "bytes": 2117482,
+      "sha256": "1a664c27b6b23f05f91cd10359aab720f3bc50b08234740c0c850d950b788e3c"
+    },
+    {
+      "path": "claude/thinking-curious-v1.prompt.txt",
+      "bytes": 2546,
+      "sha256": "329560668266c4ee4d3df9a98c63d29c4b1b7e36af781a700a7f659de32cfe75"
+    },
+    {
+      "path": "claude/thinking-curious-v1.provenance.json",
+      "bytes": 2879,
+      "sha256": "df6f5041c4fb0642bd2ae9380ad58f9739f1233a64c18b08bd064a2ca9c1a803"
+    },
+    {
+      "path": "claude/thinking-focused-v1.png",
+      "bytes": 2151369,
+      "sha256": "e32e069a8d7ee3017a2a5ec763b320d1d21cb8f82b2f0be0df121a69cd80a060"
+    },
+    {
+      "path": "claude/thinking-focused-v1.prompt.txt",
+      "bytes": 2620,
+      "sha256": "4d042c16f1ffb413d33c832d3f0d4fbce5232dbb557452ab228ef673f8d15a0b"
+    },
+    {
+      "path": "claude/thinking-focused-v1.provenance.json",
+      "bytes": 2953,
+      "sha256": "b71a99d2ff71e845ab332297037231e5383dacbafb42c0133b7b7916a69bbd9f"
+    },
+    {
+      "path": "claude/tool-adjust-v1.png",
+      "bytes": 1876748,
+      "sha256": "5bd4947b5ccc479cf7ec501867e75a56baacc5dcf05cb7737cde3cc566980dfe"
+    },
+    {
+      "path": "claude/tool-adjust-v1.prompt.txt",
+      "bytes": 2605,
+      "sha256": "eb251013fba344898118078d47a797d1cb7634f47ba23121c8a4f370a7f396e7"
+    },
+    {
+      "path": "claude/tool-adjust-v1.provenance.json",
+      "bytes": 2882,
+      "sha256": "c2f6ec086dcfb0f8f5f70ce73d4374c56213fda5c13d0a2bd370eeed5e171f9b"
+    },
+    {
+      "path": "claude/tool-inspect-v1.png",
+      "bytes": 1851702,
+      "sha256": "c7ebe30069ade64b5e3bebcf3c9f076020b32b5fe1437906517cf30c3bfab4cf"
+    },
+    {
+      "path": "claude/tool-inspect-v1.prompt.txt",
+      "bytes": 2533,
+      "sha256": "8c94f57698820f8f6cd45d90254a4b11b8c1de9bb2d7025b3dd89658135d71ca"
+    },
+    {
+      "path": "claude/tool-inspect-v1.provenance.json",
+      "bytes": 2812,
+      "sha256": "d6f90cc2d6c6eb25aaadbc45a4e02f78798280c0f885e54d36a518f0b33e56e7"
+    },
+    {
+      "path": "claude/wave-v1.png",
+      "bytes": 1900276,
+      "sha256": "a3f5040aca3dae540e8d0c95056b5d12e9c2a712580840cb1f92ca644e4087d3"
+    },
+    {
+      "path": "claude/wave-v1.prompt.txt",
+      "bytes": 2418,
+      "sha256": "2296dc320be46f534f339eccfdd496b5c000881b66df04a7ce3f4b1383239885"
+    },
+    {
+      "path": "claude/wave-v1.provenance.json",
+      "bytes": 2154,
+      "sha256": "3454fc39950365e23dffa6bcd6eed2033b48fbfae2b525adb2893c653a2f3e06"
+    },
+    {
+      "path": "claude/wink-v1.png",
+      "bytes": 1451885,
+      "sha256": "8e827fd05effab3edbbc69d7a93f23d62fc5165b5d008fd3baef3907fc8c167d"
+    },
+    {
+      "path": "claude/wink-v1.prompt.txt",
+      "bytes": 1686,
+      "sha256": "71f1fa278f6f78e66c3689d57f37468bb464c029eb950004b393f5ac6a256c22"
+    },
+    {
+      "path": "claude/wink-v1.provenance.json",
+      "bytes": 2992,
+      "sha256": "e47ac27d2b2161ec9f1ce1089bb54e80b39b753d07f16ddc8faaee7caddaf0e0"
+    },
+    {
+      "path": "gpt/aloof-look-away-v1.png",
+      "bytes": 1810169,
+      "sha256": "af584b4e6c93e0647de66a473701b0e7048d0fa11533e49371d0c0c3ea8affc0"
+    },
+    {
+      "path": "gpt/aloof-look-away-v1.prompt.txt",
+      "bytes": 2168,
+      "sha256": "0d0b27f0235a40fe2be0207ff527ba1e37de865458bb1cf9543329ef34aec776"
+    },
+    {
+      "path": "gpt/aloof-look-away-v1.provenance.json",
+      "bytes": 3540,
+      "sha256": "08c73b51b8f1249c050d66ecb943b05a989460a00014cfc804d8af2820ecad6c"
+    },
+    {
+      "path": "gpt/asking-v1.png",
+      "bytes": 1890360,
+      "sha256": "fa9a286439796b11c2960954353c2c6f8463cf7bf6b7b27aedaba1903a2d0b5f"
+    },
+    {
+      "path": "gpt/asking-v1.prompt.txt",
+      "bytes": 3049,
+      "sha256": "9c5b80fec980455a728362fe04a271a16f4edbc1773ba7200b648cf86f165929"
+    },
+    {
+      "path": "gpt/asking-v1.provenance.json",
+      "bytes": 3355,
+      "sha256": "04796820096dcfc499e361f27f966d635ccba06c9987fd4f256b40e731b4ebc0"
+    },
+    {
+      "path": "gpt/ATTRIBUTION.md",
+      "bytes": 3883,
+      "sha256": "ce24da646716982abaf6103656b48c54276307e4eff982c6e3eeea1932028bce"
+    },
+    {
+      "path": "gpt/coaxed-2-v1.png",
+      "bytes": 1810952,
+      "sha256": "a1c5767d78ecd1baebf3ebffad0ea46083bd6cbbd07a6a6c546f1ae183bec390"
+    },
+    {
+      "path": "gpt/coaxed-2-v1.prompt.txt",
+      "bytes": 3628,
+      "sha256": "8d6721238852843e132d238ec3286a9f3c4039fbaa0ab5996e58f20b00f11566"
+    },
+    {
+      "path": "gpt/coaxed-2-v1.provenance.json",
+      "bytes": 3948,
+      "sha256": "da16c34cda01eaa686335c65894e167a2c6ff6267283d0c3967e088b38b28b2e"
+    },
+    {
+      "path": "gpt/coaxed-v1.png",
+      "bytes": 1875539,
+      "sha256": "040afe21ffa538d2af7ab83763858f09bb9c2ccc8c9601bb8a356d4cfe001e0b"
+    },
+    {
+      "path": "gpt/coaxed-v1.prompt.txt",
+      "bytes": 3034,
+      "sha256": "b1f3dc1372195c256a744e7f9e96010bf7c856d1991f51b570769014a8e822ec"
+    },
+    {
+      "path": "gpt/coaxed-v1.provenance.json",
+      "bytes": 3337,
+      "sha256": "07d45d6f57b5ba1c578f22dcf81f055bff6b06be80f003686df769b89b42ea52"
+    },
+    {
+      "path": "gpt/coding-quill-v1.png",
+      "bytes": 1955769,
+      "sha256": "a0619e4e0a608ffe63eaab17a1c3400ee84cae298c00d89118e672b065d22265"
+    },
+    {
+      "path": "gpt/coding-quill-v1.prompt.txt",
+      "bytes": 3122,
+      "sha256": "82f9fdf297be438b793be49e5603d683495ed10526c1da40798b320c53e328c7"
+    },
+    {
+      "path": "gpt/coding-quill-v1.provenance.json",
+      "bytes": 3439,
+      "sha256": "f015487e0538199808524d8a75e07683dc4d0b8c213ba5ad4a63b104fa8ebffa"
+    },
+    {
+      "path": "gpt/coding-review-v1.png",
+      "bytes": 1865638,
+      "sha256": "7547b63038b5d964c1450426434d482ae30a17f8d9584591ddae057bf1cf806b"
+    },
+    {
+      "path": "gpt/coding-review-v1.prompt.txt",
+      "bytes": 3128,
+      "sha256": "45b852a7a09739e8706ac31639804c3030b99d19719d56d3e59b9ee2d303e50d"
+    },
+    {
+      "path": "gpt/coding-review-v1.provenance.json",
+      "bytes": 3447,
+      "sha256": "88104a7f386a8c3049306be340a15955d655652d315a5cf16f65ca77502dd1f0"
+    },
+    {
+      "path": "gpt/forgiven-v1.png",
+      "bytes": 1760417,
+      "sha256": "a8439bdc0139d545f16645b397322510409ffbc855de945c092a6714b2dba1ca"
+    },
+    {
+      "path": "gpt/forgiven-v1.prompt.txt",
+      "bytes": 3028,
+      "sha256": "f82164ad050ec789ed502d5bedadeb715819357a4475dd4d504f6918f01e7569"
+    },
+    {
+      "path": "gpt/forgiven-v1.provenance.json",
+      "bytes": 3336,
+      "sha256": "428475a153c904c4e6f36fbb4f273ed4af72c67ffccca5bc683f10d1ec4eb6c6"
+    },
+    {
+      "path": "gpt/greet-afternoon-v1.png",
+      "bytes": 1959115,
+      "sha256": "1e28c185213134de02735aea969107b2e9f9bfc688696766fad228c9a5223846"
+    },
+    {
+      "path": "gpt/greet-afternoon-v1.prompt.txt",
+      "bytes": 3035,
+      "sha256": "ae4049b8dfa36d9dc5acf2cdb1fcf70942e642a0cc6fc3bec18fdfe7509a3e66"
+    },
+    {
+      "path": "gpt/greet-afternoon-v1.provenance.json",
+      "bytes": 3366,
+      "sha256": "0e1f70e6ba45225d06a0c9aa44a721f3c73270a839ed498a0d558b0f1364311b"
+    },
+    {
+      "path": "gpt/greet-evening-v1.png",
+      "bytes": 1897416,
+      "sha256": "0378feec159bd557b26261d9bcfadf23357916d0aecf5e92fb622385633cf990"
+    },
+    {
+      "path": "gpt/greet-evening-v1.prompt.txt",
+      "bytes": 3052,
+      "sha256": "e2a7f6acc55439dc145bccdcffe9c68c770b18f39fe418deb11621be47af5bec"
+    },
+    {
+      "path": "gpt/greet-evening-v1.provenance.json",
+      "bytes": 3376,
+      "sha256": "4a0e1be3baab53666398c09bf9f8230b31bff9064fe694903977b6f9609456b0"
+    },
+    {
+      "path": "gpt/greet-morning-v1.png",
+      "bytes": 1864232,
+      "sha256": "d1dcdd4e308c8fee17921453a39e00641f38c2be81ea7f866148e32a43f41e55"
+    },
+    {
+      "path": "gpt/greet-morning-v1.prompt.txt",
+      "bytes": 3053,
+      "sha256": "1e9196d2734df223493cc435aeab0e1ab48e9d785966e8b6d7c39721eef0d1b3"
+    },
+    {
+      "path": "gpt/greet-morning-v1.provenance.json",
+      "bytes": 3376,
+      "sha256": "9510548acef620d96c9330b4ad9e05e1a2f1bc357e0d5d83db9abcaf4450327e"
+    },
+    {
+      "path": "gpt/greet-wave-v1.png",
+      "bytes": 1767672,
+      "sha256": "e8145e0c3a90f9786324bc0feff2ccf9986b5c9fc38bd6f037c48a9628cb869b"
+    },
+    {
+      "path": "gpt/greet-wave-v1.prompt.txt",
+      "bytes": 3101,
+      "sha256": "cd76f293ebd3f9059925568cac5e00bd256d902bf7126c07849a4545bff34489"
+    },
+    {
+      "path": "gpt/greet-wave-v1.provenance.json",
+      "bytes": 3411,
+      "sha256": "ed6bf1b237abbd4896ed1a560ed0a0f851988f7c366413f7aab9eb486b92326d"
+    },
+    {
+      "path": "gpt/hairplay-v1.png",
+      "bytes": 1815094,
+      "sha256": "e409c661e9a5dad6bae39772b0025b3ad0cada20d5b2735813e5335e4b5defa6"
+    },
+    {
+      "path": "gpt/hairplay-v1.prompt.txt",
+      "bytes": 3124,
+      "sha256": "024c098af26ac60c74dbe8b5547427cd219a7991de6154d50aa77372e1a067a6"
+    },
+    {
+      "path": "gpt/hairplay-v1.provenance.json",
+      "bytes": 3433,
+      "sha256": "6c6418cbccbe8ac9b1929a254fb80a287b5f0e9f32ccffbbf414d8d73b2d0f83"
+    },
+    {
+      "path": "gpt/happy-v1.png",
+      "bytes": 1806628,
+      "sha256": "c479815c0c7624d9f8ffeb4d9c518db1a9270f47993770a3bcc023a67a2148e5"
+    },
+    {
+      "path": "gpt/happy-v1.prompt.txt",
+      "bytes": 3078,
+      "sha256": "840365f05cc566b7460b3a8007007c2ca22447b5ef07030017ade1850cc55a10"
+    },
+    {
+      "path": "gpt/happy-v1.provenance.json",
+      "bytes": 3380,
+      "sha256": "ce4b90da14e70f92d9987a95b9a049e5e05c02ab050e701259cf5e870767b737"
+    },
+    {
+      "path": "gpt/hum-v1.png",
+      "bytes": 1848798,
+      "sha256": "26f788adafb2c5a001d7e71b475f0d3b460b25ced4577ec9c6043f1c566e3678"
+    },
+    {
+      "path": "gpt/hum-v1.prompt.txt",
+      "bytes": 3046,
+      "sha256": "ceee885eecc1b41b5e2b168362f9848a9dcc0095517cc421f7fdadfbd7c2e25c"
+    },
+    {
+      "path": "gpt/hum-v1.provenance.json",
+      "bytes": 3338,
+      "sha256": "8970399bb9a2f5df14d2da5a499dc69149b394b03d69b82fd748ad93ef972087"
+    },
+    {
+      "path": "gpt/idle-2-v1.png",
+      "bytes": 1886637,
+      "sha256": "57a24368b8db572fd0935f7c03587d890cca079afebd2796a222e23565350ba8"
+    },
+    {
+      "path": "gpt/idle-2-v1.prompt.txt",
+      "bytes": 3057,
+      "sha256": "5e1e39becbcfb63690030b202a506cf219f6c92bc3e7b1302beba5707beca7f6"
+    },
+    {
+      "path": "gpt/idle-2-v1.provenance.json",
+      "bytes": 3359,
+      "sha256": "8b5dab6c66a65af871031b7336aee225f1cc4a5a137d7ab838ad34af24798511"
+    },
+    {
+      "path": "gpt/idle-3-v1.png",
+      "bytes": 1864137,
+      "sha256": "262cf7fb096e9f6b1b81d93621c23896b1256c0f0e55f310acfff8dbe8945378"
+    },
+    {
+      "path": "gpt/idle-3-v1.prompt.txt",
+      "bytes": 3053,
+      "sha256": "13c01cf3b64ca18821ccd95f167cc724392ae506bdad6fb1ca994f15d873804f"
+    },
+    {
+      "path": "gpt/idle-3-v1.provenance.json",
+      "bytes": 3356,
+      "sha256": "be110ff18f3a6968d785e0c3c7e6d5525a4390878069b0d110a372af0aba13fc"
+    },
+    {
+      "path": "gpt/idle-blink-v1.png",
+      "bytes": 1679375,
+      "sha256": "2b33bb5023b550a8759148a32cbddddb659671dec63d20c3bf1cbfc3caa21aea"
+    },
+    {
+      "path": "gpt/idle-blink-v1.prompt.txt",
+      "bytes": 3174,
+      "sha256": "14ea971c09a4a95e58e41e72bb8ca648eae1ede6a0f85650bc09e6f4b60d80d4"
+    },
+    {
+      "path": "gpt/idle-blink-v1.provenance.json",
+      "bytes": 3248,
+      "sha256": "8f9677e85119440b25aab15d55d481f650af73c4d8d139d14d4fcdcc0fce31d7"
+    },
+    {
+      "path": "gpt/idle-v1.png",
+      "bytes": 1678302,
+      "sha256": "1a056bb221252821d255f75a3b7cca65ba1920c747aa2d33ce5b1716037f50a3"
+    },
+    {
+      "path": "gpt/idle-v1.prompt.txt",
+      "bytes": 2224,
+      "sha256": "dbe49b2134f4acfab32f823f93d4ad849464c871625284bf6b198680395cc8d3"
+    },
+    {
+      "path": "gpt/idle-v1.provenance.json",
+      "bytes": 3015,
+      "sha256": "c05b48e12ee03d9322dd0f1263bbb9918d7d0c20781b6b4e093f399d9959b2c9"
+    },
+    {
+      "path": "gpt/listening-v1.png",
+      "bytes": 1832439,
+      "sha256": "4d63cab215dc2f77c30cdb520533a52a84941872e6d8557aeb5360f2b4dc0e60"
+    },
+    {
+      "path": "gpt/listening-v1.prompt.txt",
+      "bytes": 3069,
+      "sha256": "1d31f61452661c19bc7ba791a5d57b6768788a9a23f718f4af48d2633def4ded"
+    },
+    {
+      "path": "gpt/listening-v1.provenance.json",
+      "bytes": 3383,
+      "sha256": "993a432be2f572fde2d10d3b7772871435bc99a2bc825f28bc2da890793a5af5"
+    },
+    {
+      "path": "gpt/oops-v1.png",
+      "bytes": 1906061,
+      "sha256": "9e58f4beab3309dc57e43c28c61b2b03d33521a81ce8806a6d3ca1c4438e9252"
+    },
+    {
+      "path": "gpt/oops-v1.prompt.txt",
+      "bytes": 3077,
+      "sha256": "d942c1fd41494557a620276444b069ba8c7700fc1d058d554d462feace6283ea"
+    },
+    {
+      "path": "gpt/oops-v1.provenance.json",
+      "bytes": 3374,
+      "sha256": "7911d5b36e435b7f2bf3b70b98d634f2482b5a6b117ff7143d214593da88e36a"
+    },
+    {
+      "path": "gpt/pat-content-v1.png",
+      "bytes": 1782834,
+      "sha256": "0c5666505b853e600d0393c68d4ffcce12bdaead7859c27183c58df70ad243de"
+    },
+    {
+      "path": "gpt/pat-content-v1.prompt.txt",
+      "bytes": 3119,
+      "sha256": "7e2015b635c32dea1278e6c9ba107554c55ecd4ff9912b65a5861183d0997855"
+    },
+    {
+      "path": "gpt/pat-content-v1.provenance.json",
+      "bytes": 3427,
+      "sha256": "a85d368fc9d5d9ed6e1fa140969a2531574afe1990340098e3859bfa7099210c"
+    },
+    {
+      "path": "gpt/pat-lean-v1.png",
+      "bytes": 1833156,
+      "sha256": "fe4acee684623b8ec67c86456d14758da59624cf2f0c51a619b3d7311c8257e0"
+    },
+    {
+      "path": "gpt/pat-lean-v1.prompt.txt",
+      "bytes": 3114,
+      "sha256": "fefa48a294d54527eb466bb37d5eb153b930fc569c68cea329fa5099ba7bc209"
+    },
+    {
+      "path": "gpt/pat-lean-v1.provenance.json",
+      "bytes": 3416,
+      "sha256": "a8ce2902d39eead8d0e23ffd2b7ce2e7e43ed29b30bc693ce7ee60bcea68c1d0"
+    },
+    {
+      "path": "gpt/pat-v1.png",
+      "bytes": 1849216,
+      "sha256": "8de945fe8863e13016237f632c7a8ae117d10814d6006ee61f339ee3b1a5b841"
+    },
+    {
+      "path": "gpt/pat-v1.prompt.txt",
+      "bytes": 3043,
+      "sha256": "2fc4abd07c378b799725418c8eca9910d30f80b38061140ab6ee329efb3c0985"
+    },
+    {
+      "path": "gpt/pat-v1.provenance.json",
+      "bytes": 3334,
+      "sha256": "25ac7221ec0570b99ca86ebb4db959f795b27549c970fbd9e22203e19db0e1ae"
+    },
+    {
+      "path": "gpt/puffed-v1.png",
+      "bytes": 1875345,
+      "sha256": "a68c5a044916a023dc302bd4ab01b807fc2c078766918ab6cf7fdcc13fe8e15d"
+    },
+    {
+      "path": "gpt/puffed-v1.prompt.txt",
+      "bytes": 3041,
+      "sha256": "77e2e86c41a84eb679ad6693ce6c0f826d75c842db08e2af50458fa066d87c25"
+    },
+    {
+      "path": "gpt/puffed-v1.provenance.json",
+      "bytes": 3345,
+      "sha256": "ae884a884cf09646bfa660ae94d5b5158d2a7bd180947f2899cc0ae6f23f10ca"
+    },
+    {
+      "path": "gpt/reading-page-turn-v1.png",
+      "bytes": 1913270,
+      "sha256": "7bd87063efe4d514cc7181ceebdd0d5e6c4407253d9369adae217afb67551db9"
+    },
+    {
+      "path": "gpt/reading-page-turn-v1.prompt.txt",
+      "bytes": 3108,
+      "sha256": "ac7a9c1a45d3babb8db11f13c22c3da8df03ab18ffdee6e058ebd6aa3c97a85b"
+    },
+    {
+      "path": "gpt/reading-page-turn-v1.provenance.json",
+      "bytes": 3436,
+      "sha256": "5f91820de9445cff5217705cb1f2bb0fe5d85c10bd98a542b215c870f7325b7a"
+    },
+    {
+      "path": "gpt/reading-studious-v1.png",
+      "bytes": 1933878,
+      "sha256": "4097e31a689dcda6091de1bc1d19fdd798539fb630131442a859eb2714441b11"
+    },
+    {
+      "path": "gpt/reading-studious-v1.prompt.txt",
+      "bytes": 3127,
+      "sha256": "38a2ee713d921307107e06da03ec9567386cf356aba7b3a292fcbf5e0ac36329"
+    },
+    {
+      "path": "gpt/reading-studious-v1.provenance.json",
+      "bytes": 3452,
+      "sha256": "e9388a242d75a84e3c892e67b6828dc3532ba69b259440602810274f4d778f73"
+    },
+    {
+      "path": "gpt/reading-v1.png",
+      "bytes": 1812508,
+      "sha256": "3690319de4f0a23636e02479a74b25d0792b5a73faf1a870d1b9d2d599a2f1ba"
+    },
+    {
+      "path": "gpt/reading-v1.prompt.txt",
+      "bytes": 3067,
+      "sha256": "31217fb31d82ab8654a16e12dc50f7933a1360dda28e88f2d15b4f15ad7b38ef"
+    },
+    {
+      "path": "gpt/reading-v1.provenance.json",
+      "bytes": 3375,
+      "sha256": "28a576ecc611e841b105e8f513ea2ea9cf1d100808b2b1607010411e3c9c08ef"
+    },
+    {
+      "path": "gpt/running-v1.png",
+      "bytes": 1940398,
+      "sha256": "d2850a3cc98cf43fc4b4841629d05f0f06c30d233d6bef06c866bfe2cb316b08"
+    },
+    {
+      "path": "gpt/running-v1.prompt.txt",
+      "bytes": 3092,
+      "sha256": "28011048946da72b03eab6a418e80777abc589867e9608843edaea78226d32ec"
+    },
+    {
+      "path": "gpt/running-v1.provenance.json",
+      "bytes": 3398,
+      "sha256": "55247c64d900c924220e99532fdde5fcc07876c6f2423563abefc791e5babe17"
+    },
+    {
+      "path": "gpt/sleeping-v1.png",
+      "bytes": 1956601,
+      "sha256": "6d3fa37f839e095ee22fe6a93a72d399b116d730690251b8cb20b4e4a8050e20"
+    },
+    {
+      "path": "gpt/sleeping-v1.prompt.txt",
+      "bytes": 3101,
+      "sha256": "be6ea52df490f1f6a8cd49125323db215b3742dfdd2f0ca41e4a7450dfbb709f"
+    },
+    {
+      "path": "gpt/sleeping-v1.provenance.json",
+      "bytes": 3414,
+      "sha256": "339d286d37f4d0a69d302e9277f7fdb4bf9b5f5d3255d823c2849588cffcee61"
+    },
+    {
+      "path": "gpt/smug-v1.png",
+      "bytes": 1907397,
+      "sha256": "563ccd4567a0f1a064722d4a9bd4a86f60bf0fbebde1dae55982b3f80f4918f3"
+    },
+    {
+      "path": "gpt/smug-v1.prompt.txt",
+      "bytes": 2124,
+      "sha256": "90aca8ec3047b33fd6846c84f3dbfe5dfe5c36ed587a6f628c382efaf1c7d961"
+    },
+    {
+      "path": "gpt/smug-v1.provenance.json",
+      "bytes": 3224,
+      "sha256": "ecdf09fe757e372bdc031886f1d7ef25eec7cd7e091e7fb8a529e8a85e1e3322"
+    },
+    {
+      "path": "gpt/stretch-v1.png",
+      "bytes": 1911188,
+      "sha256": "cec09de3c2ee86fd844920b02a2d267cbfb2fa74f5f548d9a2874899dad44c74"
+    },
+    {
+      "path": "gpt/stretch-v1.prompt.txt",
+      "bytes": 3068,
+      "sha256": "683adf9720188a34aeacf535e2bd03cd6f2c5d15835295929f7b3254b9df2363"
+    },
+    {
+      "path": "gpt/stretch-v1.provenance.json",
+      "bytes": 3376,
+      "sha256": "8b00086181bec69cc521c7d3b5f359f3eec638d105028bd2f43a3fd7f283af23"
+    },
+    {
+      "path": "gpt/surprised-v1.png",
+      "bytes": 1843494,
+      "sha256": "d5384c521671726cfe2c0de273a72b25b36a4e090d312ad79e6c92b4caec3c36"
+    },
+    {
+      "path": "gpt/surprised-v1.prompt.txt",
+      "bytes": 3055,
+      "sha256": "da8b7bf986539c36f786e18e9c882d88cd614847b297e22d771d6633f7f092b4"
+    },
+    {
+      "path": "gpt/surprised-v1.provenance.json",
+      "bytes": 3366,
+      "sha256": "30974d3bc4bcbdfcf4cdbbe64def7474fab55f07c63e6bc5120a9d0792347cfc"
+    },
+    {
+      "path": "gpt/thinking-2-v1.png",
+      "bytes": 1963561,
+      "sha256": "ae0799398dac5202eda254890fd2e9e65b881d6f1aa71736168fc9fb97ca03dc"
+    },
+    {
+      "path": "gpt/thinking-2-v1.prompt.txt",
+      "bytes": 3134,
+      "sha256": "0f350bd26feadcf950479c84baf3ea754a42cb53fa0d264c5120344d4f6f66e0"
+    },
+    {
+      "path": "gpt/thinking-2-v1.provenance.json",
+      "bytes": 3450,
+      "sha256": "3a268d3a6baecc6a93c8aae025369f58633da16c0361798c607d3dffa2aa6ad3"
+    },
+    {
+      "path": "gpt/thinking-curious-v1.png",
+      "bytes": 1876390,
+      "sha256": "7cf486067f2b9ce2229794eba038a0e43d7438daf2889bf8dbde8399b5c90187"
+    },
+    {
+      "path": "gpt/thinking-curious-v1.prompt.txt",
+      "bytes": 3096,
+      "sha256": "ef85fd30c0f583697c1f582df2ddd62f9f1d3c152269403edc6e4b56a8ee1b21"
+    },
+    {
+      "path": "gpt/thinking-curious-v1.provenance.json",
+      "bytes": 3424,
+      "sha256": "70e88cf69a7285d3affbde7264aa68bcc066046d9b673e0e330d8a13a3cd5c7a"
+    },
+    {
+      "path": "gpt/thinking-focused-v1.png",
+      "bytes": 1735747,
+      "sha256": "4c38b4a6f83975f591e2544878639a4c3f4aebf4befe8c316d6685cfc9436159"
+    },
+    {
+      "path": "gpt/thinking-focused-v1.prompt.txt",
+      "bytes": 3097,
+      "sha256": "35dd8af8b423a768015562eeb64075f4913e911b58b68b9b5aebfd099a36a3c6"
+    },
+    {
+      "path": "gpt/thinking-focused-v1.provenance.json",
+      "bytes": 3424,
+      "sha256": "5212cdfb64a63cb0e21fd9ca9893573a28277ce3b775cd23d4d022f9476b6cef"
+    },
+    {
+      "path": "gpt/thinking-v1.png",
+      "bytes": 1921509,
+      "sha256": "5b6637d0138cb2e5a3fa805686faa12479c4afeeedc1f48b633cef87f09c81ea"
+    },
+    {
+      "path": "gpt/thinking-v1.prompt.txt",
+      "bytes": 3093,
+      "sha256": "cdd92019dea18b5693ba89145a84f5508d038ab03719ae4395e2016d10e53384"
+    },
+    {
+      "path": "gpt/thinking-v1.provenance.json",
+      "bytes": 3405,
+      "sha256": "c400dbbeb791ba1d51be5869e27dcb35776c2fac172ecafeac90d1f13639b5d3"
+    },
+    {
+      "path": "gpt/tool-adjust-v1.png",
+      "bytes": 1947970,
+      "sha256": "a7a42654723d0bd1c9b157a402e53f7c49164c19c7fc4c5c6886de58540f7a11"
+    },
+    {
+      "path": "gpt/tool-adjust-v1.prompt.txt",
+      "bytes": 3116,
+      "sha256": "f6ab0d9c0a24cc2c5cd66b551989911707ff96377c0b1846ac3b791abe2ced91"
+    },
+    {
+      "path": "gpt/tool-adjust-v1.provenance.json",
+      "bytes": 3431,
+      "sha256": "c7cbe413e9e175052753ac95b959716a272f239384380918465cd9cd2959f323"
+    },
+    {
+      "path": "gpt/tool-inspect-v1.png",
+      "bytes": 1977212,
+      "sha256": "651aba86e90796ebb4d3c1b9577276ccc9a50c4850d2f83bcedf0c2827d3ec34"
+    },
+    {
+      "path": "gpt/tool-inspect-v1.prompt.txt",
+      "bytes": 3109,
+      "sha256": "bd7be0eea8d5db05f0e627611512058c6d220eb7039f70243bfa709570c87b9c"
+    },
+    {
+      "path": "gpt/tool-inspect-v1.provenance.json",
+      "bytes": 3425,
+      "sha256": "6a8f371b6b309932122eeb6796dade2fdc84fb5802f94399c005a8138da7ec9e"
+    },
+    {
+      "path": "gpt/white-monster-v1.png",
+      "bytes": 1944933,
+      "sha256": "9824495df23e44c56287f9c1920087cbb1a92004e37379e9df2a79023bdf10d9"
+    },
+    {
+      "path": "gpt/white-monster-v1.prompt.txt",
+      "bytes": 2469,
+      "sha256": "eeb80fef3c61cc820ca8ecf5d4400b0c15cfa15f26f394c4abcf421a77b92062"
+    },
+    {
+      "path": "gpt/white-monster-v1.provenance.json",
+      "bytes": 3586,
+      "sha256": "22e57578c95546c21039edce7a586a8668b93bad381797d646ac27aee19825e0"
+    },
+    {
+      "path": "gpt/writing-v1.png",
+      "bytes": 1785954,
+      "sha256": "91d312882585447992c030279ef7321c7f31da7d832923bbff6c8293e3e353c2"
+    },
+    {
+      "path": "gpt/writing-v1.prompt.txt",
+      "bytes": 3099,
+      "sha256": "fa851eab466f9ed3fd2828be014201d6cebb1c153fa2881be2fc44a06a095806"
+    },
+    {
+      "path": "gpt/writing-v1.provenance.json",
+      "bytes": 3406,
+      "sha256": "d3f994f852e681d1ded56ceaec476816550040b236d19609b2b7915169f2026e"
+    },
+    {
+      "path": "gpt/yawn-v1.png",
+      "bytes": 1879406,
+      "sha256": "f84a4aa04d4e12385c5f01e65f699190ad8a93b94cd8d4b13f248eb0a78d72b0"
+    },
+    {
+      "path": "gpt/yawn-v1.prompt.txt",
+      "bytes": 3346,
+      "sha256": "1753d67607725078bd7e102ec60466af267c8170f065c35144416d4211bdd105"
+    },
+    {
+      "path": "gpt/yawn-v1.provenance.json",
+      "bytes": 3644,
+      "sha256": "9c9100e345f96bd6aacbe013e6582503a24b056451894d29e1367301bb6112aa"
+    }
+  ]
+}

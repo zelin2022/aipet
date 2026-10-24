@@ -1,0 +1,123 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -Command \"& 'C:/Program Files/nodejs/node.exe' 'G:/workspace/aipet/integrations/activity.mjs' --provider codex --state idle --hook\"",
+            "timeout": 3,
+            "commandWindows": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand JgAgACcAQwA6AC8AUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwAvAG4AbwBkAGUAagBzAC8AbgBvAGQAZQAuAGUAeABlACcAIAAnAEcAOgAvAHcAbwByAGsAcwBwAGEAYwBlAC8AYQBpAHAAZQB0AC8AaQBuAHQAZQBnAHIAYQB0AGkAbwBuAHMALwBhAGMAdABpAHYAaQB0AHkALgBtAGoAcwAnACAALQAtAHAAcgBvAHYAaQBkAGUAcgAgAGMAbwBkAGUAeAAgAC0ALQBzAHQAYQB0AGUAIABpAGQAbABlACAALQAtAGgAbwBvAGsA"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -Command \"& 'C:/Program Files/nodejs/node.exe' 'G:/workspace/aipet/integrations/activity.mjs' --provider codex --state thinking --hook\"",
+            "timeout": 3,
+            "commandWindows": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand JgAgACcAQwA6AC8AUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwAvAG4AbwBkAGUAagBzAC8AbgBvAGQAZQAuAGUAeABlACcAIAAnAEcAOgAvAHcAbwByAGsAcwBwAGEAYwBlAC8AYQBpAHAAZQB0AC8AaQBuAHQAZQBnAHIAYQB0AGkAbwBuAHMALwBhAGMAdABpAHYAaQB0AHkALgBtAGoAcwAnACAALQAtAHAAcgBvAHYAaQBkAGUAcgAgAGMAbwBkAGUAeAAgAC0ALQBzAHQAYQB0AGUAIAB0AGgAaQBuAGsAaQBuAGcAIAAtAC0AaABvAG8AawA="
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "^(Read|Glob|Grep|LS|(functions[.])?(read_file|list_dir|list_directory|search_files|view_image))$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -Command \"& 'C:/Program Files/nodejs/node.exe' 'G:/workspace/aipet/integrations/activity.mjs' --provider codex --state reading --hook\"",
+            "timeout": 3,
+            "commandWindows": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand JgAgACcAQwA6AC8AUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwAvAG4AbwBkAGUAagBzAC8AbgBvAGQAZQAuAGUAeABlACcAIAAnAEcAOgAvAHcAbwByAGsAcwBwAGEAYwBlAC8AYQBpAHAAZQB0AC8AaQBuAHQAZQBnAHIAYQB0AGkAbwBuAHMALwBhAGMAdABpAHYAaQB0AHkALgBtAGoAcwAnACAALQAtAHAAcgBvAHYAaQBkAGUAcgAgAGMAbwBkAGUAeAAgAC0ALQBzAHQAYQB0AGUAIAByAGUAYQBkAGkAbgBnACAALQAtAGgAbwBvAGsA"
+          }
+        ]
+      },
+      {
+        "matcher": "^(Edit|Write|(functions[.])?apply_patch)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -Command \"& 'C:/Program Files/nodejs/node.exe' 'G:/workspace/aipet/integrations/activity.mjs' --provider codex --state coding --hook\"",
+            "timeout": 3,
+            "commandWindows": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand JgAgACcAQwA6AC8AUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwAvAG4AbwBkAGUAagBzAC8AbgBvAGQAZQAuAGUAeABlACcAIAAnAEcAOgAvAHcAbwByAGsAcwBwAGEAYwBlAC8AYQBpAHAAZQB0AC8AaQBuAHQAZQBnAHIAYQB0AGkAbwBuAHMALwBhAGMAdABpAHYAaQB0AHkALgBtAGoAcwAnACAALQAtAHAAcgBvAHYAaQBkAGUAcgAgAGMAbwBkAGUAeAAgAC0ALQBzAHQAYQB0AGUAIABjAG8AZABpAG4AZwAgAC0ALQBoAG8AbwBrAA=="
+          }
+        ]
+      },
+      {
+        "matcher": "^(Bash|PowerShell|powershell|Agent|mcp__.*|(functions[.])?(exec|exec_command|shell_command|shell|write_stdin|update_plan|spawn_agent|wait_agent))$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -Command \"& 'C:/Program Files/nodejs/node.exe' 'G:/workspace/aipet/integrations/activity.mjs' --provider codex --state tool --hook\"",
+            "timeout": 3,
+            "commandWindows": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand JgAgACcAQwA6AC8AUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwAvAG4AbwBkAGUAagBzAC8AbgBvAGQAZQAuAGUAeABlACcAIAAnAEcAOgAvAHcAbwByAGsAcwBwAGEAYwBlAC8AYQBpAHAAZQB0AC8AaQBuAHQAZQBnAHIAYQB0AGkAbwBuAHMALwBhAGMAdABpAHYAaQB0AHkALgBtAGoAcwAnACAALQAtAHAAcgBvAHYAaQBkAGUAcgAgAGMAbwBkAGUAeAAgAC0ALQBzAHQAYQB0AGUAIAB0AG8AbwBsACAALQAtAGgAbwBvAGsA"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -Command \"& 'C:/Program Files/nodejs/node.exe' 'G:/workspace/aipet/integrations/activity.mjs' --provider codex --state thinking --hook\"",
+            "timeout": 3,
+            "commandWindows": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand JgAgACcAQwA6AC8AUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwAvAG4AbwBkAGUAagBzAC8AbgBvAGQAZQAuAGUAeABlACcAIAAnAEcAOgAvAHcAbwByAGsAcwBwAGEAYwBlAC8AYQBpAHAAZQB0AC8AaQBuAHQAZQBnAHIAYQB0AGkAbwBuAHMALwBhAGMAdABpAHYAaQB0AHkALgBtAGoAcwAnACAALQAtAHAAcgBvAHYAaQBkAGUAcgAgAGMAbwBkAGUAeAAgAC0ALQBzAHQAYQB0AGUAIAB0AGgAaQBuAGsAaQBuAGcAIAAtAC0AaABvAG8AawA="
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -Command \"& 'C:/Program Files/nodejs/node.exe' 'G:/workspace/aipet/integrations/activity.mjs' --provider codex --state waiting --hook\"",
+            "timeout": 3,
+            "commandWindows": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand JgAgACcAQwA6AC8AUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwAvAG4AbwBkAGUAagBzAC8AbgBvAGQAZQAuAGUAeABlACcAIAAnAEcAOgAvAHcAbwByAGsAcwBwAGEAYwBlAC8AYQBpAHAAZQB0AC8AaQBuAHQAZQBnAHIAYQB0AGkAbwBuAHMALwBhAGMAdABpAHYAaQB0AHkALgBtAGoAcwAnACAALQAtAHAAcgBvAHYAaQBkAGUAcgAgAGMAbwBkAGUAeAAgAC0ALQBzAHQAYQB0AGUAIAB3AGEAaQB0AGkAbgBnACAALQAtAGgAbwBvAGsA"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -Command \"& 'C:/Program Files/nodejs/node.exe' 'G:/workspace/aipet/integrations/activity.mjs' --provider codex --state success --hook\"",
+            "timeout": 3,
+            "commandWindows": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand JgAgACcAQwA6AC8AUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwAvAG4AbwBkAGUAagBzAC8AbgBvAGQAZQAuAGUAeABlACcAIAAnAEcAOgAvAHcAbwByAGsAcwBwAGEAYwBlAC8AYQBpAHAAZQB0AC8AaQBuAHQAZQBnAHIAYQB0AGkAbwBuAHMALwBhAGMAdABpAHYAaQB0AHkALgBtAGoAcwAnACAALQAtAHAAcgBvAHYAaQBkAGUAcgAgAGMAbwBkAGUAeAAgAC0ALQBzAHQAYQB0AGUAIABzAHUAYwBjAGUAcwBzACAALQAtAGgAbwBvAGsA"
+          }
+        ]
+      }
+    ],
+    "Interrupt": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -Command \"& 'C:/Program Files/nodejs/node.exe' 'G:/workspace/aipet/integrations/activity.mjs' --provider codex --state idle --hook\"",
+            "timeout": 3,
+            "commandWindows": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand JgAgACcAQwA6AC8AUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwAvAG4AbwBkAGUAagBzAC8AbgBvAGQAZQAuAGUAeABlACcAIAAnAEcAOgAvAHcAbwByAGsAcwBwAGEAYwBlAC8AYQBpAHAAZQB0AC8AaQBuAHQAZQBnAHIAYQB0AGkAbwBuAHMALwBhAGMAdABpAHYAaQB0AHkALgBtAGoAcwAnACAALQAtAHAAcgBvAHYAaQBkAGUAcgAgAGMAbwBkAGUAeAAgAC0ALQBzAHQAYQB0AGUAIABpAGQAbABlACAALQAtAGgAbwBvAGsA"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -Command \"& 'C:/Program Files/nodejs/node.exe' 'G:/workspace/aipet/integrations/activity.mjs' --provider codex --state offline --hook\"",
+            "timeout": 3,
+            "commandWindows": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoLogo -NoProfile -NonInteractive -EncodedCommand JgAgACcAQwA6AC8AUAByAG8AZwByAGEAbQAgAEYAaQBsAGUAcwAvAG4AbwBkAGUAagBzAC8AbgBvAGQAZQAuAGUAeABlACcAIAAnAEcAOgAvAHcAbwByAGsAcwBwAGEAYwBlAC8AYQBpAHAAZQB0AC8AaQBuAHQAZQBnAHIAYQB0AGkAbwBuAHMALwBhAGMAdABpAHYAaQB0AHkALgBtAGoAcwAnACAALQAtAHAAcgBvAHYAaQBkAGUAcgAgAGMAbwBkAGUAeAAgAC0ALQBzAHQAYQB0AGUAIABvAGYAZgBsAGkAbgBlACAALQAtAGgAbwBvAGsA"
+          }
+        ]
+      }
+    ]
+  }
+}

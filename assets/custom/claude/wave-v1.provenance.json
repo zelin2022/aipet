@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "kind": "AI-assisted pose adaptation",
+  "character": "CrossPet Claude",
+  "output": {
+    "path": "assets/custom/claude/wave-v1.png",
+    "sha256": "a3f5040aca3dae540e8d0c95056b5d12e9c2a712580840cb1f92ca644e4087d3",
+    "bytes": 1900276,
+    "width": 1189,
+    "height": 1323,
+    "format": "PNG",
+    "alphaPreserved": true,
+    "transparentPixels": 570156,
+    "partiallyTransparentPixels": 1001793,
+    "opaquePixels": 1098
+  },
+  "generatedAt": "2026-10-24T09:13:45.647Z",
+  "tool": "OpenAI built-in image_gen",
+  "transparentBackgroundRequested": true,
+  "prompt": "wave-v1.prompt.txt",
+  "modification": "Friendly waving greeting pose, three-quarter body, book held to one side.",
+  "references": [
+    {
+      "path": "assets/crosspet/characters/claude/idle.webp",
+      "sha256": "cb4540df9325fd246de61c673e29027de0821ea70eeeafb3220a97546f440653",
+      "bytes": 96880
+    },
+    {
+      "path": "assets/crosspet/characters/claude/happy-2.webp",
+      "sha256": "5864d856f4e4ad4d3880be646413300d246dd129c1a07854c59286c5d230d4c4",
+      "bytes": 103290
+    },
+    {
+      "path": "assets/crosspet/characters/claude/greet_morning.webp",
+      "sha256": "a265ead4447fbec7093a0ec8870c60a5418c3ab835f612d262a73dd2184193aa",
+      "bytes": 104658
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "sourceArtworkLicense": "CC-BY-NC-SA-4.0 (character artwork and designs, subject to upstream rights caveat)",
+  "adaptationTerms": "CC BY-NC-SA 4.0; preserve attribution and original third-party-rights caveat",
+  "originalNotice": "../../crosspet/characters/LICENSE.md",
+  "attribution": "ATTRIBUTION.md",
+  "intendedUse": "Private noncommercial Aipet artwork candidate",
+  "reviewNotes": [
+    "Generated PNG bytes and alpha preserved without image postprocessing.",
+    "Tight crop: some nontransparent pixels touch the canvas boundary; review padding and edge cleanup before runtime use."
+  ],
+  "runtimeIntegrated": true
+}

@@ -1,0 +1,19 @@
+Use case: precise-object-edit / identity-preserve.
+Asset type: ONE edited transparent full-body GPT/ChatGPT desktop-pet concept, version2.
+
+Input roles: Image1 is the EDIT TARGET, the first approved dusty-violet-dress concept. Image2 is the original character IDENTITY REFERENCE only; do not revert Image1's dress, pose or design improvements.
+
+Primary request: improve contrast in the UPPER HALF of Image1. Make a carefully controlled second pass changing ONLY the following four color/shading areas. Preserve Image1's composition, proportions, facial expression, costume construction and overall illustration.
+
+1. HORNS: keep exactly the same two curved segmented dragon-horn shapes and scale/ridge structure, but recolor most of each horn to a clearly medium-dark, muted smoky AMETHYST (#79608F, with deeper #514265 shadows). Allow a small lighter silver-lilac tip and restrained highlights. Both horns must stand out as distinct violet shapes against the pearl-white crown; do not leave them mostly ivory or near-white. Keep them elegant and draconic.
+
+2. HAIR SHADOWS: retain pearl-white hair, recognizable bangs, ahoge and long flowing curls. Add broad, intentional medium lavender-grey shadow areas beneath overlapping bangs, in the inner side locks beside the face, behind the ears, and under the back hair. Use visible smoky lilac shadows (#B3A1C9 mids, #8D78A7 deepest inner shadows) that separate face, horn roots, hair layers and shoulders at240–300px. Keep the top crown/highlight planes luminous white. Preserve the skin's warm pale-peach color; no purple cast over her face. This should read as silver-white hair with sculpted lavender depth, rather than flat all-white hair or uniformly purple hair.
+
+3. HAIR ORNAMENT: keep the exact interwoven knot/rosette silhouette, same viewer-right placement and size, pearl and hanging tassel. Make its broad woven bands deep dusty violet (#655079) with thin silver edges and silver highlights. The ornament should form one readable dark-violet accent on white hair. Preserve the silver pearl/tassel details.
+
+4. WINGS: keep both small dragon wings, same shapes/position, ivory/silver narrow bone edges. Deepen their interior membranes to dusty medium lilac (#8A6AA7) with darker lavender folds, clearly distinct from white hair while coordinated with dress and horns.
+
+Strict invariants: keep the current dusty-violet bodice/skirt, fabric colors, embroidery, Chinese-knot fastenings, layered drapes, shoes, visible bare hands, warm pale-peach skin, violet eyes, gentle smile, full-body pose, white/light-lavender curled scaled tail, pointed ears and every other costume/accessory unchanged as closely as possible. Preserve original age appearance and modest costume. Do not add props, change the dress, change the face, move the tail, alter her hairstyle, enlarge wings, add another character, or create multiple views.
+
+Finish/framing: same polished 2D anime/chibi illustration, crisp controlled dark-violet lines, smooth cel shading, fine finished costume detail. Exactly one centered complete character. Show all horns, ahoge, wing tips, hair tips, tail and both shoes comfortably inside the canvas with small transparent padding. No cropping. Preserve true transparent alpha, opaque white highlights and clean antialiased cutout edges. No scene, floor, shadows outside the character, glow, halo, haze, checkerboard, text, watermark, border, palette swatches or caption.
+

@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 1,
+  "upstream": {
+    "repository": "https://github.com/lokicorvus/crosspet",
+    "commit": "6e98970f6ff9b44e8ac85215241cabcd78f67d92",
+    "tree": "https://github.com/lokicorvus/crosspet/tree/6e98970f6ff9b44e8ac85215241cabcd78f67d92"
+  },
+  "characters": [
+    {
+      "id": "claude",
+      "name": "Claude",
+      "provider": "claude",
+      "accent": "#e8a33d",
+      "egg": false,
+      "poses": {
+        "annoyed": "characters/claude/annoyed.webp",
+        "asking": "characters/claude/asking.webp",
+        "busy_left": "characters/claude/busy_left.webp",
+        "busy_right": "characters/claude/busy_right.webp",
+        "bye": "characters/claude/bye.webp",
+        "clawd": "characters/claude/clawd.webp",
+        "coaxed": "characters/claude/coaxed.webp",
+        "compact": "characters/claude/compact.webp",
+        "delegating": "characters/claude/delegating.webp",
+        "dizzy": "characters/claude/dizzy.webp",
+        "edge_left_peek": "characters/claude/edge_left_peek.webp",
+        "edge_left": "characters/claude/edge_left.webp",
+        "edge_right_peek": "characters/claude/edge_right_peek.webp",
+        "edge_right": "characters/claude/edge_right.webp",
+        "fest_christmas": "characters/claude/fest_christmas.webp",
+        "fest_dragonboat": "characters/claude/fest_dragonboat.webp",
+        "fest_halloween": "characters/claude/fest_halloween.webp",
+        "fest_lantern": "characters/claude/fest_lantern.webp",
+        "fest_midautumn": "characters/claude/fest_midautumn.webp",
+        "fest_national": "characters/claude/fest_national.webp",
+        "fest_newyear": "characters/claude/fest_newyear.webp",
+        "fest_spring": "characters/claude/fest_spring.webp",
+        "forgiven": "characters/claude/forgiven.webp",
+        "greet_afternoon": "characters/claude/greet_afternoon.webp",
+        "greet_dawn": "characters/claude/greet_dawn.webp",
+        "greet_evening": "characters/claude/greet_evening.webp",
+        "greet_morning": "characters/claude/greet_morning.webp",
+        "greet_night": "characters/claude/greet_night.webp",
+        "greet_noon": "characters/claude/greet_noon.webp",
+        "happy-2": "characters/claude/happy-2.webp",
+        "hum": "characters/claude/hum.webp",
+        "idle-2": "characters/claude/idle-2.webp",
+        "idle-3": "characters/claude/idle-3.webp",
+        "idle-blink": "characters/claude/idle-blink.webp",
+        "idle": "characters/claude/idle.webp",
+        "listening": "characters/claude/listening.webp",
+        "oops": "characters/claude/oops.webp",
+        "pat-2": "characters/claude/pat-2.webp",
+        "proud": "characters/claude/proud.webp",
+        "puffed": "characters/claude/puffed.webp",
+        "reading-2": "characters/claude/reading-2.webp",
+        "redhot": "characters/claude/redhot.webp",
+        "running": "characters/claude/running.webp",
+        "searching": "characters/claude/searching.webp",
+        "sleeping-2": "characters/claude/sleeping-2.webp",
+        "sorry": "characters/claude/sorry.webp",
+        "stretch": "characters/claude/stretch.webp",
+        "sulk": "characters/claude/sulk.webp",
+        "surprised": "characters/claude/surprised.webp",
+        "swamped_left": "characters/claude/swamped_left.webp",
+        "swamped_right": "characters/claude/swamped_right.webp",
+        "thinking-2": "characters/claude/thinking-2.webp",
+        "thinking": "characters/claude/thinking.webp",
+        "tired": "characters/claude/tired.webp",
+        "update": "characters/claude/update.webp",
+        "writing": "characters/claude/writing.webp",
+        "yawn": "characters/claude/yawn.webp",
+        "happy": "characters/claude/happy-2.webp",
+        "pat": "characters/claude/pat-2.webp",
+        "reading": "characters/claude/reading-2.webp",
+        "sleeping": "characters/claude/sleeping-2.webp"
+      },
+      "poseVariants": {
+        "annoyed": [
+          "characters/claude/annoyed.webp"
+        ],
+        "asking": [
+          "characters/claude/asking.webp"
+        ],
+        "busy_left": [
+          "characters/claude/busy_left.webp"
+        ],
+        "busy_right": [
+          "characters/claude/busy_right.webp"
+        ],
+        "bye": [
+          "characters/claude/bye.webp"
+        ],
+        "clawd": [
+          "characters/claude/clawd.webp"
+        ],
+        "coaxed": [
+          "characters/claude/coaxed.webp"
+        ],
+        "compact": [
+          "characters/claude/compact.webp"
+        ],
+        "delegating": [
+          "characters/claude/delegating.webp"
+        ],
+        "dizzy": [
+          "characters/claude/dizzy.webp"
+        ],
+        "edge_left_peek": [
+          "characters/claude/edge_left_peek.webp"
+        ],
+        "edge_left": [
+          "characters/claude/edge_left.webp"
+        ],
+        "edge_right_peek": [
+          "characters/claude/edge_right_peek.webp"
+        ],
+        "edge_right": [
+          "characters/claude/edge_right.webp"
+        ],
+        "fest_christmas": [
+          "characters/claude/fest_christmas.webp"
+        ],
+        "fest_dragonboat": [
+          "characters/claude/fest_dragonboat.webp"
+        ],
+        "fest_halloween": [
+          "characters/claude/fest_halloween.webp"
+        ],
+        "fest_lantern": [
+          "characters/claude/fest_lantern.webp"
+        ],
+        "fest_midautumn": [
+          "characters/claude/fest_midautumn.webp"
+        ],
+        "fest_national": [
+          "characters/claude/fest_national.webp"
+        ],
+        "fest_newyear": [
+          "characters/claude/fest_newyear.webp"
+        ],
+        "fest_spring": [
+          "characters/claude/fest_spring.webp"
+        ],
+        "forgiven": [
+          "characters/claude/forgiven.webp"
+        ],
+        "greet_afternoon": [
+          "characters/claude/greet_afternoon.webp"
+        ],
+        "greet_dawn": [
+          "characters/claude/greet_dawn.webp"
+        ],
+        "greet_evening": [
+          "characters/claude/greet_evening.webp"
+        ],
+        "greet_morning": [
+          "characters/claude/greet_morning.webp"
+        ],
+        "greet_night": [
+          "characters/claude/greet_night.webp"
+        ],
+        "greet_noon": [
+          "characters/claude/greet_noon.webp"
+        ],
+        "happy": [
+          "characters/claude/happy-2.webp"
+        ],
+        "hum": [
+          "characters/claude/hum.webp"
+        ],
+        "idle": [
+          "characters/claude/idle-2.webp",
+          "characters/claude/idle-3.webp",
+          "characters/claude/idle.webp"
+        ],
+        "listening": [
+          "characters/claude/listening.webp"
+        ],
+        "oops": [
+          "characters/claude/oops.webp"
+        ],
+        "pat": [
+          "characters/claude/pat-2.webp"
+        ],
+        "proud": [
+          "characters/claude/proud.webp"
+        ],
+        "puffed": [
+          "characters/claude/puffed.webp"
+        ],
+        "reading": [
+          "characters/claude/reading-2.webp"
+        ],
+        "redhot": [
+          "characters/claude/redhot.webp"
+        ],
+        "running": [
+          "characters/claude/running.webp"
+        ],
+        "searching": [
+          "characters/claude/searching.webp"
+        ],
+        "sleeping": [
+          "characters/claude/sleeping-2.webp"
+        ],
+        "sorry": [
+          "characters/claude/sorry.webp"
+        ],
+        "stretch": [
+          "characters/claude/stretch.webp"
+        ],
+        "sulk": [
+          "characters/claude/sulk.webp"
+        ],
+        "surprised": [
+          "characters/claude/surprised.webp"
+        ],
+        "swamped_left": [
+          "characters/claude/swamped_left.webp"
+        ],
+        "swamped_right": [
+          "characters/claude/swamped_right.webp"
+        ],
+        "thinking": [
+          "characters/claude/thinking-2.webp",
+          "characters/claude/thinking.webp"
+        ],
+        "tired": [
+          "characters/claude/tired.webp"
+        ],
+        "update": [
+          "characters/claude/update.webp"
+        ],
+        "writing": [
+          "characters/claude/writing.webp"
+        ],
+        "yawn": [
+          "characters/claude/yawn.webp"
+        ]
+      },
+      "sourceData": "characters/claude/character.json"
+    },
+    {
+      "id": "gpt",
+      "name": "GPT",
+      "provider": "codex",
+      "accent": "#7a8fa8",
+      "egg": false,
+      "poses": {
+        "annoyed": "characters/gpt/annoyed.webp",
+        "asking": "characters/gpt/asking.webp",
+        "busy_left": "characters/gpt/busy_left.webp",
+        "busy_right": "characters/gpt/busy_right.webp",
+        "bye": "characters/gpt/bye.webp",
+        "coaxed-2": "characters/gpt/coaxed-2.webp",
+        "coaxed": "characters/gpt/coaxed.webp",
+        "compact": "characters/gpt/compact.webp",
+        "delegating": "characters/gpt/delegating.webp",
+        "dizzy": "characters/gpt/dizzy.webp",
+        "drawing": "characters/gpt/drawing.webp",
+        "edge_left_peek": "characters/gpt/edge_left_peek.webp",
+        "edge_left": "characters/gpt/edge_left.webp",
+        "edge_right_peek": "characters/gpt/edge_right_peek.webp",
+        "edge_right": "characters/gpt/edge_right.webp",
+        "fest_christmas": "characters/gpt/fest_christmas.webp",
+        "fest_dragonboat": "characters/gpt/fest_dragonboat.webp",
+        "fest_halloween": "characters/gpt/fest_halloween.webp",
+        "fest_lantern": "characters/gpt/fest_lantern.webp",
+        "fest_midautumn": "characters/gpt/fest_midautumn.webp",
+        "fest_national": "characters/gpt/fest_national.webp",
+        "fest_newyear": "characters/gpt/fest_newyear.webp",
+        "fest_spring": "characters/gpt/fest_spring.webp",
+        "forgiven": "characters/gpt/forgiven.webp",
+        "greet_afternoon": "characters/gpt/greet_afternoon.webp",
+        "greet_dawn": "characters/gpt/greet_dawn.webp",
+        "greet_evening": "characters/gpt/greet_evening.webp",
+        "greet_morning": "characters/gpt/greet_morning.webp",
+        "greet_night": "characters/gpt/greet_night.webp",
+        "greet_noon": "characters/gpt/greet_noon.webp",
+        "happy": "characters/gpt/happy.webp",
+        "hum": "characters/gpt/hum.webp",
+        "idle-2": "characters/gpt/idle-2.webp",
+        "idle-3": "characters/gpt/idle-3.webp",
+        "idle-blink": "characters/gpt/idle-blink.webp",
+        "idle": "characters/gpt/idle.webp",
+        "listening": "characters/gpt/listening.webp",
+        "oops": "characters/gpt/oops.webp",
+        "pat": "characters/gpt/pat.webp",
+        "proud": "characters/gpt/proud.webp",
+        "puffed": "characters/gpt/puffed.webp",
+        "reading": "characters/gpt/reading.webp",
+        "redhot": "characters/gpt/redhot.webp",
+        "reset_bell": "characters/gpt/reset_bell.webp",
+        "reset_check": "characters/gpt/reset_check.webp",
+        "reset_hope": "characters/gpt/reset_hope.webp",
+        "reset_maybe": "characters/gpt/reset_maybe.webp",
+        "reset_nope": "characters/gpt/reset_nope.webp",
+        "reset": "characters/gpt/reset.webp",
+        "running": "characters/gpt/running.webp",
+        "searching": "characters/gpt/searching.webp",
+        "sleeping": "characters/gpt/sleeping.webp",
+        "stretch": "characters/gpt/stretch.webp",
+        "sulk": "characters/gpt/sulk.webp",
+        "surprised": "characters/gpt/surprised.webp",
+        "swamped_left": "characters/gpt/swamped_left.webp",
+        "swamped_right": "characters/gpt/swamped_right.webp",
+        "thinking": "characters/gpt/thinking.webp",
+        "tired": "characters/gpt/tired.webp",
+        "update": "characters/gpt/update.webp",
+        "writing": "characters/gpt/writing.webp",
+        "yawn": "characters/gpt/yawn.webp"
+      },
+      "poseVariants": {
+        "annoyed": [
+          "characters/gpt/annoyed.webp"
+        ],
+        "asking": [
+          "characters/gpt/asking.webp"
+        ],
+        "busy_left": [
+          "characters/gpt/busy_left.webp"
+        ],
+        "busy_right": [
+          "characters/gpt/busy_right.webp"
+        ],
+        "bye": [
+          "characters/gpt/bye.webp"
+        ],
+        "coaxed": [
+          "characters/gpt/coaxed-2.webp",
+          "characters/gpt/coaxed.webp"
+        ],
+        "compact": [
+          "characters/gpt/compact.webp"
+        ],
+        "delegating": [
+          "characters/gpt/delegating.webp"
+        ],
+        "dizzy": [
+          "characters/gpt/dizzy.webp"
+        ],
+        "drawing": [
+          "characters/gpt/drawing.webp"
+        ],
+        "edge_left_peek": [
+          "characters/gpt/edge_left_peek.webp"
+        ],
+        "edge_left": [
+          "characters/gpt/edge_left.webp"
+        ],
+        "edge_right_peek": [
+          "characters/gpt/edge_right_peek.webp"
+        ],
+        "edge_right": [
+          "characters/gpt/edge_right.webp"
+        ],
+        "fest_christmas": [
+          "characters/gpt/fest_christmas.webp"
+        ],
+        "fest_dragonboat": [
+          "characters/gpt/fest_dragonboat.webp"
+        ],
+        "fest_halloween": [
+          "characters/gpt/fest_halloween.webp"
+        ],
+        "fest_lantern": [
+          "characters/gpt/fest_lantern.webp"
+        ],
+        "fest_midautumn": [
+          "characters/gpt/fest_midautumn.webp"
+        ],
+        "fest_national": [
+          "characters/gpt/fest_national.webp"
+        ],
+        "fest_newyear": [
+          "characters/gpt/fest_newyear.webp"
+        ],
+        "fest_spring": [
+          "characters/gpt/fest_spring.webp"
+        ],
+        "forgiven": [
+          "characters/gpt/forgiven.webp"
+        ],
+        "greet_afternoon": [
+          "characters/gpt/greet_afternoon.webp"
+        ],
+        "greet_dawn": [
+          "characters/gpt/greet_dawn.webp"
+        ],
+        "greet_evening": [
+          "characters/gpt/greet_evening.webp"
+        ],
+        "greet_morning": [
+          "characters/gpt/greet_morning.webp"
+        ],
+        "greet_night": [
+          "characters/gpt/greet_night.webp"
+        ],
+        "greet_noon": [
+          "characters/gpt/greet_noon.webp"
+        ],
+        "happy": [
+          "characters/gpt/happy.webp"
+        ],
+        "hum": [
+          "characters/gpt/hum.webp"
+        ],
+        "idle": [
+          "characters/gpt/idle-2.webp",
+          "characters/gpt/idle-3.webp",
+          "characters/gpt/idle.webp"
+        ],
+        "listening": [
+          "characters/gpt/listening.webp"
+        ],
+        "oops": [
+          "characters/gpt/oops.webp"
+        ],
+        "pat": [
+          "characters/gpt/pat.webp"
+        ],
+        "proud": [
+          "characters/gpt/proud.webp"
+        ],
+        "puffed": [
+          "characters/gpt/puffed.webp"
+        ],
+        "reading": [
+          "characters/gpt/reading.webp"
+        ],
+        "redhot": [
+          "characters/gpt/redhot.webp"
+        ],
+        "reset_bell": [
+          "characters/gpt/reset_bell.webp"
+        ],
+        "reset_check": [
+          "characters/gpt/reset_check.webp"
+        ],
+        "reset_hope": [
+          "characters/gpt/reset_hope.webp"
+        ],
+        "reset_maybe": [
+          "characters/gpt/reset_maybe.webp"
+        ],
+        "reset_nope": [
+          "characters/gpt/reset_nope.webp"
+        ],
+        "reset": [
+          "characters/gpt/reset.webp"
+        ],
+        "running": [
+          "characters/gpt/running.webp"
+        ],
+        "searching": [
+          "characters/gpt/searching.webp"
+        ],
+        "sleeping": [
+          "characters/gpt/sleeping.webp"
+        ],
+        "stretch": [
+          "characters/gpt/stretch.webp"
+        ],
+        "sulk": [
+          "characters/gpt/sulk.webp"
+        ],
+        "surprised": [
+          "characters/gpt/surprised.webp"
+        ],
+        "swamped_left": [
+          "characters/gpt/swamped_left.webp"
+        ],
+        "swamped_right": [
+          "characters/gpt/swamped_right.webp"
+        ],
+        "thinking": [
+          "characters/gpt/thinking.webp"
+        ],
+        "tired": [
+          "characters/gpt/tired.webp"
+        ],
+        "update": [
+          "characters/gpt/update.webp"
+        ],
+        "writing": [
+          "characters/gpt/writing.webp"
+        ],
+        "yawn": [
+          "characters/gpt/yawn.webp"
+        ]
+      },
+      "sourceData": "characters/gpt/character.json"
+    }
+  ]
+}

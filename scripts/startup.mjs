@@ -1,0 +1,14 @@
+import { createRequire } from 'node:module';
+import { existsSync } from 'node:fs';
+import path from 'node:path';
+const require = createRequire(import.meta.url);
+const startup = require('../src/core/startup.cjs');
+const root = path.resolve(import.meta.dirname,'..');
+const action = process.argv[2] || 'status';
+if (!['status','enable','disable'].includes(action) || process.argv.slice(3).some(arg=>arg!=='--development')) throw new Error('Usage: node scripts/startup.mjs status|enable|disable [--development]');
+const portable = path.join(root,'dist/Aipet-win32-x64/electron.exe');
+const usePortable = !process.argv.includes('--development') && existsSync(portable);
+const spec = usePortable ? {executable:portable,args:[]} : {executable:require('electron'),args:[root]};
+const result = action === 'status' ? await startup.get(spec) : await startup.set(action==='enable',spec);
+console.log(JSON.stringify({scope:'current-user',mode:usePortable?'portable':'development',registered:result.registered,enabled:result.enabled,status:result.status,approval:result.approval,error:result.error},null,2));
+if (result.error) process.exitCode=1;

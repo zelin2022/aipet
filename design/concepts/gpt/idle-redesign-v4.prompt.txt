@@ -1,0 +1,15 @@
+Use case: precise-object-edit.
+Input image: the supplied V3 full-body GPT dragon girl is the EDIT TARGET.
+
+Make ONE final cleanup edit. Preserve this character, white/silver hair-knot coloring, amethyst horns, lavender hair shadows, face, expression, pose, dress, wings, tail, hands and all other details.
+
+EDIT A — OPEN CENTER OF THE HAIR KNOT:
+The white/silver knot hair ornament on viewer-right is an OpenAI-logo-inspired SIX-LOOP INTERLOCKING MARK. Preserve its existing overall silhouette, bright white bands, thin dark-violet contour and flat graphic style.
+Remove the round pearl/bead/disc currently occupying the CENTER of the knot. Replace it with a CLEAR OPEN HEXAGONAL NEGATIVE SPACE formed by the six interwoven bands. The underlying white/lilac hair must be visible through this small six-sided opening, with a subtle continuation of the hair shading so it looks like a hole through the knot. It is not a white circular object. No circular outline, circle highlight, metal boss, bead, pearl or gem in the center. Keep the six surrounding lobes and correct over-under interlocking structure clean and recognizable. This is a crisp white interwoven emblem.
+The separate small pearl and tassel HANGING BELOW the whole ornament remain exactly as before; do not remove those.
+
+EDIT B — SAFE FRAMING ONLY:
+Keep the full current image composition but scale the COMPLETE CHARACTER down very slightly and center it, leaving at least24–32 pixels of genuinely transparent empty space on ALL four sides of the final image. No horn, ahoge, wing edge, tail scale, hair tip or shoe sole should touch the canvas boundary. No cropping. Keep the same character proportions and pose; the only framing change is a small protective clear margin.
+
+Strict invariants: do not recolor the white/silver knot purple, do not change other costume knots, no new pose, no redesign, no other objects, no text or watermark. Keep the source's polished 2D anime/chibi quality, smooth shading and crisp finished lines. Output exactly ONE full-body sprite with TRUE TRANSPARENT ALPHA, opaque costume/hair highlights, smooth antialiased closed edges. No backdrop, checkerboard, floor, cast shadow, glow, halo, haze, border or color swatches.
+
