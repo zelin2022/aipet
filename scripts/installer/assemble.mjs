@@ -33,6 +33,7 @@ export async function assembleInstaller({ payloadDirectory, outputDirectory, ver
   await copy();
   if (files.length < 10 || files.length > 1024 || !files.some(file => file.path === 'electron.exe') || !files.some(file => file.path === 'resources/app/package.json')) throw new Error('Incomplete installer payload.');
   for (const name of ['Install.cmd','Install.ps1','Uninstall.cmd','Uninstall.ps1','Installer.Common.ps1','README-INSTALL.txt']) await copyFile(path.join(templates, name), path.join(output, name));
+  await copyFile(path.join(templates, '../diagnose-codex-hooks.ps1'), path.join(output, 'Diagnose-Codex.ps1'));
   const manifest = { schemaVersion: 1, edition: 'no-counters', version, platform: 'win32', arch: 'x64', files: files.sort((a,b) => a.path.localeCompare(b.path)) };
   await writeFile(path.join(output, 'installer-manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
   return { outputDirectory: output, files: files.length, bytes: files.reduce((sum,file) => sum + file.bytes, 0), manifest };

@@ -24,7 +24,7 @@ const { launchSpec } = require("./core/deployment.cjs");
 const { dataDirectory, eventDirectories } = require("./core/data.cjs");
 const diagnostics = require("./core/diagnostics.cjs");
 const debugLog = require("./core/debug-log.cjs");
-const { prepareHookExample } = require("./core/hook-commands.cjs");
+const { prepareHookExample, prepareBundledHookExample } = require("./core/hook-commands.cjs");
 const { readCustomArtwork } = require("./core/artwork.cjs");
 const { createSpriteUsage } = require("./core/sprite-usage.cjs");
 const { createSpriteCatalog } = require("./core/sprite-catalog.cjs");
@@ -237,6 +237,13 @@ function companionCount() {
     )
     ? 2
     : 1;
+}
+function bundledHookRuntime() {
+  // Packaged hooks use the same shipped vendor runtime on every computer.
+  // Source development retains its existing explicit Node hook definitions.
+  const executable = path.resolve(ROOT, "../..", "electron.exe");
+  return path.basename(ROOT) === "app" && path.basename(path.dirname(ROOT)) === "resources"
+    && fs.existsSync(executable) ? executable : null;
 }
 function companionActivities() {
   let current = activity.snapshot(settings, characters);
@@ -837,10 +844,12 @@ function installIpc() {
   handle("aipet:setup", (_event, provider) => {
     if (!["claude", "codex"].includes(provider))
       throw new Error("Unknown provider");
+    const bundled = bundledHookRuntime();
     return {
+      runtime: bundled ? "bundled" : "node",
       example:
         JSON.stringify(
-          prepareHookExample(
+          (bundled ? prepareBundledHookExample : prepareHookExample)(
             provider,
             fs.readFileSync(
               path.join(ROOT, "integrations", `${provider}-hooks.example.json`),

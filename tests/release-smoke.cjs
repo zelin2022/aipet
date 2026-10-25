@@ -4,6 +4,8 @@ const assert = require('node:assert/strict');
 const fsSync = require('node:fs');
 const fs = require('node:fs/promises');
 const path = require('node:path');
+const { createHash } = require('node:crypto');
+const { spawn } = require('node:child_process');
 
 const root = path.resolve(__dirname, '..');
 const targetRoot = process.env.AIPET_SMOKE_APP_ROOT;
@@ -14,6 +16,63 @@ const errors = [], usageCalls = [], channels = [];
 const restore = [];
 let instance, pet, studio;
 let stamp = Date.now() - 1000;
+
+async function invokeReviewedHook(provider, hook) {
+  let executable, args, state;
+  if (provider === 'codex') {
+    const parsed = /^(?:"([^"]+)"|([^ ]+)) -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -EncodedCommand ([A-Za-z0-9+/=]+)$/.exec(hook.commandWindows);
+    assert.ok(parsed, 'The reviewed encoded command has only fixed PowerShell launch flags.');
+    executable = parsed[1] || parsed[2];
+    args = ['-NoLogo','-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass','-EncodedCommand',parsed[3]];
+    state = / -State ([a-z]+)$/.exec(Buffer.from(parsed[3], 'base64').toString('utf16le'))?.[1];
+  } else {
+    executable = hook.command;
+    args = hook.args;
+    state = args.at(-1);
+  }
+  assert.ok(path.isAbsolute(executable));
+  assert.ok(['idle','thinking','reading','coding','tool','success','error','waiting','offline'].includes(state));
+  const session = provider === 'claude' ? 'aipet-bundled-smoke-session' : 'anonymous';
+  const sessionHash = createHash('sha256').update(`aipet-v1:${provider}:${session}`).digest('hex').slice(0,32);
+  const filename = path.join(data, 'events', `${provider}-${sessionHash}.json`);
+  const acceptedBefore = instance.getPollHealth().accepted[provider];
+  const launchedAt = Date.now();
+  let timedOut = false, overflow = false, stdout = '', stderr = '';
+  const child = spawn(executable, args, {
+    cwd: root, windowsHide: true, shell: false, stdio: ['ignore','pipe','pipe'],
+    env: {
+      ...process.env, USERPROFILE: process.env.USERPROFILE, LOCALAPPDATA: process.env.LOCALAPPDATA,
+      APPDATA: process.env.APPDATA, CLAUDE_CODE_SESSION_ID: 'aipet-bundled-smoke-session',
+      // A clean destination need not expose node.exe through PATH.
+      PATH: path.join(process.env.SystemRoot || 'C:\\Windows', 'System32'),
+    },
+  });
+  const timer = setTimeout(() => { timedOut = true; child.kill(); }, 3000);
+  child.stdout.on('data', bytes => { stdout += bytes.toString('utf8'); if (stdout.length > 4096) { overflow = true; child.kill(); } });
+  child.stderr.on('data', bytes => { stderr += bytes.toString('utf8'); if (stderr.length > 4096) { overflow = true; child.kill(); } });
+  let code;
+  try { code = await new Promise((resolve,reject) => { child.once('error',reject); child.once('close',resolve); }); }
+  finally { clearTimeout(timer); }
+  const elapsedMs = Date.now() - launchedAt;
+  assert.equal(timedOut, false, `${provider}/${state} finishes within the actual three-second host deadline.`);
+  assert.equal(overflow, false);
+  assert.equal(code, 0, stderr);
+  assert.equal(stdout.trim(), '{}', 'The real bundled bridge returns passive hook output.');
+  assert.equal(stderr, '');
+  const stat = await fs.stat(filename);
+  assert.ok(stat.size > 0 && stat.size <= 1024);
+  const event = JSON.parse(await fs.readFile(filename, 'utf8'));
+  assert.deepEqual(Object.keys(event).sort(), ['at','provider','session','state','version']);
+  assert.equal(event.provider, provider);
+  assert.equal(event.state, state);
+  assert.equal(event.session, sessionHash);
+  assert.ok(Date.parse(event.at) >= launchedAt - 1000, 'The helper writes fresh metadata into this test profile.');
+  await instance.pollEvents();
+  instance.refreshVisibility();
+  await until(() => instance.getPollHealth().accepted[provider] > acceptedBefore, `${provider}/${state} metadata accepted by the running main process`);
+  if (state === 'thinking') await until(async () => (await slots()).some(slot => slot.provider === provider && slot.state === 'thinking'), `${provider} real helper signal reaches the renderer`);
+  return { provider, state, elapsedMs };
+}
 
 async function until(predicate, description, timeout = 5000) {
   const end = Date.now() + timeout;
@@ -106,18 +165,36 @@ function observeUsageIO() {
   assert.equal(await run('Boolean(document.querySelector("[data-view=usage],#view-usage,#usage-rows"))'),false,'Studio has no usage navigation or panel.');
 
   const setup = {};
+  const rawCodex = JSON.parse(fsSync.readFileSync(path.join(targetRoot, 'integrations/codex-hooks.example.json'), 'utf8'));
+  const rawHandlers = Object.values(rawCodex.hooks).flat().flatMap(group=>group.hooks);
+  assert.equal(rawHandlers.length, 10);
+  for (const hook of rawHandlers) {
+    const decoded = Buffer.from(hook.commandWindows.split(' -EncodedCommand ')[1], 'base64').toString('utf16le');
+    assert.equal(decoded, hook.command.split(' -Command "')[1].slice(0,-1), 'Raw release readable and encoded legacy templates agree.');
+    assert.ok(decoded.includes('C:/Aipet/resources/app/integrations/activity.mjs'));
+    assert.ok(!decoded.includes('G:/workspace/aipet'));
+  }
   for (const provider of ['claude','codex']) {
     setup[provider] = await run(`window.aipet.getSetup(${JSON.stringify(provider)})`);
+    assert.equal(setup[provider].runtime, 'bundled', 'Installed setup uses its own verified runtime.');
     const value = JSON.parse(setup[provider].example);
     assert.ok(Object.values(value.hooks).some(groups=>groups.length),'Both target-machine AI hook examples are available.');
     const hooks = Object.values(value.hooks).flat().flatMap(group=>group.hooks);
     const commands = hooks.map(hook=>[hook.command,...(hook.args||[])].join(' '));
     assert.ok(commands.every(command=>command.includes(targetRoot.replaceAll('\\','/'))),'Generated bridge paths refer to the copied application.');
     assert.ok(!commands.some(command=>command.includes('G:/workspace/aipet/integrations/')),'Examples do not reference the development bridge.');
+    assert.ok(!commands.some(command=>/nodejs|node\.exe/i.test(command)),'Installed UI examples do not require an external Node installation.');
+    if(provider==='claude') for(const hook of hooks) {
+      assert.deepEqual(hook.args, ['-NoLogo','-NoProfile','-NonInteractive','-ExecutionPolicy','Bypass','-File',targetRoot.replaceAll('\\','/')+'/integrations/activity-launch.ps1','-Provider','claude','-State',hook.args.at(-1)]);
+      assert.equal(hook.onFailure,'continue');
+    }
     for(const hook of hooks.filter(hook=>hook.commandWindows)) {
       const encoded = / -EncodedCommand ([a-zA-Z0-9+/=]+)$/.exec(hook.commandWindows);
       assert.ok(encoded,'Windows launchers retain their reviewed, encoded form.');
-      assert.ok(Buffer.from(encoded[1],'base64').toString('utf16le').includes(targetRoot.replaceAll('\\','/')),'Encoded Windows bridge also refers to the copied application.');
+      const decoded=Buffer.from(encoded[1],'base64').toString('utf16le');
+      assert.ok(decoded.includes(targetRoot.replaceAll('\\','/')+'/integrations/activity-launch.ps1'),'Encoded Windows bridge also refers to the copied helper.');
+      assert.equal(decoded,hook.command.split(' -Command "')[1].slice(0,-1));
+      assert.doesNotMatch(decoded,/G:\/workspace\/aipet\/integrations|nodejs|node\.exe/i);
     }
   }
   instance.updateSettings({reducedMotion:false,showBoth:true,followActivity:true});
@@ -135,6 +212,11 @@ function observeUsageIO() {
   await until(async()=>{const value=await slots();return value.length===2&&value[0].state==='reading'&&value[1].state==='coding'&&value.every(slot=>slot.loaded);},'both characters react to independent metadata');
   await runPet('window.aipet.interact("pat","claude")');
   await until(async()=>(await slots())[0].state==='pat','pet interaction remains connected');
+
+  const bundledHooks = [];
+  const codexHooks = Object.values(JSON.parse(setup.codex.example).hooks).flat().flatMap(group=>group.hooks);
+  for(const hook of codexHooks) bundledHooks.push(await invokeReviewedHook('codex',hook));
+  bundledHooks.push(await invokeReviewedHook('claude',JSON.parse(setup.claude.example).hooks.UserPromptSubmit[0].hooks[0]));
 
   // Do not bypass sandboxing or import a provider process. Every bundled image
   // is decoded by the same browser image pipeline used by the two pet windows.
@@ -174,10 +256,10 @@ function observeUsageIO() {
       for(const undo of restore.reverse())undo();
       assert.deepEqual(fsSync.readFileSync(path.join(data,'sprite-usage.json')),originalSentinel,'Existing private counters are untouched.');
       assert.deepEqual(fsSync.readdirSync(data).filter(name=>/sprite.?usage/i.test(name)),['sprite-usage.json'],'No counter scratch file is created.');
-      const report={passed:true,releaseRoot:targetRoot,isolatedProfile:true,realRenderer:true,imagesDecoded:decoded,dualCompanions:true,greetings:true,interactions:true,setupRelocated:true,usageModulesOmitted:true,usageApiOmitted:true,usageIpcOmitted:true,usageUiOmitted:true,usageIoCalls:0,preexistingUsagePreserved:true,normalQuit:true,observationMilliseconds:Date.now()-started};
+      const report={passed:true,releaseRoot:targetRoot,isolatedProfile:true,realRenderer:true,imagesDecoded:decoded,dualCompanions:true,greetings:true,interactions:true,setupRelocated:true,bundledRuntime:true,externalNodeRequired:false,rawEncodedPathsVerified:true,bundledHooks,hookHostDeadlineMs:3000,usageModulesOmitted:true,usageApiOmitted:true,usageIpcOmitted:true,usageUiOmitted:true,usageIoCalls:0,preexistingUsagePreserved:true,normalQuit:true,observationMilliseconds:Date.now()-started};
       fsSync.writeFileSync(path.join(root,'out/smoke/release.qa.json'),JSON.stringify(report,null,2)+'\n');
       try{fsSync.unlinkSync(path.join(root,'out/smoke/release.failure.txt'));}catch(error){if(error.code!=='ENOENT')throw error;}
-      console.log(`No-counter release smoke passed: ${decoded} images decoded, dual pets and studio work, no counter APIs, IPC, UI, modules or storage calls (including normal quit).`);
+      console.log(`No-counter release smoke passed: ${decoded} images decoded, ${bundledHooks.length} real bundled hooks work without external Node, dual pets and studio work, no counter APIs, IPC, UI, modules or storage calls (including normal quit).`);
     }catch(error){console.error(error.stack);app.exit(1);}
   });
   app.quit();

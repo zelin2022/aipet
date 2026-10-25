@@ -99,3 +99,78 @@ test('legacy and Windows override handlers merge exactly without claiming unrela
   assert.deepEqual(mergeHooks(merged, prepared, adapter), merged);
   assert.deepEqual(mergeHooks(merged, prepared, adapter, true), { hooks: { Stop: [{ hooks: unrelated }] } });
 });
+
+test('bundled Codex hooks use only the local helper with identical readable and Windows commands', async () => {
+  const source = await readFile(new URL('./codex-hooks.example.json', import.meta.url), 'utf8');
+  const relocated = 'D:/Users/Another User/Apps/Aipet/app/resources/app';
+  const powershell = 'D:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe';
+  const legacy = hookCommands.prepareHookExample('codex', source, relocated);
+  const prepared = hookCommands.prepareBundledHookExample('codex', source, relocated, powershell);
+  const handlers = Object.values(prepared.hooks).flatMap(groups => groups.flatMap(group => group.hooks));
+  assert.equal(handlers.length, 10);
+  for (const handler of handlers) {
+    const script = Buffer.from(handler.commandWindows.split(' -EncodedCommand ')[1], 'base64').toString('utf16le');
+    assert.equal(script, handler.command.split(' -Command "')[1].slice(0, -1));
+    assert.match(script, /^& '[^']+\/integrations\/activity-launch\.ps1' -Provider codex -State [a-z]+$/);
+    assert.ok(script.includes(`'${relocated}/integrations/activity-launch.ps1'`));
+    assert.ok(handler.command.startsWith(powershell + ' -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass '));
+    assert.equal(handler.timeout, 3);
+    assert.doesNotMatch(script, /node\.exe|activity\.mjs|G:\/workspace\/aipet/);
+  }
+  assert.deepEqual(hookCommands.prepareHookExample('codex', source, relocated), legacy, 'Bundled generation leaves legacy source behavior unchanged.');
+});
+
+test('bundled Claude hooks preserve fixed states and passive failures through absolute PowerShell arguments', async () => {
+  const source = await readFile(new URL('./claude-hooks.example.json', import.meta.url), 'utf8');
+  const relocated = 'D:/Users/Another User/Apps/Aipet/app/resources/app';
+  const powershell = 'D:/System Root/System32/WindowsPowerShell/v1.0/powershell.exe';
+  const legacy = hookCommands.prepareHookExample('claude', source, relocated);
+  const prepared = hookCommands.prepareBundledHookExample('claude', source, relocated, powershell);
+  const all = value => Object.values(value.hooks).flatMap(groups => groups.flatMap(group => group.hooks));
+  const original = all(legacy), handlers = all(prepared);
+  assert.equal(handlers.length, original.length);
+  for (const [index, handler] of handlers.entries()) {
+    assert.equal(handler.command, powershell);
+    assert.deepEqual(handler.args, ['-NoLogo', '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-File', `${relocated}/integrations/activity-launch.ps1`, '-Provider', 'claude', '-State', original[index].args[4]]);
+    assert.equal(handler.onFailure, 'continue');
+    assert.equal(handler.timeout, 3);
+    assert.equal(handler.commandWindows, undefined);
+  }
+  assert.deepEqual(hookCommands.prepareHookExample('claude', source, relocated), legacy);
+});
+
+test('bundled hook generation rejects arbitrary legacy commands and unsafe PowerShell destinations', async () => {
+  const codexSource = await readFile(new URL('./codex-hooks.example.json', import.meta.url), 'utf8');
+  const claudeSource = await readFile(new URL('./claude-hooks.example.json', import.meta.url), 'utf8');
+  const root = 'D:/Apps/Aipet/resources/app';
+  for (const powershell of ['relative/powershell.exe', 'D:/other.exe', 'D:/bad$path/powershell.exe', 'D:/bad"path/powershell.exe']) {
+    assert.throws(() => hookCommands.prepareBundledHookExample('codex', codexSource, root, powershell), /Invalid bundled hook PowerShell path/);
+  }
+  const extraCodexArgs = JSON.parse(codexSource);
+  extraCodexArgs.hooks.Stop[0].hooks[0].args = ['untrusted'];
+  assert.throws(() => hookCommands.prepareBundledHookExample('codex', JSON.stringify(extraCodexArgs), root), /Invalid bundled hook example/);
+  const alteredClaude = JSON.parse(claudeSource);
+  alteredClaude.hooks.Stop[0].hooks[0].args.push('; Invoke-Expression BAD');
+  assert.throws(() => hookCommands.prepareBundledHookExample('claude', JSON.stringify(alteredClaude), root), /Invalid bundled hook example/);
+  const alteredCommand = JSON.parse(claudeSource);
+  alteredCommand.hooks.Stop[0].hooks[0].command = 'C:/unsupported.exe';
+  assert.throws(() => hookCommands.prepareBundledHookExample('claude', JSON.stringify(alteredCommand), root), /Invalid bundled hook example/);
+  assert.throws(() => hookCommands.prepareBundledHookExample('codex', codexSource, 'D:/unsafe$root'), /Invalid hook example/);
+});
+
+test('bundled default PowerShell follows this machine SystemRoot and quotes spaces', async () => {
+  const source = await readFile(new URL('./codex-hooks.example.json', import.meta.url), 'utf8');
+  const previous = process.env.SystemRoot;
+  try {
+    process.env.SystemRoot = 'E:/System Root';
+    const prepared = hookCommands.prepareBundledHookExample('codex', source, 'D:/Apps/Aipet/resources/app');
+    const handlers = Object.values(prepared.hooks).flatMap(groups => groups.flatMap(group => group.hooks));
+    for (const handler of handlers) {
+      assert.ok(handler.command.startsWith('"E:/System Root/System32/WindowsPowerShell/v1.0/powershell.exe" '));
+      assert.ok(handler.commandWindows.startsWith('"E:/System Root/System32/WindowsPowerShell/v1.0/powershell.exe" '));
+    }
+  } finally {
+    if (previous === undefined) delete process.env.SystemRoot;
+    else process.env.SystemRoot = previous;
+  }
+});

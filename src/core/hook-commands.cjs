@@ -36,4 +36,47 @@ function prepareHookExample(provider, text, root) {
   return example;
 }
 
-module.exports = { prepareHookExample };
+function prepareBundledHookExample(provider, text, root, powershellPath) {
+  // Validate the original fixed bridge invocation before deriving states. Never
+  // turn an arbitrary existing command body into an executable helper hook.
+  const example = prepareHookExample(provider, text, root);
+  const normalized = path.win32.resolve(root).replaceAll('\\', '/').replace(/\/+$/, '');
+  const shell = powershellPath === undefined
+    ? path.win32.join(process.env.SystemRoot || 'C:/Windows', 'System32/WindowsPowerShell/v1.0/powershell.exe')
+    : powershellPath;
+  if (typeof shell !== 'string' || shell.length > 2048 || !path.win32.isAbsolute(shell)
+      || path.win32.basename(shell).toLowerCase() !== 'powershell.exe'
+      || /['"$`\r\n\0%!?^|<>]/.test(shell)) throw new Error('Invalid bundled hook PowerShell path.');
+  const powershell = path.win32.resolve(shell).replaceAll('\\', '/');
+  const launcher = `${normalized}/integrations/activity-launch.ps1`;
+  const executable = powershell.includes(' ') ? `"${powershell}"` : powershell;
+  // The override is confined to this child process and does not change saved
+  // Windows policy. Host trust still applies to each generated hook definition.
+  const prefix = `${executable} -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass`;
+  for (const groups of Object.values(example.hooks)) for (const group of groups) for (const handler of group.hooks) {
+    let state;
+    if (provider === 'codex') {
+      if (handler.args !== undefined) throw new Error('Invalid bundled hook example.');
+      state = / --state ([a-z]+) --hook"$/.exec(handler.command)?.[1];
+    } else {
+      state = handler.args?.[4];
+      const expected = [`${normalized}/integrations/activity.mjs`, '--provider', 'claude', '--state', state, '--hook'];
+      if (handler.command !== NODE || JSON.stringify(handler.args) !== JSON.stringify(expected)) throw new Error('Invalid bundled hook example.');
+    }
+    if (!STATES.has(state)) throw new Error('Invalid bundled hook example.');
+    handler.timeout = 3;
+    if (provider === 'codex') {
+      const script = `& '${launcher}' -Provider codex -State ${state}`;
+      handler.command = `${prefix} -Command "${script}"`;
+      handler.commandWindows = `${prefix} -EncodedCommand ${Buffer.from(script, 'utf16le').toString('base64')}`;
+    } else {
+      handler.command = powershell;
+      handler.args = ['-NoLogo', '-NoProfile', '-NonInteractive', '-ExecutionPolicy', 'Bypass', '-File', launcher, '-Provider', 'claude', '-State', state];
+      handler.onFailure = 'continue';
+      delete handler.commandWindows;
+    }
+  }
+  return example;
+}
+
+module.exports = { prepareHookExample, prepareBundledHookExample };

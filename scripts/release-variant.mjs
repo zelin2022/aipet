@@ -1,5 +1,6 @@
 import { Script } from 'node:vm';
 import { createHash } from 'node:crypto';
+import hookCommands from '../src/core/hook-commands.cjs';
 
 // Pins cover the complete removed interiors, so unrelated future code cannot
 // silently disappear merely because the boundary lines still match.
@@ -80,7 +81,12 @@ export function releaseSource(relative, source) {
     text = replace(text, '    <button class="nav-item" data-view="usage"><span class="nav-icon">▤</span>Sprite usage</button>\n');
     text = omit(text, '  <section id="view-usage"', '  <section id="view-connections"');
     text = replace(text, 'Preferences, the latest activity metadata and sprite counters live here.', 'Preferences and the latest activity metadata live here.');
-  } else if (relative === 'src/core/hook-commands.cjs' || /^integrations\/(?:claude|codex)-hooks\.example\.json$/.test(relative)) {
+  } else if (relative === 'integrations/codex-hooks.example.json') {
+    if (!text.includes('G:/workspace/aipet')) throw new Error('Release hook template changed; review relocation.');
+    // Encoded Windows overrides must be rebuilt from the validated readable
+    // invocation; replacing plaintext alone leaves a hidden development path.
+    text = JSON.stringify(hookCommands.prepareHookExample('codex', text, RELEASE_HOOK_ROOT), null, 2) + '\n';
+  } else if (relative === 'src/core/hook-commands.cjs' || relative === 'integrations/claude-hooks.example.json') {
     if (!text.includes('G:/workspace/aipet')) throw new Error('Release hook template changed; review relocation.');
     text = text.replaceAll('G:/workspace/aipet', RELEASE_HOOK_ROOT);
   }

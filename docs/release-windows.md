@@ -4,13 +4,13 @@ This private Windows x64 build includes the Claude and ChatGPT companions, their
 
 ## Install and launch
 
-Copy **`Aipet-0.1.0-Windows-x64-no-counters.zip`** to the other Windows x64 computer and extract the complete archive before running anything. Review the included `Install.ps1`, then run **`Install.cmd`**. It installs for the current user at **`%LOCALAPPDATA%\Programs\Aipet`** and creates an **Aipet** Start Menu shortcut. Administrator rights are not needed. Installation does not enable sign-in startup or change AI settings.
+Copy **`Aipet-0.1.1-Windows-x64-no-counters.zip`** to the other Windows x64 computer and extract the complete archive before running anything. Review the included `Install.ps1`, then run **`Install.cmd`**. It installs for the current user at **`%LOCALAPPDATA%\Programs\Aipet`** and creates an **Aipet** Start Menu shortcut. Administrator rights are not needed. Installation does not enable sign-in startup or change AI settings.
 
 The default installer creates no desktop shortcut and does not launch the app. Its optional switches are `-InstallDirectory PATH`, `-DesktopShortcut` and `-Launch`; see the included installation README for invocation examples. `Install.cmd` uses a process-only PowerShell execution-policy override for this reviewed local installer. It does not change saved execution-policy settings, Windows application control, Defender or trust stores.
 
 For portable use, keep the extracted files together and launch **`payload\electron.exe`** directly. In an installed copy, that executable is **`%LOCALAPPDATA%\Programs\Aipet\app\electron.exe`**. Its original vendor filename and executable bytes are retained; Aipet loads from `app\resources\app`. Start Menu shortcuts use Aipet's own icon. Avoid running both installed and portable copies at once because they share this Windows user's Aipet profile.
 
-The desktop app includes its runtime. It needs neither Node.js nor npm to display and interact with the pets, and its normal operation makes no network requests. The optional AI hooks described below use a separate Node.js installation.
+Version 0.1.1 includes the runtime used by both the desktop pet and its optional activity hooks. A separate Node.js or npm installation is not required. The hook launcher starts this installation's unmodified Electron runtime in its Node mode for the fixed metadata bridge. Its environment setting applies only to that child process.
 
 Open the companion studio from the tray icon. Under **Privacy**, enable **Start at Windows sign-in** if wanted. This affects only the current Windows user and starts quietly in the tray. **Wait in the tray for AI** wakes the pet when a supported app or a fresh hook signal is detected. **Quit Aipet** in the tray menu exits until the next manual launch or Windows sign-in.
 
@@ -24,23 +24,43 @@ Activity hooks are optional, installed manually on the destination computer. Pre
 
 Use native Windows local sessions. This release does not connect WSL, remote, container or cloud runtimes. Use the **Code** tab of Claude Desktop rather than its ordinary chat tab. Codex likewise needs a local coding chat that supports local command hooks.
 
-1. If using the supplied hook examples, install Node.js 22 or newer at its standard Windows path, `C:\Program Files\nodejs\node.exe`. No npm packages or API keys are required. This is a requirement of the hook bridge, not the pet renderer.
-2. Keep the release folder in its final location. Open **Companion studio → Connections → Review setup** for each provider. The example shown there uses this installed application's absolute path; do not copy development paths from unrelated examples.
-3. Inspect the fixed commands and back up the destination configuration before merging the example's `hooks` entries. Preserve unrelated settings and hooks. For Claude, the user file is `%USERPROFILE%\.claude\settings.json`; for Codex it is `%USERPROFILE%\.codex\hooks.json`. Do not replace an existing entire configuration with an example.
+1. Install version 0.1.1 in its final location. Its bundled hook runtime needs no separate Node.js installation, npm packages or API keys.
+2. Open **Companion studio → Connections → Review setup** for each provider. Use the JSON displayed inside the installed app, which generates the actual local installation paths. Raw bundled examples are templates, not ready-to-register configuration.
+3. Inspect the fixed commands and back up the destination configuration before merging the example's `hooks` entries. Preserve unrelated settings and hooks. For Claude, the user file is `%USERPROFILE%\.claude\settings.json`; for Codex it is `%USERPROFILE%\.codex\hooks.json`. When upgrading Codex, replace the previous ten Aipet definitions with the new example rather than appending duplicate groups. Do not replace an existing entire configuration with an example.
 4. Codex requires human review and trust of new or changed hook definitions. Open its hook review (`/hooks` or **Settings → Coding → Hooks → Local**), reload, inspect the Aipet commands and trust the intended entries. Aipet cannot supply that approval. The generic Hook 1/2/3 labels repeat across event groups; inspect their commands.
 5. Start a fresh native Windows local session in each app, perform a short normal task and watch Aipet's signal indicator. Host versions and policies determine hook availability. An older chat can retain different hook behavior; a successful test in a new chat does not establish coverage of every existing chat or lane.
 
-Codex's examples retain a readable `command` plus a matching PowerShell `commandWindows` encoded override. The encoding protects fixed executable paths from nested shell quoting; it does not contain conversation contents. Do not change an encoded path independently of its readable command. If Node.js is installed elsewhere, both invocations must be regenerated consistently before trust. Moving Aipet likewise requires fresh examples and host review of changed definitions.
+Codex's examples retain a readable `command` plus a matching PowerShell `commandWindows` encoded override. The encoding protects fixed executable paths from nested shell quoting; it does not contain conversation contents. Both invoke this installation's reviewed `activity-launch.ps1` helper. Do not edit an encoded path independently of its readable command. Moving Aipet requires fresh examples and host review of changed definitions. The hook's process-only execution-policy override does not change saved Windows policy or override managed application controls.
 
 The recommended fixed-state bridge does not read hook stdin. It writes only provider, fixed animation state, a pseudonymous session label, timestamp and schema version under `%USERPROFILE%\.aipet\events`. Claude can separate sessions using its documented session environment variable when supplied by its host. Codex's fixed hooks share one provider state, so concurrent chats can overwrite one another's latest signal. Completion means a response stopped; it does not prove a task succeeded. A **No signal** label does not establish that the AI is idle.
 
 The bridge also contains an advanced session-aware mode, which is not enabled by these fixed examples. That mode parses a bounded hook payload transiently in memory and therefore has a wider privacy boundary. Keep the fixed examples for the smallest input boundary.
 
+## Diagnose No signal
+
+The extracted archive includes **`Diagnose-Codex.ps1`**. Its default mode reads only bounded hook configuration and Aipet's own latest-state files, then prints a JSON report of counts, existence/path-match booleans and event state/time. It prints no commands, usernames, full paths, unrelated settings or conversation contents. It supports the older external-Node hooks as well as version 0.1.1's bundled runtime.
+
+Run from the extracted archive directory:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Diagnose-Codex.ps1
+```
+
+For an installation in a custom directory, add `-AppDirectory "D:\Apps\Aipet\app\resources\app"`, using its actual location. The helper checks a custom `CODEX_HOME` when set. Paste the JSON report when asking for troubleshooting help.
+
+The optional **`-Probe`** switch explicitly writes one synthetic Codex **thinking** event through this installation's own bridge. It never executes a command copied from hook configuration, runs a Codex task, reads hook stdin or modifies hook configuration/trust:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Diagnose-Codex.ps1 -Probe
+```
+
+If the probe reports `event-written` and Aipet reacts, its bridge and local inbox work; that alone does not prove a particular Codex chat is invoking its hooks. No new event, a missing referenced runtime, mismatched readable/encoded paths or an unsupported command points to a different stage of delivery. The report is metadata only; no conversation or credential log is created.
+
 ## Local data, updates and removal
 
 Preferences and bounded latest-state activity metadata live in **`%USERPROFILE%\.aipet`** on the destination machine. The no-counter release never reads, writes or erases `sprite-usage.json`; an existing file from another Aipet edition remains untouched. There are no conversation logs, credentials, telemetry or remote assets in this package. The application does not inspect AI transcripts, databases, source files, window titles or process command lines to infer work. Its optional presence helper reads allowlisted process names and foreground/fullscreen geometry.
 
-For an update, quit Aipet from its tray menu before replacing the complete application folder. Keep the same final path to preserve shortcut and hook targets. Preferences stay in the separate profile folder. Re-review host hooks if their definitions change.
+To upgrade the installed 0.1.0 copy, turn off **Start at Windows sign-in**, quit Aipet from its tray, uninstall the previous registered copy, then install 0.1.1 at the same final path. The uninstaller preserves the separate profile and AI configuration. If it retains modified program files, review those before reusing that directory. Replace the old Aipet hook definitions with the new UI-generated definitions and review/trust them again; installing the new app alone does not update already registered commands.
 
 To remove Aipet, turn off **Start at Windows sign-in**, quit it, then choose Aipet in **Windows Settings → Apps → Installed apps** or run **`Uninstall.cmd`** in the installation directory. The uninstaller removes only recorded files whose hashes still match, its own shortcuts and its own uninstall registration. Modified or additional files remain for review; it preserves the separate profile and all AI configuration. Startup registration is never changed by the installer or uninstaller, which is why it should first be disabled in Aipet.
 

@@ -79,7 +79,7 @@ async function loaded(win) {
   await run('document.querySelector("[data-view=connections]").click(); document.querySelector("[data-provider=codex]").click()');
   await sleep(200);
   assert.equal(await run('document.querySelector("#setup-panel").hidden'), false);
-  assert.ok((await run('document.querySelector("#setup-example").textContent')).includes('--provider codex'));
+  assert.match(await run('document.querySelector("#setup-example").textContent'), /--provider codex|-Provider codex/);
   await run('document.querySelector("#close-setup").click(); document.querySelector("[data-view=privacy]").click()');
   await sleep(200);
   await fs.writeFile(path.join(root, 'out/smoke/privacy.png'), (await studio.webContents.capturePage()).toPNG());

@@ -8,6 +8,8 @@ For portable use, run **`payload\electron.exe`** in the extracted archive. In an
 
 Use the tray icon to open **Companion studio**. In **Privacy**, optionally enable **Start at Windows sign-in** to wait quietly in the tray until Claude Code or Codex is detected. Use the tray's **Quit Aipet** to exit.
 
-For thinking, reading, coding and completion reactions, manually set up the destination computer's AI hooks using **Connections → Review setup**. These optional hooks require a separate Node.js installation and the host's normal human review/trust. Installation never changes AI settings automatically.
+Version **0.1.1** uses the included runtime for thinking, reading, coding and completion signals as well as the pet. No separate Node.js installation is needed. Manually register the destination computer's AI hooks using the JSON shown in **Connections → Review setup**, not the raw template files. When upgrading Codex, replace the previous ten Aipet definitions, preserve unrelated hooks and complete the host's review/trust again. Installation never changes AI settings automatically.
+
+The extracted archive includes **Diagnose-Codex.ps1**. Run it from PowerShell with `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Diagnose-Codex.ps1` for a read-only metadata report. Adding `-Probe` explicitly sends one synthetic thinking event through Aipet's own bridge; it does not run a task in Codex. The report contains no commands, full paths or conversation contents. See the guide for custom installation paths and upgrading an existing copy.
 
 Read the [Windows installation and connection guide](docs/release-windows.md) and the [artwork credits and licenses](THIRD_PARTY_NOTICES.md) in this application's `resources\app` folder. This is a private, personal, noncommercial fan application; preserve all attribution, adaptation notices and original artwork licenses.

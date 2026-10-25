@@ -1,4 +1,4 @@
-Aipet for Windows x64 - personal edition, without sprite usage counters
+Aipet 0.1.1 for Windows x64 - personal edition, without sprite usage counters
 
 This offline package contains the application and its unmodified Electron runtime.
 No Node.js installation, administrator rights or runtime downloads are required.
@@ -13,9 +13,12 @@ Default destination: %LOCALAPPDATA%\Programs\Aipet
 The installer creates a Start menu shortcut and a current-user Installed Apps
 entry. It does not enable startup or edit Claude/Codex hooks. Connect AI tools
 explicitly from Aipet on this machine and complete any required host review.
-Optional AI activity hooks also need a supported Node.js installation at
-C:\Program Files\nodejs\node.exe; install Node.js separately before connecting.
-The desktop pet itself does not require a separate Node.js installation.
+The pet and its optional AI activity hooks use the included runtime. No separate
+Node.js installation is needed in version 0.1.1. Connections > Review setup only
+displays setup instructions: manually merge the JSON shown by this installed app
+into the destination AI configuration, then review/trust it in the AI host.
+Do not copy raw template files. For a Codex upgrade, replace the previous ten
+Aipet definitions rather than adding duplicate groups; preserve unrelated hooks.
 
 OPTIONAL POWERSHELL INSTALL
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Install.ps1 -DesktopShortcut -Launch
@@ -24,7 +27,11 @@ ExecutionPolicy Bypass applies only to the installer PowerShell process; no
 machine or user policy is changed. Managed policies may still prevent execution.
 
 UNINSTALL / REPLACE
-Exit Aipet from its tray first. Use Windows Settings > Apps > Installed apps,
+To upgrade 0.1.0, turn off Start at Windows sign-in in Aipet Privacy, quit Aipet,
+uninstall the previous registered copy, then install 0.1.1 at the same final path.
+Replace the old Aipet hook definitions with new UI-generated ones and review/trust
+them again. Installing a new app does not update existing AI hook definitions.
+Use Windows Settings > Apps > Installed apps,
 or run Uninstall.cmd inside the installed Aipet directory. Uninstall removes
 only recorded, unchanged program files, its own shortcuts and registration.
 Modified or added files are retained. Your %USERPROFILE%\.aipet data and all
@@ -32,6 +39,16 @@ Claude/Codex settings are preserved. Uninstall before installing another build.
 If you later enable startup, turn it off in Aipet's Privacy pane before
 uninstalling. If you connect AI hooks, manually remove only Aipet's hook entries
 from your AI configurations when disconnecting. The installer never edits them.
+
+DIAGNOSE NO SIGNAL
+Run the included Diagnose-Codex.ps1 from the extracted archive directory:
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Diagnose-Codex.ps1
+The default is read-only. It prints JSON counts, path-match/existence booleans and
+the latest own Codex event state/time, with no commands, full paths or content.
+For a custom install, add -AppDirectory "D:\Apps\Aipet\app\resources\app".
+Adding -Probe explicitly writes one synthetic Codex thinking event using Aipet's
+own bridge. It never runs configuration commands or a task in Codex, changes hook
+configuration/trust, or reads conversations. Paste the JSON when troubleshooting.
 
 PRIVACY AND RIGHTS
 This edition has no sprite usage collection, storage, IPC or studio usage view.

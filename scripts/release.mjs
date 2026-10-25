@@ -34,7 +34,7 @@ try {
   const sha256 = digest.digest('hex'), bytes = (await lstat(temporaryArchive)).size;
   await rename(temporaryArchive, archive);
   await writeFile(archive + '.sha256', `${sha256}  ${path.basename(archive)}\n`);
-  const report = { version: metadata.version, edition: 'no-counters', platform: 'win32', arch: 'x64', createdAt: new Date().toISOString(), archive, bytes, sha256, payloadFiles: assembled.files, spriteUsageIncluded: false, perUserInstaller: true, externalRuntimeDependencies: [], optionalHookPrerequisite: 'Node.js 22 or newer at the reviewed hook path', remotePublication: false };
+  const report = { version: metadata.version, edition: 'no-counters', platform: 'win32', arch: 'x64', createdAt: new Date().toISOString(), archive, bytes, sha256, payloadFiles: assembled.files, spriteUsageIncluded: false, perUserInstaller: true, externalRuntimeDependencies: [], optionalHookPrerequisite: 'Manual configuration and host trust; uses the bundled runtime', remotePublication: false };
   await writeFile(path.join(releaseRoot, 'release-report.json'), JSON.stringify(report, null, 2) + '\n');
   console.log(`Created offline installer ZIP: ${archive} (${(bytes / 1024 / 1024).toFixed(1)} MiB).`);
 } finally {

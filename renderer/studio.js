@@ -286,6 +286,9 @@
         const setup = await api.getSetup(button.dataset.provider);
         $("#setup-example").textContent = setup.example;
         $("#setup-guide").textContent = setup.guide;
+        $("#setup-caveat").textContent = setup.runtime === "bundled"
+          ? "These commands use Aipet’s included runtime; a separate Node.js installation is not needed. Merge only the Aipet entries into your local AI configuration, then review and trust them in the host. Windows local sessions are required."
+          : "These source-development commands require Node.js at the displayed path. The installed edition uses its included runtime. Merge the hook entries, then complete the host’s review and trust step.";
       } catch {
         $("#setup-example").textContent =
           "Open docs/integrations.md and integrations/*.example.json in the application folder.";

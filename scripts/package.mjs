@@ -139,7 +139,7 @@ try {
   for (const asset of [...provenance.files.map(file => file.destination), 'manifest.json', 'provenance.json']) await copy(path.join('assets', 'crosspet', asset));
   const custom = artwork.readCustomArtwork(path.join(root, 'assets', 'custom'), { strict: true, verifyInventory: true });
   for (const relative of custom.files) await copy(path.join('assets', 'custom', ...relative.split('/')));
-  for (const relative of ['integrations/activity.mjs', 'integrations/claude-hooks.example.json', 'integrations/codex-hooks.example.json', 'package.json', 'THIRD_PARTY_NOTICES.md']) await copy(relative);
+  for (const relative of ['integrations/activity.mjs', 'integrations/activity-launch.ps1', 'integrations/claude-hooks.example.json', 'integrations/codex-hooks.example.json', 'package.json', 'THIRD_PARTY_NOTICES.md']) await copy(relative);
   if (release) await copy('README.md', 'scripts/release/README.md');
   else { await copy('README.md'); await copy('package-lock.json'); }
   const appMetadata = { ...metadata };
