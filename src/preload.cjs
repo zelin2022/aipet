@@ -8,6 +8,7 @@ contextBridge.exposeInMainWorld(
     resetSpriteUsage: () => ipcRenderer.invoke("aipet:sprite-usage-reset"),
     reportSpriteUsage: (items) => ipcRenderer.invoke("aipet:sprite-usage-report", items),
     getSetup: (provider) => ipcRenderer.invoke("aipet:setup", provider),
+    connectCodex: () => ipcRenderer.invoke("aipet:connect-codex"),
     updateSettings: (patch) => ipcRenderer.invoke("aipet:settings", patch),
     setStartup: (enabled) => ipcRenderer.invoke("aipet:startup", enabled),
     openStudio: () => ipcRenderer.send("aipet:studio"),

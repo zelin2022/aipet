@@ -275,20 +275,64 @@
     api.interact("pat");
     toast("A little encouragement, delivered. ♡");
   });
+  $("#connect-codex").addEventListener("click", async (event) => {
+    const button = event.currentTarget;
+    if (button.disabled) return;
+    const resultNode = $("#codex-connect-result");
+    button.disabled = true;
+    button.setAttribute("aria-busy", "true");
+    resultNode.hidden = false;
+    resultNode.classList.remove("error");
+    resultNode.textContent = "Registering Aipet’s Codex hooks…";
+    try {
+      const result = await api.connectCodex();
+      if (result?.error) {
+        resultNode.classList.add("error");
+        resultNode.textContent = typeof result.error === "string"
+          ? result.error.slice(0, 1000)
+          : "Codex hooks could not be registered. Review setup for manual instructions.";
+        return;
+      }
+      if (typeof result?.changed !== "boolean") throw new Error("Invalid connection result.");
+      const lines = [
+        result.changed
+          ? "Aipet’s Codex hooks are registered."
+          : "Aipet’s Codex hooks are already registered.",
+        "Next: open Codex’s /hooks review, reload the list, and review and trust Aipet’s hooks. Then send a task in a new local chat and check for a signal above.",
+      ];
+      if (typeof result.configPath === "string") lines.push(`Hook file: ${result.configPath.slice(0, 2048)}`);
+      if (typeof result.backupPath === "string") lines.push(`Backup: ${result.backupPath.slice(0, 2048)}`);
+      resultNode.textContent = lines.join("\n\n");
+    } catch {
+      resultNode.classList.add("error");
+      resultNode.textContent = "Codex hooks could not be registered. Review setup for manual instructions, or try again after restarting Aipet.";
+    } finally {
+      button.disabled = false;
+      button.removeAttribute("aria-busy");
+    }
+  });
   document.querySelectorAll(".setup-button").forEach((button) =>
     button.addEventListener("click", async () => {
+      const isCodex = button.dataset.provider === "codex";
       $("#setup-title").textContent =
-        button.dataset.provider === "claude"
-          ? "Connect Claude Code"
-          : "Connect Codex";
+        isCodex ? "Codex hook setup" : "Claude Code hook setup";
+      $("#setup-intro").textContent = isCodex
+        ? "Use Connect Codex above to register Aipet’s hooks with a backup, or use this example for manual setup. Installing Aipet alone does not register hooks."
+        : "Claude Code setup is manual. Review and merge this configuration into Claude Code’s hook settings.";
+      $("#setup-registration-step").textContent = isCodex
+        ? "Use Connect Codex, or manually merge the example’s hooks entries. Keep unrelated hooks and settings; replace older Aipet entries when upgrading."
+        : "Merge the example’s hooks entries into your Claude Code configuration, preserving unrelated hooks and settings. Replace older Aipet entries when upgrading.";
+      $("#setup-trust-step").textContent = isCodex
+        ? "Open Codex’s /hooks review, reload the list, and review and trust Aipet’s hooks. Host version and policy determine which hooks run."
+        : "Complete Claude Code’s hook review if requested. Host version and policy determine which hooks run.";
       $("#setup-panel").hidden = false;
       try {
         const setup = await api.getSetup(button.dataset.provider);
         $("#setup-example").textContent = setup.example;
         $("#setup-guide").textContent = setup.guide;
         $("#setup-caveat").textContent = setup.runtime === "bundled"
-          ? "These commands use Aipet’s included runtime; a separate Node.js installation is not needed. Merge only the Aipet entries into your local AI configuration, then review and trust them in the host. Windows local sessions are required."
-          : "These source-development commands require Node.js at the displayed path. The installed edition uses its included runtime. Merge the hook entries, then complete the host’s review and trust step.";
+          ? "These commands use Aipet’s included runtime; a separate Node.js installation is not needed. Windows local sessions are required."
+          : "These source-development commands require Node.js at the displayed path. The installed edition uses its included runtime.";
       } catch {
         $("#setup-example").textContent =
           "Open docs/integrations.md and integrations/*.example.json in the application folder.";

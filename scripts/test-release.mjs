@@ -26,6 +26,7 @@ const child = spawn(require('electron'), [path.join(root, 'tests/release-smoke.c
     USERPROFILE: profile,
     LOCALAPPDATA: profile,
     APPDATA: profile,
+    CODEX_HOME: path.join(profile, '.codex'),
     AIPET_DESKTOP_TEST: '1',
     AIPET_TEST_DATA: data,
     AIPET_SMOKE_APP_ROOT: targetRoot,

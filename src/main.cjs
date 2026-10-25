@@ -25,6 +25,7 @@ const { dataDirectory, eventDirectories } = require("./core/data.cjs");
 const diagnostics = require("./core/diagnostics.cjs");
 const debugLog = require("./core/debug-log.cjs");
 const { prepareHookExample, prepareBundledHookExample } = require("./core/hook-commands.cjs");
+const { connectCodex, CodexConnectionError } = require("./core/codex-connection.cjs");
 const { readCustomArtwork } = require("./core/artwork.cjs");
 const { createSpriteUsage } = require("./core/sprite-usage.cjs");
 const { createSpriteCatalog } = require("./core/sprite-catalog.cjs");
@@ -244,6 +245,13 @@ function bundledHookRuntime() {
   const executable = path.resolve(ROOT, "../..", "electron.exe");
   return path.basename(ROOT) === "app" && path.basename(path.dirname(ROOT)) === "resources"
     && fs.existsSync(executable) ? executable : null;
+}
+function hookExample(provider) {
+  return (bundledHookRuntime() ? prepareBundledHookExample : prepareHookExample)(
+    provider,
+    fs.readFileSync(path.join(ROOT, "integrations", `${provider}-hooks.example.json`), "utf8"),
+    ROOT,
+  );
 }
 function companionActivities() {
   let current = activity.snapshot(settings, characters);
@@ -841,6 +849,17 @@ function installIpc() {
     return acceptSpriteUsage(items);
   });
   handle("aipet:startup", (_event, enabled) => setStartup(enabled));
+  handle("aipet:connect-codex", (event, ...args) => {
+    if (!studio || event.sender !== studio.webContents || args.length)
+      throw new Error("Invalid connection request");
+    try {
+      const result = connectCodex({ example: hookExample("codex") });
+      return { ...result, changed: result.status !== "unchanged" };
+    } catch (error) {
+      return { error: error instanceof CodexConnectionError
+        ? error.message : "Codex hooks could not be registered. Your existing settings were preserved." };
+    }
+  });
   handle("aipet:setup", (_event, provider) => {
     if (!["claude", "codex"].includes(provider))
       throw new Error("Unknown provider");
@@ -848,18 +867,7 @@ function installIpc() {
     return {
       runtime: bundled ? "bundled" : "node",
       example:
-        JSON.stringify(
-          (bundled ? prepareBundledHookExample : prepareHookExample)(
-            provider,
-            fs.readFileSync(
-              path.join(ROOT, "integrations", `${provider}-hooks.example.json`),
-              "utf8",
-            ),
-            ROOT,
-          ),
-          null,
-          2,
-        ) + "\n",
+        JSON.stringify(hookExample(provider), null, 2) + "\n",
       guide: fs.readFileSync(path.join(ROOT, "docs/integrations.md"), "utf8"),
     };
   });

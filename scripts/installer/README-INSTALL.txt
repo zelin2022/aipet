@@ -1,4 +1,4 @@
-Aipet 0.1.1 for Windows x64 - personal edition, without sprite usage counters
+Aipet 0.1.2 for Windows x64 - personal edition, without sprite usage counters
 
 This offline package contains the application and its unmodified Electron runtime.
 No Node.js installation, administrator rights or runtime downloads are required.
@@ -14,11 +14,16 @@ The installer creates a Start menu shortcut and a current-user Installed Apps
 entry. It does not enable startup or edit Claude/Codex hooks. Connect AI tools
 explicitly from Aipet on this machine and complete any required host review.
 The pet and its optional AI activity hooks use the included runtime. No separate
-Node.js installation is needed in version 0.1.1. Connections > Review setup only
-displays setup instructions: manually merge the JSON shown by this installed app
-into the destination AI configuration, then review/trust it in the AI host.
-Do not copy raw template files. For a Codex upgrade, replace the previous ten
-Aipet definitions rather than adding duplicate groups; preserve unrelated hooks.
+Node.js installation is needed. Open Connections > Connect Codex to register its
+ten hooks. The button backs up an existing user hooks.json beside it, uses
+CODEX_HOME if set (otherwise %USERPROFILE%\.codex), preserves unrelated settings
+and hooks, and updates recognized older Aipet definitions. Repeated unchanged
+connections make no write or extra backup; invalid or unsafe configuration is
+refused. Review and trust new or changed hooks yourself in Codex's /hooks view
+or Settings > Coding > Hooks > Local. Registration does not prove signal delivery.
+Claude Code stays manual: back up its settings and merge the JSON shown by
+Connections > Review setup. Do not copy raw template files or overwrite an
+entire existing configuration. Installation and startup never register hooks.
 
 OPTIONAL POWERSHELL INSTALL
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Install.ps1 -DesktopShortcut -Launch
@@ -27,10 +32,11 @@ ExecutionPolicy Bypass applies only to the installer PowerShell process; no
 machine or user policy is changed. Managed policies may still prevent execution.
 
 UNINSTALL / REPLACE
-To upgrade 0.1.0, turn off Start at Windows sign-in in Aipet Privacy, quit Aipet,
-uninstall the previous registered copy, then install 0.1.1 at the same final path.
-Replace the old Aipet hook definitions with new UI-generated ones and review/trust
-them again. Installing a new app does not update existing AI hook definitions.
+To upgrade 0.1.0 or 0.1.1, turn off Start at Windows sign-in in Aipet Privacy,
+quit Aipet, uninstall the previous registered copy, then install 0.1.2 at the same
+final path. Click Connect Codex to update recognized old Aipet definitions, then
+review/trust the changed hooks again. Inspect customized handlers left untouched;
+update Claude's manual setup when needed. Installation alone does not update hooks.
 Use Windows Settings > Apps > Installed apps,
 or run Uninstall.cmd inside the installed Aipet directory. Uninstall removes
 only recorded, unchanged program files, its own shortcuts and registration.

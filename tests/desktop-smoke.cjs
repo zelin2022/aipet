@@ -36,6 +36,9 @@ async function loaded(win) {
   assert.equal(await run('document.querySelectorAll(".character-card").length'), 2);
   assert.equal(await run('document.querySelectorAll(".state-button").length'), 9);
   assert.equal(await run('[...document.images].every(i => i.complete && i.naturalWidth > 0)'), true);
+  await require('./connect-codex-smoke.cjs').exerciseConnectCodex({ studio, pet, targetRoot, dataDirectory: instance.dataDirectory });
+  await sleep(200);
+  await fs.writeFile(path.join(root, 'out/smoke/connections.png'), (await studio.webContents.capturePage()).toPNG());
   const gptProfile = instance.snapshot().characters.find(character => character.id === 'gpt');
   if (gptProfile.customMode === 'replace') {
     assert.equal(await run('document.querySelector("[data-character=gpt] img").getAttribute("src")'), '../assets/custom/' + gptProfile.customPoses.idle[0], 'the character picker honors the approved GPT restyle');
@@ -76,7 +79,7 @@ async function loaded(win) {
   await loaded(studio); await sleep(200);
   assert.equal(await run('document.querySelector("#view-activity").hidden'), false);
   await fs.writeFile(path.join(root, 'out/smoke/activity.png'), (await studio.webContents.capturePage()).toPNG());
-  await run('document.querySelector("[data-view=connections]").click(); document.querySelector("[data-provider=codex]").click()');
+  await run('document.querySelector("[data-view=connections]").click(); document.querySelector(".setup-button[data-provider=codex]").click()');
   await sleep(200);
   assert.equal(await run('document.querySelector("#setup-panel").hidden'), false);
   assert.match(await run('document.querySelector("#setup-example").textContent'), /--provider codex|-Provider codex/);

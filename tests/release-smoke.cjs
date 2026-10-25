@@ -163,6 +163,7 @@ function observeUsageIO() {
   assert.equal(studio.webContents.getLastWebPreferences().contextIsolation,true);
   assert.equal(await run('Object.keys(window.aipet).some(key=>/sprite.?usage/i.test(key))'),false,'Sandbox bridge exposes no usage methods.');
   assert.equal(await run('Boolean(document.querySelector("[data-view=usage],#view-usage,#usage-rows"))'),false,'Studio has no usage navigation or panel.');
+  const connection = await require('./connect-codex-smoke.cjs').exerciseConnectCodex({ studio, targetRoot, dataDirectory: data });
 
   const setup = {};
   const rawCodex = JSON.parse(fsSync.readFileSync(path.join(targetRoot, 'integrations/codex-hooks.example.json'), 'utf8'));
@@ -203,6 +204,7 @@ function observeUsageIO() {
   pet = instance.getPet();
   watch(pet);
   await loaded(pet);
+  assert.equal(await runPet('window.aipet.connectCodex().then(()=>false,()=>true)'), true, 'The pet renderer cannot register hooks.');
   await until(async()=>{const value=await slots();return value.length===2&&value.every(slot=>slot.loaded);},'two actual pets render');
   assert.ok((await slots()).every(slot=>slot.state==='greet'),'Both companions greet when first detected.');
   assert.equal(await runPet('Object.keys(window.aipet).some(key=>/sprite.?usage/i.test(key))'),false);
@@ -214,7 +216,10 @@ function observeUsageIO() {
   await until(async()=>(await slots())[0].state==='pat','pet interaction remains connected');
 
   const bundledHooks = [];
-  const codexHooks = Object.values(JSON.parse(setup.codex.example).hooks).flat().flatMap(group=>group.hooks);
+  const registered = JSON.parse(await fs.readFile(path.join(process.env.CODEX_HOME, 'hooks.json'), 'utf8'));
+  const codexHooks = Object.values(registered.hooks).flat().flatMap(group=>group.hooks)
+    .filter(hook=>hook.command?.includes('/integrations/activity-launch.ps1'));
+  assert.equal(codexHooks.length, 10, 'Exercise the exact definitions saved by Connect Codex.');
   for(const hook of codexHooks) bundledHooks.push(await invokeReviewedHook('codex',hook));
   bundledHooks.push(await invokeReviewedHook('claude',JSON.parse(setup.claude.example).hooks.UserPromptSubmit[0].hooks[0]));
 
@@ -230,7 +235,7 @@ function observeUsageIO() {
   const decoded = await run(`(async()=>{const results=[];for(const source of ${JSON.stringify(paths)}){const image=new Image();image.src=source;await image.decode();if(!image.naturalWidth||!image.naturalHeight)throw new Error('Empty artwork: '+source);results.push(source);}return results.length;})()`);
   assert.equal(decoded,paths.length);
 
-  await run('document.querySelector("[data-view=connections]").click();document.querySelector("[data-provider=codex]").click()');
+  await run('document.querySelector("[data-view=connections]").click();document.querySelector(".setup-button[data-provider=codex]").click()');
   await until(()=>run('!document.querySelector("#setup-panel").hidden'),'connection setup remains usable');
   await run('document.querySelector("#close-setup").click();document.querySelector("[data-view=privacy]").click()');
   await until(()=>run('!document.querySelector("#view-privacy").hidden'),'privacy view remains usable');
@@ -256,7 +261,7 @@ function observeUsageIO() {
       for(const undo of restore.reverse())undo();
       assert.deepEqual(fsSync.readFileSync(path.join(data,'sprite-usage.json')),originalSentinel,'Existing private counters are untouched.');
       assert.deepEqual(fsSync.readdirSync(data).filter(name=>/sprite.?usage/i.test(name)),['sprite-usage.json'],'No counter scratch file is created.');
-      const report={passed:true,releaseRoot:targetRoot,isolatedProfile:true,realRenderer:true,imagesDecoded:decoded,dualCompanions:true,greetings:true,interactions:true,setupRelocated:true,bundledRuntime:true,externalNodeRequired:false,rawEncodedPathsVerified:true,bundledHooks,hookHostDeadlineMs:3000,usageModulesOmitted:true,usageApiOmitted:true,usageIpcOmitted:true,usageUiOmitted:true,usageIoCalls:0,preexistingUsagePreserved:true,normalQuit:true,observationMilliseconds:Date.now()-started};
+      const report={passed:true,releaseRoot:targetRoot,isolatedProfile:true,realRenderer:true,imagesDecoded:decoded,dualCompanions:true,greetings:true,interactions:true,setupRelocated:true,connection,bundledRuntime:true,externalNodeRequired:false,rawEncodedPathsVerified:true,bundledHooks,hookHostDeadlineMs:3000,usageModulesOmitted:true,usageApiOmitted:true,usageIpcOmitted:true,usageUiOmitted:true,usageIoCalls:0,preexistingUsagePreserved:true,normalQuit:true,observationMilliseconds:Date.now()-started};
       fsSync.writeFileSync(path.join(root,'out/smoke/release.qa.json'),JSON.stringify(report,null,2)+'\n');
       try{fsSync.unlinkSync(path.join(root,'out/smoke/release.failure.txt'));}catch(error){if(error.code!=='ENOENT')throw error;}
       console.log(`No-counter release smoke passed: ${decoded} images decoded, ${bundledHooks.length} real bundled hooks work without external Node, dual pets and studio work, no counter APIs, IPC, UI, modules or storage calls (including normal quit).`);

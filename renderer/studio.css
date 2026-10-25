@@ -4,3 +4,4 @@
 
 .automatic-button{font-size:8px;padding:11px 5px 0}
 .nav-item:not(.active) .nav-active-dot{display:none}
+.connection-card .connect-disclosure{font-size:9px;line-height:1.7;color:#a49caf;margin-bottom:14px}.connection-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.connection-actions .connect-button{width:auto;min-width:140px;background:#ccb6ee13;border-color:#ccb6ee44;color:#e0d2f2}.connection-actions .connect-button:hover{background:#ccb6ee20}.connection-actions .setup-button{font-size:10px;white-space:nowrap}.connect-result{margin-top:16px;border:1px solid #a3c4b033;border-radius:9px;background:#a3c4b008;padding:15px 18px;font-size:11px;line-height:1.8;color:#bdcdbf;white-space:pre-wrap;overflow-wrap:anywhere}.connect-result.error{border-color:#d8a79b44;background:#d8a79b08;color:#e2bfb6}
